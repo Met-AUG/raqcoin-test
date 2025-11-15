@@ -7,7 +7,7 @@ from subprocess import Popen, PIPE
 import glob
 import operator
 
-OUT_CPP="src/qt/abcmintstrings.cpp"
+OUT_CPP="src/qt/raqcoinstrings.cpp"
 EMPTY=['""']
 
 def parse_po(text):

@@ -7,12 +7,12 @@ Fortunately, only four of the files in the existing project are affected by this
 Three new classes have been implemented in three new .h/.cpp file pairs, with much of the functionality that was previously
 implemented in the AbcmintGUI class moved over to these new classes.
 
-The two existing files most affected, by far, are abcmintgui.h and abcmintgui.cpp, as the AbcmintGUI class will require
+The two existing files most affected, by far, are raqcoingui.h and raqcoingui.cpp, as the AbcmintGUI class will require
 some major retrofitting.
 
-Only requiring some minor changes is abcmint.cpp.
+Only requiring some minor changes is raqcoin.cpp.
 
-Finally, three new headers and source files will have to be added to abcmint-qt.pro.
+Finally, three new headers and source files will have to be added to raqcoin-qt.pro.
 
 Changes to class AbcmintGUI
 ---------------------------
@@ -34,9 +34,9 @@ that takes the place of what used to be centralWidget in AbcmintGUI. The purpose
 refinements of the wallet controls with minimal need for further modifications to AbcmintGUI, thus greatly simplifying
 merges while reducing the risk of breaking top-level stuff.
 
-Changes to abcmint.cpp
+Changes to raqcoin.cpp
 ----------------------
-abcmint.cpp is the entry point into abcmint-qt, and as such, will require some minor modifications to provide hooks for
+raqcoin.cpp is the entry point into abcmint-qt, and as such, will require some minor modifications to provide hooks for
 multiple wallet support. Most importantly will be the way it instantiates WalletModels and passes them to the
 singleton AbcmintGUI instance called window. Formerly, AbcmintGUI kept a pointer to a single instance of a WalletModel.
 The initial change required is very simple: rather than calling `window.setWalletModel(&walletModel);` we perform the

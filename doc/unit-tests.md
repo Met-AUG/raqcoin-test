@@ -27,9 +27,9 @@ use the Qt unit-testing framework.
 
 To compile and run the tests:
 
-	qmake abcmint-qt.pro ABCMINT_QT_TEST=1
+	qmake raqcoin-qt.pro ABCMINT_QT_TEST=1
 	make
 	./abcmint-qt_test
 
 To add more tests, add them to the `src/qt/test/` directory,
-the `src/qt/test/test_main.cpp` file, and abcmint-qt.pro.
+the `src/qt/test/test_main.cpp` file, and raqcoin-qt.pro.

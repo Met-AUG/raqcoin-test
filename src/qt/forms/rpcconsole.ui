@@ -431,7 +431,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../abcmint.qrc">
+            <iconset resource="../raqcoin.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="shortcut">
@@ -451,7 +451,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../abcmint.qrc"/>
+  <include location="../raqcoin.qrc"/>
  </resources>
  <connections/>
 </ui>

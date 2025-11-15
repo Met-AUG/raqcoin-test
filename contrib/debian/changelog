@@ -315,8 +315,8 @@ abcmint (0.3.19~dfsg-5) unstable; urgency=low
 abcmint (0.3.19~dfsg-4) unstable; urgency=low
 
   [ Micah Anderson ]
-  * Provide example abcmint.conf.
-  * Add abcmint(1) and abcmint.conf(5) man pages.
+  * Provide example raqcoin.conf.
+  * Add abcmint(1) and raqcoin.conf(5) man pages.
 
   [ Jonas Smedegaard ]
   * Ease backporting:

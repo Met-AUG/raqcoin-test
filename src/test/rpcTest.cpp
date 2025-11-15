@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include "abcmintrpc.h"
+#include "raqcoinrpc.h"
 #include <boost/algorithm/string.hpp>
 #include "boost/filesystem.hpp"
 

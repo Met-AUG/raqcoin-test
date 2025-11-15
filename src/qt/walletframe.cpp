@@ -5,7 +5,7 @@
  * The Bitcoin Developers 2011-2013
  */
 #include "walletframe.h"
-#include "abcmintgui.h"
+#include "raqcoingui.h"
 #include "walletstack.h"
 
 #include <QVBoxLayout>

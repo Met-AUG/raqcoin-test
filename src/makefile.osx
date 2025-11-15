@@ -96,8 +96,8 @@ OBJS= \
     obj/main.o \
     obj/diskpubkeypos.o \
     obj/net.o \
-    obj/protocol.o \
-    obj/abcmintrpc.o \
+	obj/protocol.o \
+	obj/raqcoinrpc.o \
     obj/rpcdump.o \
     obj/rpcnet.o \
     obj/rpcmining.o \
@@ -112,10 +112,10 @@ OBJS= \
     obj/hash.o \
     obj/bloom.o \
     obj/noui.o \
-    obj/leveldb.o \
-    obj/txdb.o \
-    obj/validationinterface.o \
-    obj/abcmint.o \
+	obj/leveldb.o \
+	obj/txdb.o \
+	obj/validationinterface.o \
+	obj/raqcoin.o \
     obj/miner.o
 
 ifndef USE_UPNP
@@ -134,10 +134,10 @@ ifneq (${USE_IPV6}, -)
 	DEFS += -DUSE_IPV6=$(USE_IPV6)
 endif
 
-all: abcmint
+all: raqcoin
 
-test check: test_abcmint FORCE
-	./test_abcmint
+test check: test_raqcoin FORCE
+	./test_raqcoin
 
 #
 # LevelDB support
@@ -178,7 +178,7 @@ obj/%.o: %.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-abcmint: $(OBJS:obj/%=obj/%)
+raqcoin: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) -Wl,-stack_size,0x8000000 -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := obj-test/gtest.a obj-test/gtest_main.a
@@ -220,10 +220,10 @@ obj-test/%.o: test/%.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-test_abcmint: $(TESTOBJS) $(filter-out obj/abcmint.o,$(OBJS:obj/%=obj/%))
+test_raqcoin: $(TESTOBJS) $(filter-out obj/raqcoin.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(LIBS)
 clean:
-	-rm -f abcmint test_abcmint
+	-rm -f raqcoin test_raqcoin
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f pqcrypto/*.o

@@ -462,7 +462,7 @@
   <customwidget>
    <class>AbcmintAmountField</class>
    <extends>QSpinBox</extends>
-   <header>abcmintamountfield.h</header>
+   <header>raqcoinamountfield.h</header>
   </customwidget>
   <customwidget>
    <class>QValueComboBox</class>

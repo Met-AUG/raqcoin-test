@@ -1,7 +1,7 @@
 #!/bin/bash
 # create multiresolution windows icon
-ICON_SRC=../../src/qt/res/icons/abcmint.png
-ICON_DST=../../src/qt/res/icons/abcmint.ico
+ICON_SRC=../../src/qt/res/icons/raqcoin.png
+ICON_DST=../../src/qt/res/icons/raqcoin.ico
 convert ${ICON_SRC} -resize 16x16 abcmint-16.png
 convert ${ICON_SRC} -resize 32x32 abcmint-32.png
 convert ${ICON_SRC} -resize 48x48 abcmint-48.png

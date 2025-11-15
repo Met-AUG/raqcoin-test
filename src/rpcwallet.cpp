@@ -7,7 +7,7 @@
 
 #include "wallet.h"
 #include "walletdb.h"
-#include "abcmintrpc.h"
+#include "raqcoinrpc.h"
 #include "init.h"
 #include "base58.h"
 #include "diskpubkeypos.h"

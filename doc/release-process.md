@@ -9,7 +9,7 @@ Release Process
 ###update (commit) version in sources
 
 
-	abcmint-qt.pro
+	raqcoin-qt.pro
 	contrib/verifysfbinaries/verify.sh
 	doc/README*
 	share/setup.nsi
@@ -93,7 +93,7 @@ repackage gitian builds for release as stand-alone zip/tar/installer exe
 
   OSX binaries are created by Gavin Andresen on a 32-bit, OSX 10.6 machine.
 
-	qmake RELEASE=1 USE_UPNP=1 USE_QRCODE=1 abcmint-qt.pro
+	qmake RELEASE=1 USE_UPNP=1 USE_QRCODE=1 raqcoin-qt.pro
 	make
 	export QTDIR=/opt/local/share/qt4  # needed to find translations/qt_*.qm files
 	T=$(contrib/qt_translations.py $QTDIR/translations src/qt/locale)

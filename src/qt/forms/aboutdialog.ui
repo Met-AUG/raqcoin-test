@@ -23,7 +23,7 @@
       </sizepolicy>
      </property>
      <property name="pixmap">
-      <pixmap resource="../abcmint.qrc">:/images/about</pixmap>
+      <pixmap resource="../raqcoin.qrc">:/images/about</pixmap>
      </property>
     </widget>
    </item>
@@ -150,7 +150,7 @@ This product includes software developed by the OpenSSL Project for use in the O
   </layout>
  </widget>
  <resources>
-  <include location="../abcmint.qrc"/>
+  <include location="../raqcoin.qrc"/>
  </resources>
  <connections>
   <connection>

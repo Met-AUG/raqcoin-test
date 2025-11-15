@@ -3,7 +3,7 @@
 
 #include "addresstablemodel.h"
 #include "optionsmodel.h"
-#include "abcmintgui.h"
+#include "raqcoingui.h"
 #include "editaddressdialog.h"
 #include "csvmodelwriter.h"
 #include "guiutil.h"

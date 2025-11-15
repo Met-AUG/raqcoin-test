@@ -4,7 +4,7 @@
 
 #include "txdb.h"
 #include "walletdb.h"
-#include "abcmintrpc.h"
+#include "raqcoinrpc.h"
 #include "net.h"
 #include "init.h"
 #include "util.h"
@@ -183,7 +183,7 @@ bool AppInit(int argc, char* argv[])
         //
         // Parameters
         //
-        // If Qt is used, parameters/abcmint.conf are parsed in qt/abcmint.cpp's main()
+        // If Qt is used, parameters/raqcoin.conf are parsed in qt/raqcoin.cpp's main()
         ParseParameters(argc, argv);
         if (!boost::filesystem::is_directory(GetDataDir(false)))
         {
@@ -315,7 +315,7 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
-        "  -conf=<file>           " + _("Specify configuration file (default: abcmint.conf)") + "\n" +
+        "  -conf=<file>           " + _("Specify configuration file (default: raqcoin.conf)") + "\n" +
         "  -pid=<file>            " + _("Specify pid file (default: abcmint.pid)") + "\n" +
         "  -gen                   " + _("Generate coins (default: 0)") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +

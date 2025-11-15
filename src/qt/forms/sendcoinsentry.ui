@@ -87,7 +87,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="../abcmint.qrc">
+        <iconset resource="../raqcoin.qrc">
          <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
        </property>
        <property name="shortcut">
@@ -115,7 +115,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="../abcmint.qrc">
+        <iconset resource="../raqcoin.qrc">
          <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
       </widget>
@@ -128,7 +128,7 @@
   <customwidget>
    <class>AbcmintAmountField</class>
    <extends>QLineEdit</extends>
-   <header>abcmintamountfield.h</header>
+   <header>raqcoinamountfield.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
@@ -138,7 +138,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../abcmint.qrc"/>
+  <include location="../raqcoin.qrc"/>
  </resources>
  <connections/>
 </ui>

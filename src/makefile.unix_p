@@ -149,7 +149,7 @@ OBJS= \
     obj/diskpubkeypos.o \
     obj/net.o \
     obj/protocol.o \
-    obj/abcmintrpc.o \
+    obj/raqcoinrpc.o \
     obj/rpcdump.o \
     obj/rpcnet.o \
     obj/rpcmining.o \
@@ -167,17 +167,17 @@ OBJS= \
     obj/leveldb.o \
     obj/txdb.o \
     obj/base58.o \
-    obj/abcmint.o \
+    obj/raqcoin.o \
     obj/zmqabstractnotifier.o \
     obj/zmqnotificationinterface.o \
     obj/zmqpublishnotifier.o \
     obj/validationinterface.o
 
 
-all: abcmint_p
+all: raqcoin_p
 
-test check: test_abcmint FORCE
-	./test_abcmint
+test check: test_raqcoin FORCE
+    ./test_raqcoin
 
 #
 # LevelDB support
@@ -244,8 +244,8 @@ obj/%.o: %.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-abcmint_p:  $(OBJS:obj/%=obj/%)
-	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)	
+raqcoin_p:  $(OBJS:obj/%=obj/%)
+    $(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)	
 	
 
 TESTOBJS := obj-test/gtest.a obj-test/gtest_main.a
@@ -287,14 +287,14 @@ obj-test/%.o: test/%.cpp
 	  rm -f $(@:%.o=%.d)
 	  
 
-test_abcmint: $(TESTOBJS) $(filter-out obj/abcmint.o,$(OBJS:obj/%=obj/%))
-	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
+test_raqcoin: $(TESTOBJS) $(filter-out obj/raqcoin.o,$(OBJS:obj/%=obj/%))
+    $(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
 
 #test_abcmint: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 #	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f abcmint_p test_abcmint
+    -rm -f raqcoin_p test_raqcoin
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f pqcrypto/*.o

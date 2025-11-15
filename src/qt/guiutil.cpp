@@ -2,9 +2,9 @@
 
 #include "guiutil.h"
 
-#include "abcmintaddressvalidator.h"
+#include "raqcoinaddressvalidator.h"
 #include "walletmodel.h"
-#include "abcmintunits.h"
+#include "raqcoinunits.h"
 
 #include "util.h"
 #include "init.h"

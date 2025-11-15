@@ -2,7 +2,7 @@
 #include "ui_sendcoinsdialog.h"
 
 #include "walletmodel.h"
-#include "abcmintunits.h"
+#include "raqcoinunits.h"
 #include "addressbookpage.h"
 #include "optionsmodel.h"
 #include "sendcoinsentry.h"

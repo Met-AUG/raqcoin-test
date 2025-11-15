@@ -1,4 +1,4 @@
-abcmint               ICON    "pixmaps/abcmint.ico"
+raqcoin               ICON    "pixmaps/raqcoin.ico"
 
 #include "wx/msw/wx.rc"
 

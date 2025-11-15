@@ -6,7 +6,7 @@
  */
 #include "walletstack.h"
 #include "walletview.h"
-#include "abcmintgui.h"
+#include "raqcoingui.h"
 
 #include <QMap>
 #include <QMessageBox>

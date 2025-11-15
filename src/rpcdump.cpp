@@ -3,7 +3,7 @@
 
 
 #include "init.h" // for pwalletMain
-#include "abcmintrpc.h"
+#include "raqcoinrpc.h"
 #include "ui_interface.h"
 #include "base58.h"
 

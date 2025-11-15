@@ -45,7 +45,7 @@ src/.lock
 # 钱包和配置
 src/wallet.dat
 src/wallet.dat.*
-src/abcmint.conf
+src/raqcoin.conf
 src/peers.dat
 src/banlist.dat
 src/fee_estimates.dat

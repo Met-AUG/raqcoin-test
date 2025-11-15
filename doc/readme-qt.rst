@@ -35,7 +35,7 @@ then execute the following:
     qmake
     make
 
-Alternatively, install `Qt Creator`_ and open the `abcmint-qt.pro` file.
+Alternatively, install `Qt Creator`_ and open the `raqcoin-qt.pro` file.
 
 An executable named `abcmint-qt` will be built.
 
@@ -62,11 +62,11 @@ Mac OS X
 	brew update
 	brew install boost miniupnpc openssl berkeley-db
 
-- If using HomeBrew,  edit `abcmint-qt.pro` to account for library location differences. There's a diff in `contrib/homebrew/abcmint-qt-pro.patch` that shows what you need to change, or you can just patch by doing
+- If using HomeBrew,  edit `raqcoin-qt.pro` to account for library location differences. There's a diff in `contrib/homebrew/abcmint-qt-pro.patch` that shows what you need to change, or you can just patch by doing
 
-        patch -p1 < contrib/homebrew/abcmint.qt.pro.patch
+        patch -p1 < contrib/homebrew/raqcoin.qt.pro.patch
 
-- Open the abcmint-qt.pro file in Qt Creator and build as normal (cmd-B)
+- Open the raqcoin-qt.pro file in Qt Creator and build as normal (cmd-B)
 
 .. _`Qt Mac OS X SDK`: http://qt-project.org/downloads/
 .. _`MacPorts`: http://www.macports.org/install.php

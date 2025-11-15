@@ -12,7 +12,7 @@ inFile     = abcmintDir+"/share/qt/Info.plist"
 outFile    = "Abcmint-Qt.app/Contents/Info.plist"
 version    = "unknown";
 
-fileForGrabbingVersion = abcmintDir+"abcmint-qt.pro"
+fileForGrabbingVersion = abcmintDir+"raqcoin-qt.pro"
 for line in open(fileForGrabbingVersion):
 	lineArr = line.replace(" ", "").split("=");
 	if lineArr[0].startswith("VERSION"):
