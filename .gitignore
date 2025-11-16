@@ -1,4 +1,4 @@
-# ABCMint .gitignore
+# Raqcoin .gitignore
 
 # ============================================
 # 编译产物 (可以清理)
@@ -6,15 +6,17 @@
 
 # 备份文件
 backup
+moredoc
 
 # 构建输出目录
 release
+build
 
 # 可执行文件
-src/abcmint
-src/abcmintrpc
-src/abcmint-cli
-src/abcmint-tx
+src/raqcoin
+src/raqcoinrpc
+src/raqcoin-cli
+src/raqcoin-tx
 src/test_raqcoin
 src/test_*
 
@@ -23,6 +25,8 @@ src/obj/
 src/obj-test/
 src/*.o
 src/*.a
+.qmake.stash
+raqcoin-qt-p.app
 
 # 编译生成的头文件
 src/obj/build.h
@@ -68,6 +72,7 @@ __pycache__/
 *$py.class
 
 # IDE和编辑器
+.github/
 .vscode/
 .idea/
 *.sublime-*
