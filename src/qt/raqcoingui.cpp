@@ -1,5 +1,5 @@
 /*
- * Qt4 abcmint GUI.
+ * Qt4 raqcoin GUI.
  *
  * W.J. van der Laan 2011-2012
  * The Bitcoin Developers 2011-2012
@@ -53,9 +53,9 @@
 
 #include <iostream>
 
-const QString AbcmintGUI::DEFAULT_WALLET = "~Default";
+const QString RaqcoinGUI::DEFAULT_WALLET = "~Default";
 
-AbcmintGUI::AbcmintGUI(QWidget *parent) :
+RaqcoinGUI::RaqcoinGUI(QWidget *parent) :
     QMainWindow(parent),
     clientModel(0),
     encryptWalletAction(0),
@@ -67,7 +67,7 @@ AbcmintGUI::AbcmintGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-    setWindowTitle(tr("Abcmint") + " - " + tr("Wallet"));
+    setWindowTitle(tr("Raqcoin") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/abcmint"));
     setWindowIcon(QIcon(":icons/abcmint"));
@@ -146,7 +146,7 @@ AbcmintGUI::AbcmintGUI(QWidget *parent) :
     this->installEventFilter(this);
 }
 
-AbcmintGUI::~AbcmintGUI()
+RaqcoinGUI::~RaqcoinGUI()
 {
     saveWindowGeometry();
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
@@ -157,7 +157,7 @@ AbcmintGUI::~AbcmintGUI()
 #endif
 }
 
-void AbcmintGUI::createActions()
+void RaqcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -169,7 +169,7 @@ void AbcmintGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Abcmint address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Raqcoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
@@ -212,13 +212,13 @@ void AbcmintGUI::createActions()
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
     aboutAction = new QAction(QIcon(":/icons/abcmint"), tr("&About Abcmint"), this);
-    aboutAction->setStatusTip(tr("Show information about Abcmint"));
+    aboutAction->setStatusTip(tr("Show information about Raqcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for Abcmint"));
+    optionsAction->setStatusTip(tr("Modify configuration options for Raqcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/abcmint"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
@@ -231,9 +231,9 @@ void AbcmintGUI::createActions()
     changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Abcmint addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your Raqcoin addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Abcmint addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Raqcoin addresses"));
 
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
@@ -250,7 +250,7 @@ void AbcmintGUI::createActions()
     connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
 }
 
-void AbcmintGUI::createMenuBar()
+void RaqcoinGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
@@ -281,7 +281,7 @@ void AbcmintGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
-void AbcmintGUI::createToolBars()
+void RaqcoinGUI::createToolBars()
 {
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -292,7 +292,7 @@ void AbcmintGUI::createToolBars()
     toolbar->addAction(addressBookAction);
 }
 
-void AbcmintGUI::setClientModel(ClientModel *clientModel)
+void RaqcoinGUI::setClientModel(ClientModel *clientModel)
 {
     this->clientModel = clientModel;
     if(clientModel)
@@ -337,27 +337,27 @@ void AbcmintGUI::setClientModel(ClientModel *clientModel)
     }
 }
 
-bool AbcmintGUI::addWallet(const QString& name, WalletModel *walletModel)
+bool RaqcoinGUI::addWallet(const QString& name, WalletModel *walletModel)
 {
     return walletFrame->addWallet(name, walletModel);
 }
 
-bool AbcmintGUI::setCurrentWallet(const QString& name)
+bool RaqcoinGUI::setCurrentWallet(const QString& name)
 {
     return walletFrame->setCurrentWallet(name);
 }
 
-void AbcmintGUI::removeAllWallets()
+void RaqcoinGUI::removeAllWallets()
 {
     walletFrame->removeAllWallets();
 }
 
-void AbcmintGUI::createTrayIcon()
+void RaqcoinGUI::createTrayIcon()
 {
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
 
-    trayIcon->setToolTip(tr("Abcmint client"));
+    trayIcon->setToolTip(tr("Raqcoin client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     trayIcon->show();
 #endif
@@ -365,7 +365,7 @@ void AbcmintGUI::createTrayIcon()
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-void AbcmintGUI::createTrayIconMenu()
+void RaqcoinGUI::createTrayIconMenu()
 {
     QMenu *trayIconMenu;
 #ifndef Q_OS_MAC
@@ -403,7 +403,7 @@ void AbcmintGUI::createTrayIconMenu()
 }
 
 #ifndef Q_OS_MAC
-void AbcmintGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void RaqcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -413,14 +413,14 @@ void AbcmintGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void AbcmintGUI::saveWindowGeometry()
+void RaqcoinGUI::saveWindowGeometry()
 {
     QSettings settings;
     settings.setValue("nWindowPos", pos());
     settings.setValue("nWindowSize", size());
 }
 
-void AbcmintGUI::restoreWindowGeometry()
+void RaqcoinGUI::restoreWindowGeometry()
 {
     QSettings settings;
     QPoint pos = settings.value("nWindowPos").toPoint();
@@ -435,7 +435,7 @@ void AbcmintGUI::restoreWindowGeometry()
     move(pos);
 }
 
-void AbcmintGUI::optionsClicked()
+void RaqcoinGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -444,49 +444,49 @@ void AbcmintGUI::optionsClicked()
     dlg.exec();
 }
 
-void AbcmintGUI::aboutClicked()
+void RaqcoinGUI::aboutClicked()
 {
     AboutDialog dlg;
     dlg.setModel(clientModel);
     dlg.exec();
 }
 
-void AbcmintGUI::gotoOverviewPage()
+void RaqcoinGUI::gotoOverviewPage()
 {
     if (walletFrame) walletFrame->gotoOverviewPage();
 }
 
-void AbcmintGUI::gotoHistoryPage()
+void RaqcoinGUI::gotoHistoryPage()
 {
     if (walletFrame) walletFrame->gotoHistoryPage();
 }
 
-void AbcmintGUI::gotoAddressBookPage()
+void RaqcoinGUI::gotoAddressBookPage()
 {
     if (walletFrame) walletFrame->gotoAddressBookPage();
 }
 
-void AbcmintGUI::gotoReceiveCoinsPage()
+void RaqcoinGUI::gotoReceiveCoinsPage()
 {
     if (walletFrame) walletFrame->gotoReceiveCoinsPage();
 }
 
-void AbcmintGUI::gotoSendCoinsPage(QString addr)
+void RaqcoinGUI::gotoSendCoinsPage(QString addr)
 {
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
 }
 
-void AbcmintGUI::gotoSignMessageTab(QString addr)
+void RaqcoinGUI::gotoSignMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoSignMessageTab(addr);
 }
 
-void AbcmintGUI::gotoVerifyMessageTab(QString addr)
+void RaqcoinGUI::gotoVerifyMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
 }
 
-void AbcmintGUI::setNumConnections(int count)
+void RaqcoinGUI::setNumConnections(int count)
 {
     QString icon;
     switch(count)
@@ -498,10 +498,10 @@ void AbcmintGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Abcmint network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Raqcoin network", "", count));
 }
 
-void AbcmintGUI::setNumBlocks(int count, int nTotalBlocks)
+void RaqcoinGUI::setNumBlocks(int count, int nTotalBlocks)
 {
     // Prevent orphan statusbar messages (e.g. hover Quit in main menu, wait until chain-sync starts -> garbelled text)
     statusBar()->clearMessage();
@@ -595,9 +595,9 @@ void AbcmintGUI::setNumBlocks(int count, int nTotalBlocks)
     progressBar->setToolTip(tooltip);
 }
 
-void AbcmintGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
+void RaqcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Abcmint"); // default title
+    QString strTitle = tr("Raqcoin"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -646,7 +646,7 @@ void AbcmintGUI::message(const QString &title, const QString &message, unsigned 
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void AbcmintGUI::changeEvent(QEvent *e)
+void RaqcoinGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -665,7 +665,7 @@ void AbcmintGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void AbcmintGUI::closeEvent(QCloseEvent *event)
+void RaqcoinGUI::closeEvent(QCloseEvent *event)
 {
     if(clientModel)
     {
@@ -680,18 +680,18 @@ void AbcmintGUI::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void AbcmintGUI::askFee(qint64 nFeeRequired, bool *payFee)
+void RaqcoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
 {
     QString strMessage = tr("This transaction is over the size limit. You can still send it for a fee of %1, "
         "which goes to the nodes that process your transaction and helps to support the network. "
-        "Do you want to pay the fee?").arg(AbcmintUnits::formatWithUnit(AbcmintUnits::ABC, nFeeRequired));
+        "Do you want to pay the fee?").arg(RaqcoinUnits::formatWithUnit(RaqcoinUnits::ABC, nFeeRequired));
     QMessageBox::StandardButton retval = QMessageBox::question(
           this, tr("Confirm transaction fee"), strMessage,
           QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
     *payFee = (retval == QMessageBox::Yes);
 }
 
-void AbcmintGUI::incomingTransaction(const QString& date, int unit, qint64 amount, const QString& type, const QString& address)
+void RaqcoinGUI::incomingTransaction(const QString& date, int unit, qint64 amount, const QString& type, const QString& address)
 {
     // On new transaction, make an info balloon
     message((amount)<0 ? tr("Sent transaction") : tr("Incoming transaction"),
@@ -700,19 +700,19 @@ void AbcmintGUI::incomingTransaction(const QString& date, int unit, qint64 amoun
                 "Type: %3\n"
                 "Address: %4\n")
                   .arg(date)
-                  .arg(AbcmintUnits::formatWithUnit(unit, amount, true))
+                  .arg(RaqcoinUnits::formatWithUnit(unit, amount, true))
                   .arg(type)
                   .arg(address), CClientUIInterface::MSG_INFORMATION);
 }
 
-void AbcmintGUI::dragEnterEvent(QDragEnterEvent *event)
+void RaqcoinGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void AbcmintGUI::dropEvent(QDropEvent *event)
+void RaqcoinGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -728,14 +728,14 @@ void AbcmintGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             walletFrame->gotoSendCoinsPage();
         else
-            message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Abcmint address or malformed URI parameters."),
+            message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Raqcoin address or malformed URI parameters."),
                       CClientUIInterface::ICON_WARNING);
     }
 
     event->acceptProposedAction();
 }
 
-bool AbcmintGUI::eventFilter(QObject *object, QEvent *event)
+bool RaqcoinGUI::eventFilter(QObject *object, QEvent *event)
 {
     // Catch status tip events
     if (event->type() == QEvent::StatusTip)
@@ -747,15 +747,15 @@ bool AbcmintGUI::eventFilter(QObject *object, QEvent *event)
     return QMainWindow::eventFilter(object, event);
 }
 
-void AbcmintGUI::handleURI(QString strURI)
+void RaqcoinGUI::handleURI(QString strURI)
 {
     // URI has to be valid
     if (!walletFrame->handleURI(strURI))
-        message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Abcmint address or malformed URI parameters."),
+        message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Raqcoin address or malformed URI parameters."),
                   CClientUIInterface::ICON_WARNING);
 }
 
-void AbcmintGUI::setEncryptionStatus(int status)
+void RaqcoinGUI::setEncryptionStatus(int status)
 {
     switch(status)
     {
@@ -784,7 +784,7 @@ void AbcmintGUI::setEncryptionStatus(int status)
     }
 }
 
-void AbcmintGUI::showNormalIfMinimized(bool fToggleHidden)
+void RaqcoinGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     // activateWindow() (sometimes) helps with keyboard focus on Windows
     if (isHidden())
@@ -806,12 +806,12 @@ void AbcmintGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void AbcmintGUI::toggleHidden()
+void RaqcoinGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void AbcmintGUI::detectShutdown()
+void RaqcoinGUI::detectShutdown()
 {
     if (ShutdownRequested())
         QMetaObject::invokeMethod(QCoreApplication::instance(), "quit", Qt::QueuedConnection);

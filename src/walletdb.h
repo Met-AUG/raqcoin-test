@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_WALLETDB_H
-#define ABCMINT_WALLETDB_H
+#ifndef RAQCOIN_WALLETDB_H
+#define RAQCOIN_WALLETDB_H
 
 #include "db.h"
 #include "base58.h"
@@ -159,4 +160,4 @@ public:
     static bool Recover(CDBEnv& dbenv, std::string filename);
 };
 
-#endif // ABCMINT_WALLETDB_H
+#endif // RAQCOIN_WALLETDB_H

@@ -4,12 +4,12 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Abcmint</source>
+        <source>About Raqcoin</source>
         <translation>बिटकोइन के संबंध में</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Abcmint&lt;/b&gt; version</source>
+        <source>&lt;b&gt;Raqcoin&lt;/b&gt; version</source>
         <translation>बिटकोइन वर्सन</translation>
     </message>
     <message>
@@ -29,7 +29,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Abcmint developers</source>
+        <source>The Raqcoin developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -62,7 +62,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Abcmint addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your Raqcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -77,7 +77,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Abcmint address</source>
+        <source>Sign a message to prove you own a Raqcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -102,7 +102,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Abcmint address</source>
+        <source>Verify a message to ensure it was signed with a specified Raqcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -117,7 +117,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Abcmint addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Raqcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -243,7 +243,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABCMINTS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAQCOINS&lt;/b&gt;!</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -270,7 +270,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Abcmint will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your abcmints from being stolen by malware infecting your computer.</source>
+        <source>Raqcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your raqcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -316,7 +316,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>AbcmintGUI</name>
+    <name>RaqcoinGUI</name>
     <message>
         <location filename="../raqcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
@@ -370,7 +370,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Abcmint</source>
+        <source>Show information about Raqcoin</source>
         <translation>बीटकोइन के बारे में जानकारी !</translation>
     </message>
     <message>
@@ -415,12 +415,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Abcmint address</source>
+        <source>Send coins to a Raqcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Abcmint</source>
+        <source>Modify configuration options for Raqcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -451,7 +451,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Abcmint</source>
+        <source>Raqcoin</source>
         <translation>बीटकोइन</translation>
     </message>
     <message>
@@ -476,7 +476,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Abcmint</source>
+        <source>&amp;About Raqcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -496,12 +496,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Abcmint addresses to prove you own them</source>
+        <source>Sign messages with your Raqcoin addresses to prove you own them</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Abcmint addresses</source>
+        <source>Verify messages to ensure they were signed with specified Raqcoin addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -532,12 +532,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>Abcmint client</source>
+        <source>Raqcoin client</source>
         <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Abcmint network</source>
+        <source>%n active connection(s) to Raqcoin network</source>
         <translation><numerusform>%n सक्रिया संपर्क बीटकोइन नेटवर्क से</numerusform><numerusform>%n सक्रिया संपर्क बीटकोइन नेटवर्क से</numerusform></translation>
     </message>
     <message>
@@ -651,7 +651,7 @@ Address: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Abcmint address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Raqcoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -666,7 +666,7 @@ Address: %4
     </message>
     <message>
         <location filename="../raqcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Abcmint can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Raqcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -732,7 +732,7 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Abcmint address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Raqcoin address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -751,7 +751,7 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Abcmint-Qt</source>
+        <source>Raqcoin-Qt</source>
         <translation>बीटकोइन-Qt</translation>
     </message>
     <message>
@@ -814,12 +814,12 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Abcmint after logging in to the system.</source>
+        <source>Automatically start Raqcoin after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Abcmint on system login</source>
+        <source>&amp;Start Raqcoin on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -839,7 +839,7 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Abcmint client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Raqcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -849,7 +849,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Abcmint network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the Raqcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -924,7 +924,7 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Abcmint.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Raqcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -939,7 +939,7 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Abcmint addresses in the transaction list or not.</source>
+        <source>Whether to show Raqcoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -991,7 +991,7 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Abcmint.</source>
+        <source>This setting will take effect after restarting Raqcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1010,7 +1010,7 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Abcmint network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raqcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1215,7 +1215,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Abcmint-Qt help message to get a list with possible Abcmint command-line options.</source>
+        <source>Show the Raqcoin-Qt help message to get a list with possible Raqcoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1235,12 +1235,12 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Abcmint - Debug window</source>
+        <source>Raqcoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Abcmint Core</source>
+        <source>Raqcoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1250,7 +1250,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Abcmint debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Raqcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1260,7 +1260,7 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Abcmint RPC console.</source>
+        <source>Welcome to the Raqcoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1444,8 +1444,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Abcmint एड्रेस लिखें (उदाहरण: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Raqcoin एड्रेस लिखें (उदाहरण: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
     </message>
 </context>
 <context>
@@ -1509,7 +1509,7 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Abcmint address</source>
+        <source>Sign the message to prove you own this Raqcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1545,7 +1545,7 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Abcmint address</source>
+        <source>Verify the message to ensure it was signed with the specified Raqcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1561,8 +1561,8 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Abcmint एड्रेस लिखें (उदाहरण: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Raqcoin एड्रेस लिखें (उदाहरण: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1571,7 +1571,7 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Abcmint signature</source>
+        <source>Enter Raqcoin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1645,7 +1645,7 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Abcmint developers</source>
+        <source>The Raqcoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2180,10 +2180,10 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>abcmint-core</name>
+    <name>raqcoin-core</name>
     <message>
         <location filename="../raqcoinstrings.cpp" line="+94"/>
-        <source>Abcmint version</source>
+        <source>Raqcoin version</source>
         <translation>बीटकोइन  संस्करण</translation>
     </message>
     <message>
@@ -2193,8 +2193,8 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or abcmint</source>
-        <translation>-server या abcmint को कमांड भेजें</translation>
+        <source>Send command to -server or raqcoin</source>
+        <translation>-server या raqcoin को कमांड भेजें</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2218,8 +2218,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: abcmint.pid)</source>
-        <translation>pid फाइल का विवरण दें (default: abcmint.pid)</translation>
+        <source>Specify pid file (default: raqcoin.pid)</source>
+        <translation>pid फाइल का विवरण दें (default: raqcoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2296,13 +2296,13 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=abcmintrpc
+rpcuser=raqcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Raqcoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2318,7 +2318,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Abcmint is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Raqcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2363,7 +2363,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Abcmint will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Raqcoin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2613,7 +2613,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Abcmint Wiki for SSL setup instructions)</source>
+        <source>SSL options: (see the Raqcoin Wiki for SSL setup instructions)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2803,12 +2803,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Abcmint</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Raqcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Abcmint to complete</source>
+        <source>Wallet needed to be rewritten: restart Raqcoin to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2868,7 +2868,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Abcmint is probably already running.</source>
+        <source>Unable to bind to %s on this computer. Raqcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

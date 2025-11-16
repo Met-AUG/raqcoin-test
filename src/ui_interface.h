@@ -1,9 +1,10 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_UI_INTERFACE_H
-#define ABCMINT_UI_INTERFACE_H
+#ifndef RAQCOIN_UI_INTERFACE_H
+#define RAQCOIN_UI_INTERFACE_H
 
 #include <string>
 #include "util.h" // for int64

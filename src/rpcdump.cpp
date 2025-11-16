@@ -1,5 +1,6 @@
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include "init.h" // for pwalletMain
@@ -38,7 +39,7 @@ Value importkey(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 3)
         throw runtime_error(
-            "importkey <abcmintkey> [label] [rescan=true]\n"
+            "importkey <raqcoinkey> [label] [rescan=true]\n"
             "Adds a private key|public key|position (as returned by dumpkey) to your wallet, this would cost a few minutes");
 
     string strOneKey = params[0].get_str();
@@ -59,7 +60,7 @@ Value importkey(const Array& params, bool fHelp)
     if (params.size() > 2)
         fRescan = params[2].get_bool();
 
-    CAbcmintSecret vchSecret;
+    CRaqcoinSecret vchSecret;
     bool fGood = vchSecret.SetString(vArgs[0]);
 
     if (!fGood) throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");
@@ -89,7 +90,7 @@ Value importkey(const Array& params, bool fHelp)
         if(vArgs.size() > 2) {
             CDiskPubKeyPos pos;
             pos<< ParseHex(vArgs[2]);
-            if (!pwalletMain->AddPubKeyPos(CAbcmintAddress(vchAddress).ToString(), pos))
+            if (!pwalletMain->AddPubKeyPos(CRaqcoinAddress(vchAddress).ToString(), pos))
                 throw JSONRPCError(RPC_WALLET_ERROR, "Error adding public key position to wallet");
         }
 
@@ -108,13 +109,13 @@ Value dumpkey(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "dumpkey <abcmintaddress>\n"
-            "Reveals the private key|public key|position corresponding to <abcmintaddress>, this would cost a few minutes");
+            "dumpkey <raqcoinaddress>\n"
+            "Reveals the private key|public key|position corresponding to <raqcoinaddress>, this would cost a few minutes");
 
     string strAddress = params[0].get_str();
-    CAbcmintAddress address;
+    CRaqcoinAddress address;
     if (!address.SetString(strAddress))
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Abcmint address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Raqcoin address");
     CKeyID keyID;
     if (!address.GetKeyID(keyID))
         throw JSONRPCError(RPC_TYPE_ERROR, "Address does not refer to a key");
@@ -135,8 +136,8 @@ Value dumpkey(const Array& params, bool fHelp)
 
     CDiskPubKeyPos pos;
     if (pwalletMain->GetPubKeyPos(strAddress, pos))
-        return CAbcmintSecret(vchSecret).ToString()+"|" + EncodeBase58(pubKey.vchPubKey) + "|" + HexStr(pos.ToVector());
+        return CRaqcoinSecret(vchSecret).ToString()+"|" + EncodeBase58(pubKey.vchPubKey) + "|" + HexStr(pos.ToVector());
     else
-        return CAbcmintSecret(vchSecret).ToString()+"|" + EncodeBase58(pubKey.vchPubKey);
+        return CRaqcoinSecret(vchSecret).ToString()+"|" + EncodeBase58(pubKey.vchPubKey);
 
 }

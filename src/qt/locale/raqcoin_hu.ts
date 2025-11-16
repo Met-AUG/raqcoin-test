@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Abcmint</source>
-        <translation>A Abcmintról</translation>
+        <source>About Raqcoin</source>
+        <translation>A Raqcoinról</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Abcmint&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Abcmint&lt;/b&gt; verzió</translation>
+        <source>&lt;b&gt;Raqcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Raqcoin&lt;/b&gt; verzió</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,7 +33,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+0"/>
-        <source>The Abcmint developers</source>
+        <source>The Raqcoin developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -66,8 +66,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Abcmint addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Ezekkel a Abcmint-címekkel fogadhatod kifizetéseket. Érdemes lehet minden egyes kifizető számára külön címet létrehozni, hogy könnyebben nyomon követhesd, kitől kaptál már pénzt.</translation>
+        <source>These are your Raqcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Ezekkel a Raqcoin-címekkel fogadhatod kifizetéseket. Érdemes lehet minden egyes kifizető számára külön címet létrehozni, hogy könnyebben nyomon követhesd, kitől kaptál már pénzt.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,7 +81,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Abcmint address</source>
+        <source>Sign a message to prove you own a Raqcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -106,8 +106,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Abcmint address</source>
-        <translation>Üzenet ellenőrzése, hogy valóban a megjelölt Abcmint címekkel van-e aláírva.</translation>
+        <source>Verify a message to ensure it was signed with a specified Raqcoin address</source>
+        <translation>Üzenet ellenőrzése, hogy valóban a megjelölt Raqcoin címekkel van-e aláírva.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,7 +121,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Abcmint addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Raqcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -247,8 +247,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABCMINTS&lt;/b&gt;!</source>
-        <translation>Figyelem: Ha kódolod a tárcát, és elveszíted a jelszavad, akkor &lt;b&gt;AZ ÖSSZES ABCMINTODAT IS EL FOGOD VESZÍTENI!&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAQCOINS&lt;/b&gt;!</source>
+        <translation>Figyelem: Ha kódolod a tárcát, és elveszíted a jelszavad, akkor &lt;b&gt;AZ ÖSSZES RAQCOINODAT IS EL FOGOD VESZÍTENI!&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -274,8 +274,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="-56"/>
-        <source>Abcmint will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your abcmints from being stolen by malware infecting your computer.</source>
-        <translation>Abcmint will close now to finish the encryption process. Ne feledd, hogy a tárca titkosítása sem nyújt teljes védelmet az adathalász programok fertőzésével szemben.</translation>
+        <source>Raqcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your raqcoins from being stolen by malware infecting your computer.</source>
+        <translation>Raqcoin will close now to finish the encryption process. Ne feledd, hogy a tárca titkosítása sem nyújt teljes védelmet az adathalász programok fertőzésével szemben.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -320,7 +320,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
 </context>
 <context>
-    <name>AbcmintGUI</name>
+    <name>RaqcoinGUI</name>
     <message>
         <location filename="../raqcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
@@ -373,8 +373,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Abcmint</source>
-        <translation>Információk a Abcmintról</translation>
+        <source>Show information about Raqcoin</source>
+        <translation>Információk a Raqcoinról</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -418,13 +418,13 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Abcmint address</source>
+        <source>Send coins to a Raqcoin address</source>
         <translation>Érmék küldése megadott címre</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Abcmint</source>
-        <translation>Abcmint konfigurációs opciók</translation>
+        <source>Modify configuration options for Raqcoin</source>
+        <translation>Raqcoin konfigurációs opciók</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -454,8 +454,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Abcmint</source>
-        <translation>Abcmint</translation>
+        <source>Raqcoin</source>
+        <translation>Raqcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -479,8 +479,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Abcmint</source>
-        <translation>&amp;A Abcmintról</translation>
+        <source>&amp;About Raqcoin</source>
+        <translation>&amp;A Raqcoinról</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -499,13 +499,13 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Abcmint addresses to prove you own them</source>
-        <translation>Üzenet aláírása a Abcmint címmel, amivel bizonyítja, hogy a cím az ön tulajdona.</translation>
+        <source>Sign messages with your Raqcoin addresses to prove you own them</source>
+        <translation>Üzenet aláírása a Raqcoin címmel, amivel bizonyítja, hogy a cím az ön tulajdona.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Abcmint addresses</source>
-        <translation>Annak ellenőrzése, hogy az üzenetek valóban a megjelölt Abcmint címekkel vannak-e alaírva</translation>
+        <source>Verify messages to ensure they were signed with specified Raqcoin addresses</source>
+        <translation>Annak ellenőrzése, hogy az üzenetek valóban a megjelölt Raqcoin címekkel vannak-e alaírva</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -535,13 +535,13 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+47"/>
-        <source>Abcmint client</source>
-        <translation>Abcmint kliens</translation>
+        <source>Raqcoin client</source>
+        <translation>Raqcoin kliens</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Abcmint network</source>
-        <translation><numerusform>%n aktív kapcsolat a Abcmint-hálózattal</numerusform><numerusform>%n aktív kapcsolat a Abcmint-hálózattal</numerusform></translation>
+        <source>%n active connection(s) to Raqcoin network</source>
+        <translation><numerusform>%n aktív kapcsolat a Raqcoin-hálózattal</numerusform><numerusform>%n aktív kapcsolat a Raqcoin-hálózattal</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,7 +655,7 @@ Cím: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Abcmint address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Raqcoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -670,7 +670,7 @@ Cím: %4
     </message>
     <message>
         <location filename="../raqcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Abcmint can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Raqcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -736,8 +736,8 @@ Cím: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Abcmint address.</source>
-        <translation>A megadott &quot;%1&quot; cím nem egy érvényes Abcmint-cím.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Raqcoin address.</source>
+        <translation>A megadott &quot;%1&quot; cím nem egy érvényes Raqcoin-cím.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,7 +755,7 @@ Cím: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Abcmint-Qt</source>
+        <source>Raqcoin-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -819,12 +819,12 @@ Cím: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Abcmint after logging in to the system.</source>
-        <translation>Induljon el a Abcmint a számítógép bekapcsolásakor</translation>
+        <source>Automatically start Raqcoin after logging in to the system.</source>
+        <translation>Induljon el a Raqcoin a számítógép bekapcsolásakor</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Abcmint on system login</source>
+        <source>&amp;Start Raqcoin on system login</source>
         <translation>&amp;Induljon el a számítógép bekapcsolásakor</translation>
     </message>
     <message>
@@ -844,8 +844,8 @@ Cím: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Abcmint client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>A Abcmint-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the Raqcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>A Raqcoin-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -854,8 +854,8 @@ Cím: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Abcmint network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>SOCKS proxyn keresztüli csatlakozás a Abcmint hálózatához (pl. Tor-on keresztüli csatlakozás esetén)</translation>
+        <source>Connect to the Raqcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>SOCKS proxyn keresztüli csatlakozás a Raqcoin hálózatához (pl. Tor-on keresztüli csatlakozás esetén)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,7 +929,7 @@ Cím: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Abcmint.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Raqcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -944,7 +944,7 @@ Cím: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Abcmint addresses in the transaction list or not.</source>
+        <source>Whether to show Raqcoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -996,8 +996,8 @@ Cím: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Abcmint.</source>
-        <translation>Ez a beállítás a Abcmint ujraindítása után lép érvénybe.</translation>
+        <source>This setting will take effect after restarting Raqcoin.</source>
+        <translation>Ez a beállítás a Raqcoin ujraindítása után lép érvénybe.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,8 +1015,8 @@ Cím: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Abcmint network after a connection is established, but this process has not completed yet.</source>
-        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Abcmint hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raqcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Raqcoin hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1219,7 +1219,7 @@ Cím: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Abcmint-Qt help message to get a list with possible Abcmint command-line options.</source>
+        <source>Show the Raqcoin-Qt help message to get a list with possible Raqcoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1239,12 +1239,12 @@ Cím: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Abcmint - Debug window</source>
+        <source>Raqcoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Abcmint Core</source>
+        <source>Raqcoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1254,7 +1254,7 @@ Cím: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Abcmint debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Raqcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1264,7 +1264,7 @@ Cím: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Abcmint RPC console.</source>
+        <source>Welcome to the Raqcoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1365,7 +1365,7 @@ Cím: %4
     <message>
         <location line="+5"/>
         <source>The amount exceeds your balance.</source>
-        <translation>Nincs ennyi abcmint az egyenlegeden.</translation>
+        <translation>Nincs ennyi raqcoin az egyenlegeden.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1449,8 +1449,8 @@ Cím: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Adj meg egy Abcmint-címet (pl.: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ )</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Adj meg egy Raqcoin-címet (pl.: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ )</translation>
     </message>
 </context>
 <context>
@@ -1473,7 +1473,7 @@ Cím: %4
     <message>
         <location line="+18"/>
         <source>The address to sign the message with (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Adj meg egy Abcmint-címet (pl.: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ )</translation>
+        <translation>Adj meg egy Raqcoin-címet (pl.: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ )</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1514,7 +1514,7 @@ Cím: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Abcmint address</source>
+        <source>Sign the message to prove you own this Raqcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1546,11 +1546,11 @@ Cím: %4
     <message>
         <location line="+21"/>
         <source>The address the message was signed with (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Adj meg egy Abcmint-címet (pl.: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ )</translation>
+        <translation>Adj meg egy Raqcoin-címet (pl.: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ )</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Abcmint address</source>
+        <source>Verify the message to ensure it was signed with the specified Raqcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1566,8 +1566,8 @@ Cím: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Adj meg egy Abcmint-címet (pl.: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ )</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Adj meg egy Raqcoin-címet (pl.: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ )</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1576,8 +1576,8 @@ Cím: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Abcmint signature</source>
-        <translation>Adja meg a Abcmint aláírást</translation>
+        <source>Enter Raqcoin signature</source>
+        <translation>Adja meg a Raqcoin aláírást</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1650,7 +1650,7 @@ Cím: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Abcmint developers</source>
+        <source>The Raqcoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2185,11 +2185,11 @@ Cím: %4
     </message>
 </context>
 <context>
-    <name>abcmint-core</name>
+    <name>raqcoin-core</name>
     <message>
         <location filename="../raqcoinstrings.cpp" line="+94"/>
-        <source>Abcmint version</source>
-        <translation>Abcmint verzió</translation>
+        <source>Raqcoin version</source>
+        <translation>Raqcoin verzió</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2198,8 +2198,8 @@ Cím: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or abcmint</source>
-        <translation>Parancs küldése a -serverhez vagy a abcmintdhez
+        <source>Send command to -server or raqcoin</source>
+        <translation>Parancs küldése a -serverhez vagy a raqcoindhez
 </translation>
     </message>
     <message>
@@ -2228,8 +2228,8 @@ Cím: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: abcmint.pid)</source>
-        <translation>pid-fájl (alapértelmezett: abcmint.pid)
+        <source>Specify pid file (default: raqcoin.pid)</source>
+        <translation>pid-fájl (alapértelmezett: raqcoin.pid)
 </translation>
     </message>
     <message>
@@ -2311,13 +2311,13 @@ Cím: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=abcmintrpc
+rpcuser=raqcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Raqcoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2333,7 +2333,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Abcmint is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Raqcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2378,8 +2378,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Abcmint will not work properly.</source>
-        <translation>Figyelem: Ellenőrizd, hogy helyesen van-e beállítva a gépeden a dátum és az idő.  A Abcmint nem fog megfelelően működni, ha rosszul van beállítvaaz órád.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Raqcoin will not work properly.</source>
+        <translation>Figyelem: Ellenőrizd, hogy helyesen van-e beállítva a gépeden a dátum és az idő.  A Raqcoin nem fog megfelelően működni, ha rosszul van beállítvaaz órád.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2628,8 +2628,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Abcmint Wiki for SSL setup instructions)</source>
-        <translation>SSL-opciók: (lásd a Abcmint Wiki SSL-beállítási instrukcióit)</translation>
+        <source>SSL options: (see the Raqcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL-opciók: (lásd a Raqcoin Wiki SSL-beállítási instrukcióit)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2829,13 +2829,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Abcmint</source>
-        <translation>Hiba a wallet.dat betöltése közben: ehhez a tárcához újabb verziójú Abcmint-kliens szükséges</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Raqcoin</source>
+        <translation>Hiba a wallet.dat betöltése közben: ehhez a tárcához újabb verziójú Raqcoin-kliens szükséges</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Abcmint to complete</source>
-        <translation>A Tárca újraírása szükséges: Indítsa újra a teljesen a Abcmint-t</translation>
+        <source>Wallet needed to be rewritten: restart Raqcoin to complete</source>
+        <translation>A Tárca újraírása szükséges: Indítsa újra a teljesen a Raqcoin-t</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2880,7 +2880,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     <message>
         <location line="-6"/>
         <source>Insufficient funds</source>
-        <translation>Nincs elég abcmintod.</translation>
+        <translation>Nincs elég raqcoinod.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2894,8 +2894,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Abcmint is probably already running.</source>
-        <translation>A %s nem elérhető ezen a gépen. A Abcmint valószínűleg fut már.</translation>
+        <source>Unable to bind to %s on this computer. Raqcoin is probably already running.</source>
+        <translation>A %s nem elérhető ezen a gépen. A Raqcoin valószínűleg fut már.</translation>
     </message>
     <message>
         <location line="+64"/>

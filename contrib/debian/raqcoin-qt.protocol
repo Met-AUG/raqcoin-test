@@ -1,6 +1,6 @@
 [Protocol]
-exec=abcmint-qt '%u'
-protocol=abcmint
+exec=raqcoin-qt '%u'
+protocol=raqcoin
 input=none
 output=none
 helper=true

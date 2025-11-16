@@ -83,7 +83,7 @@ Threads
  
 - ThreadRPCServer : Remote procedure call handler, listens on port 8332 for connections and services them.
  
-- ThreadAbcmintMiner : Generates abcmints
+- ThreadRaqcoinMiner : Generates raqcoins
   
 - ThreadMapPort : Universal plug-and-play startup/shutdown
  

@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #ifndef WIN32
@@ -905,7 +906,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "abcmint";
+    const char* pszModule = "raqcoin";
 #endif
     if (pex)
         return strprintf(
@@ -943,7 +944,7 @@ boost::filesystem::path GetDefaultDataDir()
     namespace fs = boost::filesystem;
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\abc
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\abc
-    // Mac: ~/Library/Application Support/Abcmint
+    // Mac: ~/Library/Application Support/Raqcoin
     // Unix: ~/.abcmint
 #ifdef WIN32
     // Windows
@@ -1041,7 +1042,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "abcmint.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "raqcoin.pid"));
 #if BOOST_VERSION >= 104600
     if (!pathPidFile.is_absolute()) pathPidFile = GetDataDir() / pathPidFile;
 #else
@@ -1274,7 +1275,7 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Abcmint will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Raqcoin will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
                     uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_WARNING);
@@ -1324,7 +1325,7 @@ string FormatFullVersion()
     return CLIENT_BUILD;
 }
 
-// Format the subversion field according to BIP 14 spec (https://en.abcmint.it/wiki/BIP_0014)
+// Format the subversion field according to BIP 14 spec (https://en.raqcoin.it/wiki/BIP_0014)
 std::string FormatSubVersion(const std::string& name, int nClientVersion, const std::vector<std::string>& comments)
 {
     std::ostringstream ss;

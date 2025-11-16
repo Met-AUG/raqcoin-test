@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Abcmint</source>
-        <translation>Abcmintist</translation>
+        <source>About Raqcoin</source>
+        <translation>Raqcoinist</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Abcmint&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Abcminti&lt;/b&gt; versioon</translation>
+        <source>&lt;b&gt;Raqcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Raqcoini&lt;/b&gt; versioon</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,7 +34,7 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+0"/>
-        <source>The Abcmint developers</source>
+        <source>The Raqcoin developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -67,8 +67,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Abcmint addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Maksete saamiseks kasutatavad Abcminti aadressid. Maksjate paremaks jälgimiseks võib igaühele anda erineva.</translation>
+        <source>These are your Raqcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Maksete saamiseks kasutatavad Raqcoini aadressid. Maksjate paremaks jälgimiseks võib igaühele anda erineva.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,7 +82,7 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Abcmint address</source>
+        <source>Sign a message to prove you own a Raqcoin address</source>
         <translation>Allkirjasta sõnum, et tõestada Bitconi aadressi olemasolu.</translation>
     </message>
     <message>
@@ -107,8 +107,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Abcmint address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Abcminti aadressiga.</translation>
+        <source>Verify a message to ensure it was signed with a specified Raqcoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Raqcoini aadressiga.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Abcmint addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu Abcminti aadressid maksete saatmiseks. Müntide saatmisel kontrolli alati summat ning saaja aadressi.</translation>
+        <source>These are your Raqcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu Raqcoini aadressid maksete saatmiseks. Müntide saatmisel kontrolli alati summat ning saaja aadressi.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABCMINTS&lt;/b&gt;!</source>
-        <translation>Hoiatus: Kui sa kaotad oma, rahakoti krüpteerimisel kasutatud, salafraasi, siis &lt;b&gt;KAOTAD KA KÕIK OMA ABCMINTID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAQCOINS&lt;/b&gt;!</source>
+        <translation>Hoiatus: Kui sa kaotad oma, rahakoti krüpteerimisel kasutatud, salafraasi, siis &lt;b&gt;KAOTAD KA KÕIK OMA RAQCOINID&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-56"/>
-        <source>Abcmint will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your abcmints from being stolen by malware infecting your computer.</source>
-        <translation>Abcmint sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista abcmintide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
+        <source>Raqcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your raqcoins from being stolen by malware infecting your computer.</source>
+        <translation>Raqcoin sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista raqcoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -321,7 +321,7 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
 </context>
 <context>
-    <name>AbcmintGUI</name>
+    <name>RaqcoinGUI</name>
     <message>
         <location filename="../raqcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
@@ -374,8 +374,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Abcmint</source>
-        <translation>Kuva info Abcminti kohta</translation>
+        <source>Show information about Raqcoin</source>
+        <translation>Kuva info Raqcoini kohta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Abcmint address</source>
-        <translation>Saada münte Abcminti aadressile</translation>
+        <source>Send coins to a Raqcoin address</source>
+        <translation>Saada münte Raqcoini aadressile</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Abcmint</source>
-        <translation>Muuda Abcminti seadeid</translation>
+        <source>Modify configuration options for Raqcoin</source>
+        <translation>Muuda Raqcoini seadeid</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Abcmint</source>
-        <translation>Abcmint</translation>
+        <source>Raqcoin</source>
+        <translation>Raqcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Abcmint</source>
-        <translation>%Abcmintist</translation>
+        <source>&amp;About Raqcoin</source>
+        <translation>%Raqcoinist</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Abcmint addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Abcminti aadressiga</translation>
+        <source>Sign messages with your Raqcoin addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Raqcoini aadressiga</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Abcmint addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Abcminti aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Raqcoin addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Raqcoini aadressiga</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+47"/>
-        <source>Abcmint client</source>
-        <translation>Abcminti klient</translation>
+        <source>Raqcoin client</source>
+        <translation>Raqcoini klient</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Abcmint network</source>
-        <translation><numerusform>%n aktiivne ühendus Abcminti võrku</numerusform><numerusform>%n aktiivset ühendust Abcminti võrku</numerusform></translation>
+        <source>%n active connection(s) to Raqcoin network</source>
+        <translation><numerusform>%n aktiivne ühendus Raqcoini võrku</numerusform><numerusform>%n aktiivset ühendust Raqcoini võrku</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Aadress: %4⏎</translation>
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Abcmint address or malformed URI parameters.</source>
-        <translation>URI ei suudeta parsida. Põhjuseks võib olla kehtetu Abcminti aadress või vigased URI parameetrid.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Raqcoin address or malformed URI parameters.</source>
+        <translation>URI ei suudeta parsida. Põhjuseks võib olla kehtetu Raqcoini aadress või vigased URI parameetrid.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -670,8 +670,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location filename="../raqcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Abcmint can no longer continue safely and will quit.</source>
-        <translation>Ilmnes kriitiline tõrge. Abcmint suletakse turvakaalutluste tõttu.</translation>
+        <source>A fatal error occurred. Raqcoin can no longer continue safely and will quit.</source>
+        <translation>Ilmnes kriitiline tõrge. Raqcoin suletakse turvakaalutluste tõttu.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Abcmint address.</source>
-        <translation>Sisestatud aadress &quot;%1&quot; ei ole Abcmintis kehtiv.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Raqcoin address.</source>
+        <translation>Sisestatud aadress &quot;%1&quot; ei ole Raqcoinis kehtiv.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Aadress: %4⏎</translation>
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Abcmint-Qt</source>
-        <translation>Abcminti-Qt</translation>
+        <source>Raqcoin-Qt</source>
+        <translation>Raqcoini-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Abcmint after logging in to the system.</source>
-        <translation>Käivita Abcmint süsteemi logimisel.</translation>
+        <source>Automatically start Raqcoin after logging in to the system.</source>
+        <translation>Käivita Raqcoin süsteemi logimisel.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Abcmint on system login</source>
-        <translation>&amp;Start Abcmint sisselogimisel</translation>
+        <source>&amp;Start Raqcoin on system login</source>
+        <translation>&amp;Start Raqcoin sisselogimisel</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Abcmint client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abcminti kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Raqcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Raqcoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Abcmint network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Kasuta Abcminti võrgustikku ühendumiseks SOCKS turva proxy&apos;t (nt Tor&apos;i kasutamisel).</translation>
+        <source>Connect to the Raqcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Kasuta Raqcoini võrgustikku ühendumiseks SOCKS turva proxy&apos;t (nt Tor&apos;i kasutamisel).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Abcmint.</source>
-        <translation>Kasutajaliidese keele valimise koht. Valik rakendub Abcminti käivitamisel.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Raqcoin.</source>
+        <translation>Kasutajaliidese keele valimise koht. Valik rakendub Raqcoini käivitamisel.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,8 +943,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Abcmint addresses in the transaction list or not.</source>
-        <translation>Kuvada Abcminti aadress tehingute loetelus või mitte.</translation>
+        <source>Whether to show Raqcoin addresses in the transaction list or not.</source>
+        <translation>Kuvada Raqcoini aadress tehingute loetelus või mitte.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Aadress: %4⏎</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Abcmint.</source>
-        <translation>Tehtud valik rakendub Abcminti käivitamisel.</translation>
+        <source>This setting will take effect after restarting Raqcoin.</source>
+        <translation>Tehtud valik rakendub Raqcoini käivitamisel.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,7 +1014,7 @@ Aadress: %4⏎</translation>
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Abcmint network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raqcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1069,7 +1069,7 @@ Aadress: %4⏎</translation>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
         <source>Cannot start abcmint: click-to-pay handler</source>
-        <translation>Abcmint ei käivitu: vajuta-maksa toiming</translation>
+        <translation>Raqcoin ei käivitu: vajuta-maksa toiming</translation>
     </message>
 </context>
 <context>
@@ -1218,8 +1218,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Abcmint-Qt help message to get a list with possible Abcmint command-line options.</source>
-        <translation>Näita kehtivate käsurea valikute kuvamiseks Abcminti-Qt abiteksti</translation>
+        <source>Show the Raqcoin-Qt help message to get a list with possible Raqcoin command-line options.</source>
+        <translation>Näita kehtivate käsurea valikute kuvamiseks Raqcoini-Qt abiteksti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Abcmint - Debug window</source>
-        <translation>Abcmint - debugimise aken</translation>
+        <source>Raqcoin - Debug window</source>
+        <translation>Raqcoin - debugimise aken</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Abcmint Core</source>
-        <translation>Abcminti tuumik</translation>
+        <source>Raqcoin Core</source>
+        <translation>Raqcoini tuumik</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Abcmint debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Ava Abcminti logifail praegusest andmekaustast. Toiminguks võib kuluda kuni mõni sekund.</translation>
+        <source>Open the Raqcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Ava Raqcoini logifail praegusest andmekaustast. Toiminguks võib kuluda kuni mõni sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Abcmint RPC console.</source>
-        <translation>Teretulemast Abcminti RPC konsooli.</translation>
+        <source>Welcome to the Raqcoin RPC console.</source>
+        <translation>Teretulemast Raqcoini RPC konsooli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1447,8 +1447,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Sisesta Abcminti aadress (nt: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Sisesta Raqcoini aadress (nt: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Abcmint address</source>
-        <translation>Allkirjasta sõnum Abcminti aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Raqcoin address</source>
+        <translation>Allkirjasta sõnum Raqcoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Abcmint address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Abcminti aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Raqcoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Raqcoini aadressiga.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Aadress: %4⏎</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Sisesta Abcminti aadress (nt: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Sisesta Raqcoini aadress (nt: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Abcmint signature</source>
-        <translation>Sisesta Abcminti allkiri</translation>
+        <source>Enter Raqcoin signature</source>
+        <translation>Sisesta Raqcoini allkiri</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1648,7 +1648,7 @@ Aadress: %4⏎</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Abcmint developers</source>
+        <source>The Raqcoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2183,11 +2183,11 @@ Aadress: %4⏎</translation>
     </message>
 </context>
 <context>
-    <name>abcmint-core</name>
+    <name>raqcoin-core</name>
     <message>
         <location filename="../raqcoinstrings.cpp" line="+94"/>
-        <source>Abcmint version</source>
-        <translation>Abcminti versioon</translation>
+        <source>Raqcoin version</source>
+        <translation>Raqcoini versioon</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or abcmint</source>
-        <translation>Saada käsklus -serverile või abcmintdile</translation>
+        <source>Send command to -server or raqcoin</source>
+        <translation>Saada käsklus -serverile või raqcoindile</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2221,8 +2221,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: abcmint.pid)</source>
-        <translation>Täpsusta PID fail (vaikimisi: abcmint.pid)</translation>
+        <source>Specify pid file (default: raqcoin.pid)</source>
+        <translation>Täpsusta PID fail (vaikimisi: raqcoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Aadress: %4⏎</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=abcmintrpc
+rpcuser=raqcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Raqcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, sul tuleb rpcpassword määrata seadete failis:
 %s
 Soovitatav on kasutada järgmist juhuslikku parooli:
-rpcuser=abcmintrpc
+rpcuser=raqcoinrpc
 rpcpassword=%s
 (seda parooli ei pea meeles pidama)
 Kasutajanimi ning parool EI TOHI kattuda.
 Kui faili ei leita, loo see ainult-omaniku-loetavas failiõigustes .
 Soovitatav on seadistada tõrgete puhul teavitus;
-nt: alertnotify=echo %%s | email -s &quot;Abcmint Alert&quot; admin@foo.com
+nt: alertnotify=echo %%s | email -s &quot;Raqcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ nt: alertnotify=echo %%s | email -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Abcmint is probably already running.</source>
-        <translation>Ei suuda määrata ainuõigust andmekaustale %s. Tõenäolisel on Abcmint juba avatud.</translation>
+        <source>Cannot obtain a lock on data directory %s. Raqcoin is probably already running.</source>
+        <translation>Ei suuda määrata ainuõigust andmekaustale %s. Tõenäolisel on Raqcoin juba avatud.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2376,8 +2376,8 @@ nt: alertnotify=echo %%s | email -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Abcmint will not work properly.</source>
-        <translation>Hoiatus: Palun kontrolli oma arvuti kuupäeva/kellaaega! Kui arvuti kell on vale, siis Abcmint ei tööta korralikult</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Raqcoin will not work properly.</source>
+        <translation>Hoiatus: Palun kontrolli oma arvuti kuupäeva/kellaaega! Kui arvuti kell on vale, siis Raqcoin ei tööta korralikult</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ nt: alertnotify=echo %%s | email -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Abcmint Wiki for SSL setup instructions)</source>
-        <translation>SSL valikud: (vaata Abcminti Wikist või SSL sätete juhendist)</translation>
+        <source>SSL options: (see the Raqcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL valikud: (vaata Raqcoini Wikist või SSL sätete juhendist)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2816,13 +2816,13 @@ nt: alertnotify=echo %%s | email -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Abcmint</source>
-        <translation>Viga wallet.dat käivitamisel: Rahakott nõuab Abcminti uusimat versiooni</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Raqcoin</source>
+        <translation>Viga wallet.dat käivitamisel: Rahakott nõuab Raqcoini uusimat versiooni</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Abcmint to complete</source>
-        <translation>Rahakott tuli ümberkirjutada: toimingu lõpetamiseks taaskäivita Abcmint</translation>
+        <source>Wallet needed to be rewritten: restart Raqcoin to complete</source>
+        <translation>Rahakott tuli ümberkirjutada: toimingu lõpetamiseks taaskäivita Raqcoin</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ nt: alertnotify=echo %%s | email -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Abcmint is probably already running.</source>
-        <translation>%s&apos;ga ei ole võimalik sellest arvutist siduda. Abcmint juba töötab.</translation>
+        <source>Unable to bind to %s on this computer. Raqcoin is probably already running.</source>
+        <translation>%s&apos;ga ei ole võimalik sellest arvutist siduda. Raqcoin juba töötab.</translation>
     </message>
     <message>
         <location line="+64"/>

@@ -26,7 +26,7 @@ files must end with `.qm`, not `.ts`.
 
 This directory contains all translations. Filenames must adhere to this format:
 
-    abcmint_xx_YY.ts or abcmint_xx.ts
+    raqcoin_xx_YY.ts or raqcoin_xx.ts
 
 #### raqcoin_en.ts (Source file)
 
@@ -80,7 +80,7 @@ config to be able to connect with the client:
     [main]
     host = https://www.transifex.com
 
-    [abcmint.tx]
+    [raqcoin.tx]
     file_filter = src/qt/locale/abcmint_<lang>.ts
     source_file = src/qt/locale/raqcoin_en.ts
     source_lang = en
@@ -90,7 +90,7 @@ config to be able to connect with the client:
     [main]
     host = https://www.transifex.com
 
-    [abcmint.tx]
+    [raqcoin.tx]
     file_filter = src\qt\locale\abcmint_<lang>.ts
     source_file = src\qt\locale\raqcoin_en.ts
     source_lang = en
@@ -101,5 +101,5 @@ It is also possible to directly download new translations one by one from the Tr
 
 1. `tx pull -a`
 2. update `src/qt/raqcoin.qrc` manually or via
-   `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(abcmint_\(.*\)\).ts/<file alias="\2">locale/\1.qm<\/file>/'`
+   `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(raqcoin_\(.*\)\).ts/<file alias="\2">locale/\1.qm<\/file>/'`
 3. `git add` new translations from `src/qt/locale/`

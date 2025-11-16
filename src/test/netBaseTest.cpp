@@ -26,7 +26,7 @@ TEST(netBaseTest, netBaseNetworks) {
     EXPECT_TRUE(ResolveIP("8.8.8.8").GetNetwork()                                == NET_IPV4);
     EXPECT_TRUE(ResolveIP("2001::8888").GetNetwork()                             == NET_IPV6);
     EXPECT_TRUE(ResolveIP("FD87:D87E:EB43:edb1:8e4:3588:e546:35ca").GetNetwork() == NET_TOR);
-	//std::string msg("abcmint");
+	//std::string msg("raqcoin");
 	//unsigned char out[32] = {};
 	//pqcSha256((const unsigned char*)msg.data(),msg.size(), out);
 	//for (int i = 0; i < 32; i++)

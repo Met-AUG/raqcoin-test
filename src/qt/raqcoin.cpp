@@ -27,8 +27,8 @@
 #include "macdockiconhandler.h"
 #endif
 
-#if defined(ABCMINT_NEED_QT_PLUGINS) && !defined(_ABCMINT_QT_PLUGINS_INCLUDED)
-#define _ABCMINT_QT_PLUGINS_INCLUDED
+#if defined(RAQCOIN_NEED_QT_PLUGINS) && !defined(_RAQCOIN_QT_PLUGINS_INCLUDED)
+#define _RAQCOIN_QT_PLUGINS_INCLUDED
 #define __INSURE__
 #include <QtPlugin>
 Q_IMPORT_PLUGIN(qcncodecs)
@@ -42,7 +42,7 @@ Q_IMPORT_PLUGIN(qtaccessiblewidgets)
 Q_DECLARE_METATYPE(bool*)
 
 // Need a global reference for the notifications to find the GUI
-static AbcmintGUI *guiref;
+static RaqcoinGUI *guiref;
 static SplashScreen *splashref;
 
 static bool ThreadSafeMessageBox(const std::string& message, const std::string& caption, unsigned int style)
@@ -100,7 +100,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("abcmint-core", psz).toStdString();
+    return QCoreApplication::translate("raqcoin-core", psz).toStdString();
 }
 
 /* Handle runaway exceptions. Shows a message box with the problem and quits the program.
@@ -108,11 +108,11 @@ static std::string Translate(const char* psz)
 static void handleRunawayException(std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
-    QMessageBox::critical(0, "Runaway exception", AbcmintGUI::tr("A fatal error occurred. Abcmint can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
+    QMessageBox::critical(0, "Runaway exception", RaqcoinGUI::tr("A fatal error occurred. Raqcoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
     exit(1);
 }
 
-#ifndef ABCMINT_QT_TEST
+#ifndef RAQCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
     // Command-line options take precedence:
@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
 
-    Q_INIT_RESOURCE(abcmint);
+    Q_INIT_RESOURCE(raqcoin);
     QApplication app(argc, argv);
 
     // Register meta types used for QMetaObject::invokeMethod
@@ -147,7 +147,7 @@ int main(int argc, char *argv[])
     {
         // This message can not be translated, as translation is not initialized yet
         // (which not yet possible because lang=XX can be overridden in raqcoin.conf in the data directory)
-        QMessageBox::critical(0, "Abcmint",
+        QMessageBox::critical(0, "Raqcoin",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
@@ -155,12 +155,12 @@ int main(int argc, char *argv[])
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
-    QApplication::setOrganizationName("Abcmint");
+    QApplication::setOrganizationName("Raqcoin");
     QApplication::setOrganizationDomain("abcmint.org");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        QApplication::setApplicationName("Abcmint-Qt-testnet");
+        QApplication::setApplicationName("Raqcoin-Qt-testnet");
     else
-        QApplication::setApplicationName("Abcmint-Qt");
+        QApplication::setApplicationName("Raqcoin-Qt");
 
     // ... then GUI settings:
     OptionsModel optionsModel;
@@ -184,11 +184,11 @@ int main(int argc, char *argv[])
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         app.installTranslator(&qtTranslator);
 
-    // Load e.g. abcmint_de.qm (shortcut "de" needs to be defined in raqcoin.qrc)
+    // Load e.g. raqcoin_de.qm (shortcut "de" needs to be defined in raqcoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         app.installTranslator(&translatorBase);
 
-    // Load e.g. abcmint_de_DE.qm (shortcut "de_DE" needs to be defined in raqcoin.qrc)
+    // Load e.g. raqcoin_de_DE.qm (shortcut "de_DE" needs to be defined in raqcoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         app.installTranslator(&translator);
 
@@ -233,7 +233,7 @@ int main(int argc, char *argv[])
 
         boost::thread_group threadGroup;
 
-        AbcmintGUI window;
+        RaqcoinGUI window;
         guiref = &window;
 
         QTimer* pollShutdownTimer = new QTimer(guiref);
@@ -280,7 +280,7 @@ int main(int argc, char *argv[])
                 window.removeAllWallets();
                 guiref = 0;
             }
-            // Shutdown the core and its threads, but don't exit Abcmint-Qt here
+            // Shutdown the core and its threads, but don't exit Raqcoin-Qt here
             threadGroup.interrupt_all();
             threadGroup.join_all();
         }
@@ -299,4 +299,4 @@ int main(int argc, char *argv[])
     Shutdown();
     return 0;
 }
-#endif // ABCMINT_QT_TEST
+#endif // RAQCOIN_QT_TEST

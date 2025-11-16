@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef _ABCMINT_COMPAT_H
-#define _ABCMINT_COMPAT_H 1
+#ifndef _RAQCOIN_COMPAT_H
+#define _RAQCOIN_COMPAT_H 1
 
 #ifdef WIN32
 #define _WIN32_WINNT 0x0501

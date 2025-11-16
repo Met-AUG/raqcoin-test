@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Abcmint</source>
-        <translation>Abcmint hakkında</translation>
+        <source>About Raqcoin</source>
+        <translation>Raqcoin hakkında</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Abcmint&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Abcmint&lt;/b&gt; sürüm</translation>
+        <source>&lt;b&gt;Raqcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Raqcoin&lt;/b&gt; sürüm</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,8 +34,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Abcmint developers</source>
-        <translation>Abcmint geliştiricileri</translation>
+        <source>The Raqcoin developers</source>
+        <translation>Raqcoin geliştiricileri</translation>
     </message>
 </context>
 <context>
@@ -67,8 +67,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Abcmint addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Bunlar, ödeme almak için Abcmint adresleridir. Kimin ödeme yaptığını izleyebilmek için her ödeme yollaması gereken kişiye değişik bir adres verebilirsiniz.</translation>
+        <source>These are your Raqcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Bunlar, ödeme almak için Raqcoin adresleridir. Kimin ödeme yaptığını izleyebilmek için her ödeme yollaması gereken kişiye değişik bir adres verebilirsiniz.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,8 +82,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Abcmint address</source>
-        <translation>Bir Abcmint adresinin sizin olduğunu ispatlamak için mesaj imzalayın</translation>
+        <source>Sign a message to prove you own a Raqcoin address</source>
+        <translation>Bir Raqcoin adresinin sizin olduğunu ispatlamak için mesaj imzalayın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -107,8 +107,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Abcmint address</source>
-        <translation>Belirtilen Abcmint adresi ile imzalandığını doğrulamak için bir mesajı kontrol et</translation>
+        <source>Verify a message to ensure it was signed with a specified Raqcoin address</source>
+        <translation>Belirtilen Raqcoin adresi ile imzalandığını doğrulamak için bir mesajı kontrol et</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Abcmint addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödeme yapmak için kullanacağınız Abcmint adreslerinizdir. Abcmint yollamadan önce meblağı ve alıcı adresini daima kontrol ediniz.</translation>
+        <source>These are your Raqcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödeme yapmak için kullanacağınız Raqcoin adreslerinizdir. Raqcoin yollamadan önce meblağı ve alıcı adresini daima kontrol ediniz.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,7 +248,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABCMINTS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAQCOINS&lt;/b&gt;!</source>
         <translation>Uyarı: Eğer cüzdanınızı şifrelerseniz ve parolanızı kaybederseniz, &lt;b&gt;TÜM BİTCOİNLERİNİZİ KAYBEDERSİNİZ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -275,8 +275,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Abcmint will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your abcmints from being stolen by malware infecting your computer.</source>
-        <translation>Şifreleme işlemini tamamlamak için Abcmint şimdi kapanacaktır. Cüzdanınızı şifrelemenin, Abcmintlerinizin bilgisayara bulaşan kötücül bir yazılım tarafından çalınmaya karşı tamamen koruyamayacağını unutmayınız.</translation>
+        <source>Raqcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your raqcoins from being stolen by malware infecting your computer.</source>
+        <translation>Şifreleme işlemini tamamlamak için Raqcoin şimdi kapanacaktır. Cüzdanınızı şifrelemenin, Raqcoinlerinizin bilgisayara bulaşan kötücül bir yazılım tarafından çalınmaya karşı tamamen koruyamayacağını unutmayınız.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -321,7 +321,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>AbcmintGUI</name>
+    <name>RaqcoinGUI</name>
     <message>
         <location filename="../raqcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
@@ -374,8 +374,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Abcmint</source>
-        <translation>Abcmint hakkında bilgi göster</translation>
+        <source>Show information about Raqcoin</source>
+        <translation>Raqcoin hakkında bilgi göster</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Abcmint address</source>
-        <translation>Bir Abcmint adresine Abcmint yolla</translation>
+        <source>Send coins to a Raqcoin address</source>
+        <translation>Bir Raqcoin adresine Raqcoin yolla</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Abcmint</source>
-        <translation>Abcmint seçeneklerinin yapılandırmasını değiştir</translation>
+        <source>Modify configuration options for Raqcoin</source>
+        <translation>Raqcoin seçeneklerinin yapılandırmasını değiştir</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Abcmint</source>
-        <translation>Abcmint</translation>
+        <source>Raqcoin</source>
+        <translation>Raqcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Abcmint</source>
-        <translation>Abcmint &amp;Hakkında</translation>
+        <source>&amp;About Raqcoin</source>
+        <translation>Raqcoin &amp;Hakkında</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Abcmint addresses to prove you own them</source>
-        <translation>Mesajları adreslerin size ait olduğunu ispatlamak için Abcmint adresleri ile imzala</translation>
+        <source>Sign messages with your Raqcoin addresses to prove you own them</source>
+        <translation>Mesajları adreslerin size ait olduğunu ispatlamak için Raqcoin adresleri ile imzala</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Abcmint addresses</source>
-        <translation>Belirtilen Abcmint adresleri ile imzalandıklarından emin olmak için mesajları kontrol et</translation>
+        <source>Verify messages to ensure they were signed with specified Raqcoin addresses</source>
+        <translation>Belirtilen Raqcoin adresleri ile imzalandıklarından emin olmak için mesajları kontrol et</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>Abcmint client</source>
-        <translation>Abcmint istemcisi</translation>
+        <source>Raqcoin client</source>
+        <translation>Raqcoin istemcisi</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Abcmint network</source>
-        <translation><numerusform>Abcmint şebekesine %n faal bağlantı</numerusform><numerusform>Abcmint şebekesine %n faal bağlantı</numerusform></translation>
+        <source>%n active connection(s) to Raqcoin network</source>
+        <translation><numerusform>Raqcoin şebekesine %n faal bağlantı</numerusform><numerusform>Raqcoin şebekesine %n faal bağlantı</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -656,8 +656,8 @@ Adres: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Abcmint address or malformed URI parameters.</source>
-        <translation>URI okunamadı! Sebebi geçersiz bir Abcmint adresi veya hatalı URI parametreleri olabilir.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Raqcoin address or malformed URI parameters.</source>
+        <translation>URI okunamadı! Sebebi geçersiz bir Raqcoin adresi veya hatalı URI parametreleri olabilir.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -671,8 +671,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../raqcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Abcmint can no longer continue safely and will quit.</source>
-        <translation>Ciddi bir hata oluştu. Abcmint artık güvenli bir şekilde işlemeye devam edemez ve kapanacaktır.</translation>
+        <source>A fatal error occurred. Raqcoin can no longer continue safely and will quit.</source>
+        <translation>Ciddi bir hata oluştu. Raqcoin artık güvenli bir şekilde işlemeye devam edemez ve kapanacaktır.</translation>
     </message>
 </context>
 <context>
@@ -737,8 +737,8 @@ Adres: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Abcmint address.</source>
-        <translation>Girilen &quot;%1&quot; adresi geçerli bir Abcmint adresi değildir.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Raqcoin address.</source>
+        <translation>Girilen &quot;%1&quot; adresi geçerli bir Raqcoin adresi değildir.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -756,8 +756,8 @@ Adres: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Abcmint-Qt</source>
-        <translation>Abcmint-Qt</translation>
+        <source>Raqcoin-Qt</source>
+        <translation>Raqcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -819,13 +819,13 @@ Adres: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Abcmint after logging in to the system.</source>
-        <translation>Sistemde oturum açıldığında Abcmint&apos;i otomatik olarak başlat.</translation>
+        <source>Automatically start Raqcoin after logging in to the system.</source>
+        <translation>Sistemde oturum açıldığında Raqcoin&apos;i otomatik olarak başlat.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Abcmint on system login</source>
-        <translation>Abcmint&apos;i sistem oturumuyla &amp;başlat</translation>
+        <source>&amp;Start Raqcoin on system login</source>
+        <translation>Raqcoin&apos;i sistem oturumuyla &amp;başlat</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -844,8 +844,8 @@ Adres: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Abcmint client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönlendiricide Abcmint istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
+        <source>Automatically open the Raqcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönlendiricide Raqcoin istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -854,8 +854,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Abcmint network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Abcmint şebekesine SOCKS vekil sunucusu vasıtasıyla bağlan (mesela Tor ile bağlanıldığında).</translation>
+        <source>Connect to the Raqcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Raqcoin şebekesine SOCKS vekil sunucusu vasıtasıyla bağlan (mesela Tor ile bağlanıldığında).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,8 +929,8 @@ Adres: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Abcmint.</source>
-        <translation>Kullanıcı arayüzünün dili burada belirtilebilir. Bu ayar Abcmint tekrar başlatıldığında etkinleşecektir.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Raqcoin.</source>
+        <translation>Kullanıcı arayüzünün dili burada belirtilebilir. Bu ayar Raqcoin tekrar başlatıldığında etkinleşecektir.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -940,12 +940,12 @@ Adres: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Abcmint gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
+        <translation>Raqcoin gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Abcmint addresses in the transaction list or not.</source>
-        <translation>Muamele listesinde Abcmint adreslerinin gösterilip gösterilmeyeceklerini belirler.</translation>
+        <source>Whether to show Raqcoin addresses in the transaction list or not.</source>
+        <translation>Muamele listesinde Raqcoin adreslerinin gösterilip gösterilmeyeceklerini belirler.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -996,8 +996,8 @@ Adres: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Abcmint.</source>
-        <translation>Bu ayarlar Abcmint tekrar başlatıldığında etkinleşecektir.</translation>
+        <source>This setting will take effect after restarting Raqcoin.</source>
+        <translation>Bu ayarlar Raqcoin tekrar başlatıldığında etkinleşecektir.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,7 +1015,7 @@ Adres: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Abcmint network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raqcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Görüntülenen veriler zaman aşımına uğramış olabilir. Bağlantı kurulduğunda cüzdanınız otomatik olarak şebeke ile eşleşir ancak bu işlem henüz tamamlanmamıştır.</translation>
     </message>
     <message>
@@ -1070,7 +1070,7 @@ Adres: %4
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
         <source>Cannot start abcmint: click-to-pay handler</source>
-        <translation>Abcmint başlatılamadı: tıkla-ve-öde yöneticisi</translation>
+        <translation>Raqcoin başlatılamadı: tıkla-ve-öde yöneticisi</translation>
     </message>
 </context>
 <context>
@@ -1219,8 +1219,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Abcmint-Qt help message to get a list with possible Abcmint command-line options.</source>
-        <translation>Mevcut Abcmint komut satırı seçeneklerinin listesini içeren Abcmint-Qt yardımını göster.</translation>
+        <source>Show the Raqcoin-Qt help message to get a list with possible Raqcoin command-line options.</source>
+        <translation>Mevcut Raqcoin komut satırı seçeneklerinin listesini içeren Raqcoin-Qt yardımını göster.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1239,13 +1239,13 @@ Adres: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Abcmint - Debug window</source>
-        <translation>Abcmint - Hata ayıklama penceresi</translation>
+        <source>Raqcoin - Debug window</source>
+        <translation>Raqcoin - Hata ayıklama penceresi</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Abcmint Core</source>
-        <translation>Abcmint Çekirdeği</translation>
+        <source>Raqcoin Core</source>
+        <translation>Raqcoin Çekirdeği</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1254,8 +1254,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Abcmint debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Güncel veri klasöründen Abcmint hata ayıklama kütük dosyasını açar. Büyük kütük dosyaları için bu birkaç saniye alabilir.</translation>
+        <source>Open the Raqcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Güncel veri klasöründen Raqcoin hata ayıklama kütük dosyasını açar. Büyük kütük dosyaları için bu birkaç saniye alabilir.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1264,8 +1264,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Abcmint RPC console.</source>
-        <translation>Abcmint RPC konsoluna hoş geldiniz.</translation>
+        <source>Welcome to the Raqcoin RPC console.</source>
+        <translation>Raqcoin RPC konsoluna hoş geldiniz.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1290,7 +1290,7 @@ Adres: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Abcmint yolla</translation>
+        <translation>Raqcoin yolla</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -1448,8 +1448,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Abcmint adresi giriniz (mesela 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Raqcoin adresi giriniz (mesela 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
     </message>
 </context>
 <context>
@@ -1513,8 +1513,8 @@ Adres: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Abcmint address</source>
-        <translation>Bu Abcmint adresinin sizin olduğunu ispatlamak için mesajı imzalayın</translation>
+        <source>Sign the message to prove you own this Raqcoin address</source>
+        <translation>Bu Raqcoin adresinin sizin olduğunu ispatlamak için mesajı imzalayın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1549,8 +1549,8 @@ Adres: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Abcmint address</source>
-        <translation>Belirtilen Abcmint adresi ile imzalandığını doğrulamak için mesajı kontrol et</translation>
+        <source>Verify the message to ensure it was signed with the specified Raqcoin address</source>
+        <translation>Belirtilen Raqcoin adresi ile imzalandığını doğrulamak için mesajı kontrol et</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,8 +1565,8 @@ Adres: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Abcmint adresi giriniz (mesela 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Raqcoin adresi giriniz (mesela 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1575,8 +1575,8 @@ Adres: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Abcmint signature</source>
-        <translation>Abcmint imzası gir</translation>
+        <source>Enter Raqcoin signature</source>
+        <translation>Raqcoin imzası gir</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1649,8 +1649,8 @@ Adres: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Abcmint developers</source>
-        <translation>Abcmint geliştiricileri</translation>
+        <source>The Raqcoin developers</source>
+        <translation>Raqcoin geliştiricileri</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1784,7 +1784,7 @@ Adres: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Oluşturulan Abcmint&apos;lerin harcanabilmelerinden önce 120 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu &quot;kabul edilmedi&quot; olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
+        <translation>Oluşturulan Raqcoin&apos;lerin harcanabilmelerinden önce 120 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu &quot;kabul edilmedi&quot; olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2137,7 +2137,7 @@ Adres: %4
     <message>
         <location filename="../walletmodel.cpp" line="+193"/>
         <source>Send Coins</source>
-        <translation>Abcmint yolla</translation>
+        <translation>Raqcoin yolla</translation>
     </message>
 </context>
 <context>
@@ -2184,11 +2184,11 @@ Adres: %4
     </message>
 </context>
 <context>
-    <name>abcmint-core</name>
+    <name>raqcoin-core</name>
     <message>
         <location filename="../raqcoinstrings.cpp" line="+94"/>
-        <source>Abcmint version</source>
-        <translation>Abcmint sürümü</translation>
+        <source>Raqcoin version</source>
+        <translation>Raqcoin sürümü</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2197,8 +2197,8 @@ Adres: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or abcmint</source>
-        <translation>-server ya da abcmint&apos;ye komut gönder</translation>
+        <source>Send command to -server or raqcoin</source>
+        <translation>-server ya da raqcoin&apos;ye komut gönder</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2222,8 +2222,8 @@ Adres: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: abcmint.pid)</source>
-        <translation>Pid dosyası belirt (varsayılan: abcmint.pid)</translation>
+        <source>Specify pid file (default: raqcoin.pid)</source>
+        <translation>Pid dosyası belirt (varsayılan: raqcoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2300,24 +2300,24 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=abcmintrpc
+rpcuser=raqcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Raqcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, şu yapılandırma dosyasında rpc parolası belirtmeniz gerekir:
 %s
 Aşağıdaki rastgele oluşturulan parolayı kullanmanız tavsiye edilir:
-rpcuser=abcmintrpc
+rpcuser=raqcoinrpc
 rpcpassword=%s
 (bu parolayı hatırlamanız gerekli değildir)
 Kullanıcı ismi ile parolanın FARKLI olmaları gerekir.
 Dosya mevcut değilse, sadece sahibi için okumayla sınırlı izin ile oluşturunuz.
 Sorunlar hakkında bildiri almak için alertnotify unsurunu ayarlamanız tavsiye edilir;
-mesela: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
+mesela: alertnotify=echo %%s | mail -s &quot;Raqcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2332,8 +2332,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Abcmint is probably already running.</source>
-        <translation>%s veri dizininde kilit elde edilemedi. Abcmint muhtemelen hâlihazırda çalışmaktadır.</translation>
+        <source>Cannot obtain a lock on data directory %s. Raqcoin is probably already running.</source>
+        <translation>%s veri dizininde kilit elde edilemedi. Raqcoin muhtemelen hâlihazırda çalışmaktadır.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2363,7 +2363,7 @@ mesela: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
     <message>
         <location line="+6"/>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - abcmint oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
+        <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - raqcoin oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2377,8 +2377,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Abcmint will not work properly.</source>
-        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olup olmadığını kontrol ediniz! Saatiniz doğru değilse Abcmint gerektiği gibi çalışamaz.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Raqcoin will not work properly.</source>
+        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olup olmadığını kontrol ediniz! Saatiniz doğru değilse Raqcoin gerektiği gibi çalışamaz.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2518,7 +2518,7 @@ mesela: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>Abcmint oluştur (varsayılan: 0)</translation>
+        <translation>Raqcoin oluştur (varsayılan: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2627,8 +2627,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Abcmint Wiki for SSL setup instructions)</source>
-        <translation> SSL seçenekleri: (SSL kurulum bilgisi için Abcmint vikisine bakınız)</translation>
+        <source>SSL options: (see the Raqcoin Wiki for SSL setup instructions)</source>
+        <translation> SSL seçenekleri: (SSL kurulum bilgisi için Raqcoin vikisine bakınız)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2817,13 +2817,13 @@ mesela: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Abcmint</source>
-        <translation>wallet.dat dosyasının yüklenmesinde hata oluştu: cüzdanın daha yeni bir Abcmint sürümüne ihtiyacı var</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Raqcoin</source>
+        <translation>wallet.dat dosyasının yüklenmesinde hata oluştu: cüzdanın daha yeni bir Raqcoin sürümüne ihtiyacı var</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Abcmint to complete</source>
-        <translation>Cüzdanın tekrar yazılması gerekiyordu: işlemi tamamlamak için Abcmint&apos;i yeniden başlatınız</translation>
+        <source>Wallet needed to be rewritten: restart Raqcoin to complete</source>
+        <translation>Cüzdanın tekrar yazılması gerekiyordu: işlemi tamamlamak için Raqcoin&apos;i yeniden başlatınız</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2882,8 +2882,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Abcmint is probably already running.</source>
-        <translation>Bu bilgisayarda %s unsuruna bağlanılamadı. Abcmint muhtemelen hâlihazırda çalışmaktadır.</translation>
+        <source>Unable to bind to %s on this computer. Raqcoin is probably already running.</source>
+        <translation>Bu bilgisayarda %s unsuruna bağlanılamadı. Raqcoin muhtemelen hâlihazırda çalışmaktadır.</translation>
     </message>
     <message>
         <location line="+64"/>

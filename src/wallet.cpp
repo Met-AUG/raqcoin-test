@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include "wallet.h"
@@ -677,7 +678,7 @@ int64 CWalletTx::GetAddressAmounts(const string& strAddress) const
         if (!ExtractDestination(txout.scriptPubKey, addressId) || !IsMine(*pwallet, addressId))
             continue;
 
-        if (CAbcmintAddress(addressId).ToString() != strAddress)
+        if (CRaqcoinAddress(addressId).ToString() != strAddress)
             continue;
 
         nCredit += txout.nValue;
@@ -865,7 +866,7 @@ void CWalletTx::RelayWalletTransaction()
 {
     BOOST_FOREACH(const CMerkleTx& tx, vtxPrev)
     {
-        // Important: versions of abcmint before 0.8.6 had a bug that inserted
+        // Important: versions of raqcoin before 0.8.6 had a bug that inserted
         // empty transactions into the vtxPrev, which will cause the node to be
         // banned when retransmitted, hence the check for !tx.vin.empty()
         if (!tx.IsCoinBase() && !tx.vin.empty())
@@ -1014,7 +1015,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 if (!(pcoin->IsSpent(i)) && IsMine(pcoin->vout[i]) && !IsLockedCoin((*it).first, i) && pcoin->vout[i].nValue > 0) {
                     if (!strAddress.empty()) {
                         CTxDestination addressId;
-                        if (ExtractDestination(pcoin->vout[i].scriptPubKey, addressId) && CAbcmintAddress(addressId).ToString() == strAddress) {
+                        if (ExtractDestination(pcoin->vout[i].scriptPubKey, addressId) && CRaqcoinAddress(addressId).ToString() == strAddress) {
                             vCoins.push_back(COutput(pcoin, i, pcoin->GetDepthInMainChain()));
                         }
                     } else {
@@ -1252,7 +1253,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CW
                 // The following if statement should be removed once enough miners
                 // have upgraded to the 0.9 GetMinFee() rules. Until then, this avoids
                 // creating free transactions that have change outputs less than
-                // CENT abcmints.
+                // CENT raqcoins.
                 if (nFeeRet < CTransaction::nMinTxFee && nChange > 0 && nChange < CENT)
                 {
                     int64 nMoveToFee = min(nChange, CTransaction::nMinTxFee - nFeeRet);
@@ -1275,7 +1276,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CW
 
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-abcmint-address
+                    // change transaction isn't always pay-to-raqcoin-address
                     CScript scriptChange;
                     scriptChange.SetDestination(vchPubKey.GetID());
 
@@ -1440,7 +1441,7 @@ string CWallet::SendMoneyToDestination(const CTxDestination& address, int64 nVal
     if (nValue + nTransactionFee > GetBalance())
         return _("Insufficient funds");
 
-    // Parse Abcmint address
+    // Parse Raqcoin address
     CScript scriptPubKey;
     scriptPubKey.SetDestination(address);
 
@@ -1482,7 +1483,7 @@ bool CWallet::SetAddressBookName(const CTxDestination& address, const string& st
     NotifyAddressBookChanged(this, address, strName, ::IsMine(*this, address), (mi == mapAddressBook.end()) ? CT_NEW : CT_UPDATED);
     if (!fFileBacked)
         return false;
-    return CWalletDB(strWalletFile).WriteName(CAbcmintAddress(address).ToString(), strName);
+    return CWalletDB(strWalletFile).WriteName(CRaqcoinAddress(address).ToString(), strName);
 }
 
 bool CWallet::DelAddressBookName(const CTxDestination& address)
@@ -1491,7 +1492,7 @@ bool CWallet::DelAddressBookName(const CTxDestination& address)
     NotifyAddressBookChanged(this, address, "", ::IsMine(*this, address), CT_DELETED);
     if (!fFileBacked)
         return false;
-    return CWalletDB(strWalletFile).EraseName(CAbcmintAddress(address).ToString());
+    return CWalletDB(strWalletFile).EraseName(CRaqcoinAddress(address).ToString());
 }
 
 
@@ -1868,7 +1869,7 @@ bool CReserveKey::GetReservedKey(CPubKey& pubkey)
 bool CReserveKey::GetMinerAddress(CKeyID &keyId)
 {
     if (!pwallet->vchMinerAddress.empty()) {
-        CAbcmintAddress address(pwallet->vchMinerAddress);
+        CRaqcoinAddress address(pwallet->vchMinerAddress);
         if (address.GetKeyID(keyId)) {
             return true;
         }

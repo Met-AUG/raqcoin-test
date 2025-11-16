@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_DB_H
-#define ABCMINT_DB_H
+#ifndef RAQCOIN_DB_H
+#define RAQCOIN_DB_H
 
 #include "main.h"
 
@@ -318,4 +319,4 @@ public:
     bool Read(CAddrMan& addr);
 };
 
-#endif // ABCMINT_DB_H
+#endif // RAQCOIN_DB_H

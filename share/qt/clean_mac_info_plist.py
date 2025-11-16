@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 # Jonas Schnelli, 2013
-# make sure the Abcmint-Qt.app contains the right plist (including the right version)
+# make sure the Raqcoin-Qt.app contains the right plist (including the right version)
 # fix made because of serval bugs in Qt mac deployment (https://bugreports.qt-project.org/browse/QTBUG-21267)
 
 from string import Template
 from datetime import date
 
-abcmintDir = "./";
+raqcoinDir = "./";
 
-inFile     = abcmintDir+"/share/qt/Info.plist"
-outFile    = "Abcmint-Qt.app/Contents/Info.plist"
+inFile     = raqcoinDir+"/share/qt/Info.plist"
+outFile    = "Raqcoin-Qt.app/Contents/Info.plist"
 version    = "unknown";
 
-fileForGrabbingVersion = abcmintDir+"raqcoin-qt.pro"
+fileForGrabbingVersion = raqcoinDir+"raqcoin-qt.pro"
 for line in open(fileForGrabbingVersion):
 	lineArr = line.replace(" ", "").split("=");
 	if lineArr[0].startswith("VERSION"):

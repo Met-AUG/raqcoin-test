@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include "alert.h"
@@ -1560,7 +1561,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("abcmint-scriptch");
+    RenameThread("raqcoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -1726,7 +1727,7 @@ bool SavePubKeyPos(CTransaction& tx, CBlockIndex* pBlockIndex) {
                     if(!pubkey.IsValid())
                         continue;
                     
-                    CAbcmintAddress address(pubkey.GetID());
+                    CRaqcoinAddress address(pubkey.GetID());
                     std::string addressStr = address.ToString();
                     CDiskPubKeyPos pos;
                     std::string pubkeyHex = HexStr(vchPushValue);

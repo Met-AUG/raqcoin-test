@@ -1,8 +1,9 @@
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_MRUSET_H
-#define ABCMINT_MRUSET_H
+#ifndef RAQCOIN_MRUSET_H
+#define RAQCOIN_MRUSET_H
 
 #include <set>
 #include <deque>

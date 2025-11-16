@@ -1,6 +1,6 @@
 Copyright (c) 2018 AbcmintCore Developers
 
-Abcmintcoie is released under the terms of the GNU GPL v. 3 license. 
+Raqcoincoie is released under the terms of the GNU GPL v. 3 license. 
 See https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
 This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](http://www.openssl.org/). This product includes
 cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
@@ -12,9 +12,9 @@ To Build
 ---------------------
 
 	cd src/
-	make -f makefile.unix		# Headless abcmint
+	make -f makefile.unix		# Headless raqcoin
 
-See readme-qt.rst for instructions on building Abcmint-Qt, the graphical user interface.
+See readme-qt.rst for instructions on building Raqcoin-Qt, the graphical user interface.
 
 Dependencies
 ---------------------
@@ -72,7 +72,7 @@ Optional:
 
 Notes
 -----
-The release is built with GCC and then "strip abcmint" to strip the debug
+The release is built with GCC and then "strip raqcoin" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 
@@ -104,7 +104,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your abcmint installation more secure by making certain attacks impossible to
+To help make your raqcoin installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -131,7 +131,7 @@ exploit even if a vulnerability is found, you can take the following measures:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, abcmint should be built with a non-executable stack
+    vulnerable buffers are found. By default, raqcoin should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.

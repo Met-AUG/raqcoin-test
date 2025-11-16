@@ -20,7 +20,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate(): QAbstractItemDelegate(), unit(AbcmintUnits::ABC)
+    TxViewDelegate(): QAbstractItemDelegate(), unit(RaqcoinUnits::ABC)
     {
 
     }
@@ -68,7 +68,7 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(foreground);
-        QString amountText = AbcmintUnits::formatWithUnit(unit, amount, true);
+        QString amountText = RaqcoinUnits::formatWithUnit(unit, amount, true);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -137,9 +137,9 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
     currentBalance = balance;
     currentUnconfirmedBalance = unconfirmedBalance;
     currentImmatureBalance = immatureBalance;
-    ui->labelBalance->setText(AbcmintUnits::formatWithUnit(unit, balance));
-    ui->labelUnconfirmed->setText(AbcmintUnits::formatWithUnit(unit, unconfirmedBalance));
-    ui->labelImmature->setText(AbcmintUnits::formatWithUnit(unit, immatureBalance));
+    ui->labelBalance->setText(RaqcoinUnits::formatWithUnit(unit, balance));
+    ui->labelUnconfirmed->setText(RaqcoinUnits::formatWithUnit(unit, unconfirmedBalance));
+    ui->labelImmature->setText(RaqcoinUnits::formatWithUnit(unit, immatureBalance));
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users

@@ -81,7 +81,7 @@ TEST(base58Test, decodeBase58Check) {
                             "8Qrve1DTjsHDQ5rhmkH74MWUiA71im48ZqYvx2ofoqX545t4q",
                             "8Rj5WDxT2VaM8HZpPv4uDtae9qLxPsQtLRGtTgUzZhJtpg1px"
 	                         };
-    CAbcmintAddress address;
+    CRaqcoinAddress address;
 	CKeyID keyID;
 	for (int i = 0; i < 12; i++) {
 	    EXPECT_TRUE(address.SetString(addr[i]));
@@ -106,7 +106,7 @@ TEST(base58Test, base58_public_key_address)
     CPubKey pk;
 	pk = key.GetPubKey();
     CKeyID id = pk.GetID();
-	CAbcmintAddress addr;
+	CRaqcoinAddress addr;
 	EXPECT_TRUE(addr.Set(id));
 	std::cout<<"key id : "<<id.ToString()<<std::endl;
     std::cout<<"key address : "<<addr.ToString()<<std::endl;
@@ -121,7 +121,7 @@ TEST(base58Test, base58_public_key_address)
 	//std::string longstr = HexStr(sk);
     //std::vector<unsigned char> skhex = ParseHex(longstr);
 //	std::string encodedata = EncodeBase58Check(sk);
-//    CAbcmintSecret secret;
+//    CRaqcoinSecret secret;
 //    EXPECT_TRUE(secret.SetString(encodedata));
 	
 }
@@ -145,7 +145,7 @@ TEST(base58Test , test)
 	//EXPECT_TRUE(DecodeBase58(encodedata, result));
 	//nTime = GetTimeMicros() - nStart;
 	//std::cout<<"decodeTime: "<<nTime<<std::endl;
-	//CAbcmintSecret secret;
+	//CRaqcoinSecret secret;
 	//bool b = secret.SetString(encodedata);
 
 }

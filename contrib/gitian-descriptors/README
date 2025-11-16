@@ -40,7 +40,7 @@ Once you've got the right hardware and software:
     cd ..
 
     # Build Linux release:
-    cd abcmint
+    cd raqcoin
     git pull
     cd ../gitian-builder
     git pull

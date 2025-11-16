@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include <QApplication>
@@ -22,7 +23,7 @@
 
 using namespace boost;
 
-const int ABCMINT_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
+const int RAQCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
 const QString ABCMINT_IPC_PREFIX("abcmint:");
 
 //
@@ -32,7 +33,7 @@ const QString ABCMINT_IPC_PREFIX("abcmint:");
 //
 static QString ipcServerName()
 {
-    QString name("AbcmintQt");
+    QString name("RaqcoinQt");
 
     // Append a simple hash of the datadir
     // Note that GetDataDir(true) returns a different path
@@ -63,7 +64,7 @@ bool PaymentServer::ipcSendCommandLine()
     const QStringList& args = qApp->arguments();
     for (int i = 1; i < args.size(); i++)
     {
-        if (!args[i].startsWith(ABCMINT_IPC_PREFIX, Qt::CaseInsensitive))
+        if (!args[i].startsWith(RAQCOIN_IPC_PREFIX, Qt::CaseInsensitive))
             continue;
         savedPaymentRequests.append(args[i]);
     }
@@ -72,7 +73,7 @@ bool PaymentServer::ipcSendCommandLine()
     {
         QLocalSocket* socket = new QLocalSocket();
         socket->connectToServer(ipcServerName(), QIODevice::WriteOnly);
-        if (!socket->waitForConnected(ABCMINT_IPC_CONNECT_TIMEOUT))
+        if (!socket->waitForConnected(RAQCOIN_IPC_CONNECT_TIMEOUT))
             return false;
 
         QByteArray block;
@@ -83,7 +84,7 @@ bool PaymentServer::ipcSendCommandLine()
         socket->write(block);
         socket->flush();
 
-        socket->waitForBytesWritten(ABCMINT_IPC_CONNECT_TIMEOUT);
+        socket->waitForBytesWritten(RAQCOIN_IPC_CONNECT_TIMEOUT);
         socket->disconnectFromServer();
         delete socket;
         fResult = true;

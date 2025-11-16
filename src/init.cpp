@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 #include "txdb.h"
 #include "walletdb.h"
@@ -99,7 +100,7 @@ void Shutdown()
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
 
-    RenameThread("abcmint-shutoff");
+    RenameThread("raqcoin-shutoff");
     nTransactionsUpdated++;
     StopRPCThreads();
     bitdb.Flush(false);
@@ -194,13 +195,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to abcmint / RPC client
-            std::string strUsage = _("Abcmint version") + " " + FormatFullVersion() + "\n\n" +
+            // First part of help message is specific to raqcoin / RPC client
+            std::string strUsage = _("Raqcoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  abcmint [options]                     " + "\n" +
-                  "  abcmint [options] <command> [params]  " + _("Send command to -server or abcmint") + "\n" +
-                  "  abcmint [options] help                " + _("List commands") + "\n" +
-                  "  abcmint [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  raqcoin [options]                     " + "\n" +
+                  "  raqcoin [options] <command> [params]  " + _("Send command to -server or raqcoin") + "\n" +
+                  "  raqcoin [options] help                " + _("List commands") + "\n" +
+                  "  raqcoin [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -273,7 +274,7 @@ int main(int argc, char* argv[])
 {
     bool fRet = false;
 
-    // Connect abcmint signal handlers
+    // Connect raqcoin signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);
@@ -316,7 +317,7 @@ std::string HelpMessage()
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
         "  -conf=<file>           " + _("Specify configuration file (default: raqcoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: abcmint.pid)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: raqcoin.pid)") + "\n" +
         "  -gen                   " + _("Generate coins (default: 0)") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
         "  -dbcache=<n>           " + _("Set database cache size in megabytes (default: 25)") + "\n" +
@@ -397,7 +398,7 @@ std::string HelpMessage()
         "  -zmqpubrawtx=<address>" + _("Enable publish raw transaction in <address>") + "\n" +
 #endif
 
-        "\n" + _("SSL options: (see the Abcmint Wiki for SSL setup instructions)") + "\n" +
+        "\n" + _("SSL options: (see the Raqcoin Wiki for SSL setup instructions)") + "\n" +
         "  -rpcssl                                  " + _("Use OpenSSL (https) for JSON-RPC connections") + "\n" +
         "  -rpcsslcertificatechainfile=<file.cert>  " + _("Server certificate file (default: server.cert)") + "\n" +
         "  -rpcsslprivatekeyfile=<file.pem>         " + _("Server private key (default: server.pem)") + "\n" +
@@ -421,7 +422,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("abcmint-loadblk");
+    RenameThread("raqcoin-loadblk");
 
     // -reindex
     if (fReindex) {
@@ -467,7 +468,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
     }
 }
 
-/** Initialize abcmint.
+/** Initialize raqcoin.
  *  @pre Parameters should be parsed and config file should be read.
  */
 bool AppInit2(boost::thread_group& threadGroup)
@@ -644,18 +645,18 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     std::string strDataDir = GetDataDir().string();
 
-    // Make sure only a single Abcmint process is using the data directory.
+    // Make sure only a single Raqcoin process is using the data directory.
     boost::filesystem::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
     static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
     if (!lock.try_lock())
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Abcmint is probably already running."), strDataDir.c_str()));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Raqcoin is probably already running."), strDataDir.c_str()));
 
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("Abcmint version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
+    printf("Raqcoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
     printf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
 
     if (!fLogTimestamps)
@@ -666,7 +667,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     std::ostringstream strErrors;
 
     if (fDaemon)
-        fprintf(stdout, "Abcmint server starting\n");
+        fprintf(stdout, "Raqcoin server starting\n");
 
     if (nScriptCheckThreads) {
         printf("Using %u threads for script verification\n", nScriptCheckThreads);
@@ -924,7 +925,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         return InitError(_("You need to rebuild the databases using -reindex to change -txindex"));
 
     // as LoadBlockIndex can take several minutes, it's possible the user
-    // requested to kill abcmint-qt during the last operation. If so, exit.
+    // requested to kill raqcoin-qt during the last operation. If so, exit.
     // As the program has not fully started yet, Shutdown() is possibly overkill.
     if (fRequestShutdown)
     {
@@ -981,10 +982,10 @@ bool AppInit2(boost::thread_group& threadGroup)
             InitWarning(msg);
         }
         else if (nLoadWalletRet == DB_TOO_NEW)
-            strErrors << _("Error loading wallet.dat: Wallet requires newer version of Abcmint") << "\n";
+            strErrors << _("Error loading wallet.dat: Wallet requires newer version of Raqcoin") << "\n";
         else if (nLoadWalletRet == DB_NEED_REWRITE)
         {
-            strErrors << _("Wallet needed to be rewritten: restart Abcmint to complete") << "\n";
+            strErrors << _("Wallet needed to be rewritten: restart Raqcoin to complete") << "\n";
             printf("%s", strErrors.str().c_str());
             return InitError(strErrors.str());
         }
@@ -1103,7 +1104,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         StartRPCThreads();
 
     // Generate coins in the background
-    GenerateAbcmints(GetBoolArg("-gen", false), pwalletMain);
+    GenerateRaqcoins(GetBoolArg("-gen", false), pwalletMain);
 
     //seach block position for public key  in the background
     SearchPubKeyPos(threadGroup);

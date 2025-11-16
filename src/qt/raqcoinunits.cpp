@@ -2,22 +2,22 @@
 
 #include <QStringList>
 
-AbcmintUnits::AbcmintUnits(QObject *parent):
+RaqcoinUnits::RaqcoinUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<AbcmintUnits::Unit> AbcmintUnits::availableUnits()
+QList<RaqcoinUnits::Unit> RaqcoinUnits::availableUnits()
 {
-    QList<AbcmintUnits::Unit> unitlist;
+    QList<RaqcoinUnits::Unit> unitlist;
     unitlist.append(ABC);
     unitlist.append(mABC);
     unitlist.append(uABC);
     return unitlist;
 }
 
-bool AbcmintUnits::valid(int unit)
+bool RaqcoinUnits::valid(int unit)
 {
     switch(unit)
     {
@@ -30,7 +30,7 @@ bool AbcmintUnits::valid(int unit)
     }
 }
 
-QString AbcmintUnits::name(int unit)
+QString RaqcoinUnits::name(int unit)
 {
     switch(unit)
     {
@@ -42,18 +42,18 @@ QString AbcmintUnits::name(int unit)
     }
 }
 
-QString AbcmintUnits::description(int unit)
+QString RaqcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case ABC: return QString("Abcmints");
-    case mABC: return QString("Milli-Abcmints (1 / 1,000)");
-    case uABC: return QString("Micro-Abcmints (1 / 1,000,000)");
+    case ABC: return QString("Raqcoins");
+    case mABC: return QString("Milli-Raqcoins (1 / 1,000)");
+    case uABC: return QString("Micro-Raqcoins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
 
-qint64 AbcmintUnits::factor(int unit)
+qint64 RaqcoinUnits::factor(int unit)
 {
     switch(unit)
     {
@@ -64,7 +64,7 @@ qint64 AbcmintUnits::factor(int unit)
     }
 }
 
-int AbcmintUnits::amountDigits(int unit)
+int RaqcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
@@ -75,7 +75,7 @@ int AbcmintUnits::amountDigits(int unit)
     }
 }
 
-int AbcmintUnits::decimals(int unit)
+int RaqcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
@@ -86,7 +86,7 @@ int AbcmintUnits::decimals(int unit)
     }
 }
 
-QString AbcmintUnits::format(int unit, qint64 n, bool fPlus)
+QString RaqcoinUnits::format(int unit, qint64 n, bool fPlus)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -113,12 +113,12 @@ QString AbcmintUnits::format(int unit, qint64 n, bool fPlus)
     return quotient_str + QString(".") + remainder_str;
 }
 
-QString AbcmintUnits::formatWithUnit(int unit, qint64 amount, bool plussign)
+QString RaqcoinUnits::formatWithUnit(int unit, qint64 amount, bool plussign)
 {
     return format(unit, amount, plussign) + QString(" ") + name(unit);
 }
 
-bool AbcmintUnits::parse(int unit, const QString &value, qint64 *val_out)
+bool RaqcoinUnits::parse(int unit, const QString &value, qint64 *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -155,13 +155,13 @@ bool AbcmintUnits::parse(int unit, const QString &value, qint64 *val_out)
     return ok;
 }
 
-int AbcmintUnits::rowCount(const QModelIndex &parent) const
+int RaqcoinUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant AbcmintUnits::data(const QModelIndex &index, int role) const
+QVariant RaqcoinUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())

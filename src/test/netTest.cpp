@@ -1,5 +1,6 @@
 // Copyright (c) 2012-2017 The Bitcoin Core developers
-// Copyright (c) 2018 The Abcmint Core developers
+// Copyright (c) 2018 The Abcmint Core Developers
+// Copyright (c) 2025 The Raqcoin Core developers
 
 #include <gtest/gtest.h>
 #include <string>

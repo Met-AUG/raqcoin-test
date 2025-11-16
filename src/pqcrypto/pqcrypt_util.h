@@ -1,5 +1,5 @@
-#ifndef ABCMINT_PQCRYPT_UTIL_H
-#define ABCMINT_PQCRYPT_UTIL_H
+#ifndef RAQCOIN_PQCRYPT_UTIL_H
+#define RAQCOIN_PQCRYPT_UTIL_H
 
 /* macros for various libc functions you can change for embedded targets */
 #ifndef XMALLOC

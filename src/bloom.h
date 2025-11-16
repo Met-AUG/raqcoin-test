@@ -1,8 +1,9 @@
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_BLOOM_H
-#define ABCMINT_BLOOM_H
+#ifndef RAQCOIN_BLOOM_H
+#define RAQCOIN_BLOOM_H
 
 #include <vector>
 
@@ -88,4 +89,4 @@ public:
     void UpdateEmptyFull();
 };
 
-#endif /* ABCMINT_BLOOM_H */
+#endif /* RAQCOIN_BLOOM_H */

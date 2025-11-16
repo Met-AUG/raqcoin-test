@@ -1,5 +1,6 @@
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include "net.h"

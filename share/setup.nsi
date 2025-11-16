@@ -1,4 +1,4 @@
-Name Abcmint
+Name Raqcoin
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -6,7 +6,7 @@ SetCompressor /SOLID lzma
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 0.8.6
-!define COMPANY "Abcmint project"
+!define COMPANY "Raqcoin project"
 !define URL http://www.abcmint.org/
 
 # MUI Symbol Definitions
@@ -19,7 +19,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER Abcmint
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER Raqcoin
 !define MUI_FINISHPAGE_RUN $INSTDIR\abcmint-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
@@ -45,14 +45,14 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile abcmint-0.8.6-win32-setup.exe
-InstallDir $PROGRAMFILES\Abcmint
+OutFile raqcoin-0.8.6-win32-setup.exe
+InstallDir $PROGRAMFILES\Raqcoin
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion 0.8.6.0
-VIAddVersionKey ProductName Abcmint
+VIAddVersionKey ProductName Raqcoin
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -76,7 +76,7 @@ Section -Main SEC0000
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
-    # Remove old wxwidgets-based-abcmint executable and locales:
+    # Remove old wxwidgets-based-raqcoin executable and locales:
     Delete /REBOOTOK $INSTDIR\abcmint.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
@@ -88,7 +88,7 @@ Section -post SEC0001
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Abcmint.lnk" $INSTDIR\abcmint-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Abcmint.lnk" $INSTDIR\uninstall.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Raqcoin.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
@@ -98,8 +98,8 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "abcmint" "URL Protocol" ""
-    WriteRegStr HKCR "abcmint" "" "URL:Abcmint"
+    WriteRegStr HKCR "raqcoin" "URL Protocol" ""
+    WriteRegStr HKCR "raqcoin" "" "URL:Raqcoin"
     WriteRegStr HKCR "abcmint\DefaultIcon" "" $INSTDIR\abcmint-qt.exe
     WriteRegStr HKCR "abcmint\shell\open\command" "" '"$INSTDIR\abcmint-qt.exe" "%1"'
 SectionEnd
@@ -129,9 +129,9 @@ SectionEnd
 
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Abcmint.lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Abcmint.lnk"
-    Delete /REBOOTOK "$SMSTARTUP\Abcmint.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Raqcoin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Raqcoin.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\Raqcoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
@@ -139,7 +139,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "abcmint"
+    DeleteRegKey HKCR "raqcoin"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0

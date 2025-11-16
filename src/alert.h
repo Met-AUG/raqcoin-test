@@ -1,9 +1,10 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef _ABCMINTALERT_H_
-#define _ABCMINTALERT_H_ 1
+#ifndef _RAQCOINALERT_H_
+#define _RAQCOINALERT_H_ 1
 
 #include <set>
 #include <string>

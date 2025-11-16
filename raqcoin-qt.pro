@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = abcmint-qt
-macx:TARGET = "Abcmint-Qt"
+TARGET = raqcoin-qt
+macx:TARGET = "Raqcoin-Qt"
 VERSION = 0.8.6
 INCLUDEPATH += src src/json src/qt
 QT += network
@@ -94,7 +94,7 @@ contains(USE_ASSEMBLY, 1) {
 } else {
     message(Building with Non-assembly support)
     LIBS += $$PWD/src/rainbow18/librainbowpro_unix_p.a
-    TARGET = abcmint-qt-p
+    TARGET = raqcoin-qt-p
 }
 
 # use: qmake "USE_QRCODE=1"
@@ -146,8 +146,8 @@ contains(USE_IPV6, -) {
     DEFINES += USE_IPV6=$$USE_IPV6
 }
 
-contains(ABCMINT_NEED_QT_PLUGINS, 1) {
-    DEFINES += ABCMINT_NEED_QT_PLUGINS
+contains(RAQCOIN_NEED_QT_PLUGINS, 1) {
+    DEFINES += RAQCOIN_NEED_QT_PLUGINS
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs qtaccessiblewidgets
 }
 
@@ -424,14 +424,14 @@ FORMS += src/qt/forms/sendcoinsdialog.ui \
 #FORMS += src/qt/forms/qrcodedialog.ui
 #}
 
-contains(ABCMINT_QT_TEST, 1) {
+contains(RAQCOIN_QT_TEST, 1) {
 SOURCES += src/qt/test/test_main.cpp \
     src/qt/test/uritests.cpp
 HEADERS += src/qt/test/uritests.h
 DEPENDPATH += src/qt/test
 QT += testlib
-TARGET = abcmint-qt_test
-DEFINES += ABCMINT_QT_TEST
+TARGET = raqcoin-qt_test
+DEFINES += RAQCOIN_QT_TEST
   macx: CONFIG -= app_bundle
 }
 

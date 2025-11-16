@@ -21,7 +21,7 @@ public:
 
     enum ColumnIndex {
         Label = 0,   /**< User specified label */
-        Address = 1,  /**< Abcmint address */
+        Address = 1,  /**< Raqcoin address */
         Balances = 2,
         IsMiner = 2,
         SignType = 3

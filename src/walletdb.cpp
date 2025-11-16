@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include "walletdb.h"
@@ -196,7 +197,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
         {
             string strAddress;
             ssKey >> strAddress;
-            ssValue >> pwallet->mapAddressBook[CAbcmintAddress(strAddress).Get()];
+            ssValue >> pwallet->mapAddressBook[CRaqcoinAddress(strAddress).Get()];
         }
         else if (strType == "tx")
         {
@@ -483,7 +484,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("abcmint-wallet");
+    RenameThread("raqcoin-wallet");
 
     static bool fOneThread;
     if (fOneThread)

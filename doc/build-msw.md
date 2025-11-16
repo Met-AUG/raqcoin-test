@@ -1,12 +1,12 @@
 Copyright (c) 2018 AbcmintCore Developers
 
-Abcmintcoie is released under the terms of the GNU GPL v. 3 license.
+Raqcoincoie is released under the terms of the GNU GPL v. 3 license.
 See https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
 This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](http://www.openssl.org/). This product includes
 cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
 
 
-See readme-qt.rst for instructions on building Abcmint-Qt, the
+See readme-qt.rst for instructions on building Raqcoin-Qt, the
 graphical user interface.
 
 WINDOWS BUILD NOTES
@@ -81,10 +81,10 @@ MSYS shell:
 	mkdir miniupnpc
 	cp *.h miniupnpc/
 
-Abcmint
+Raqcoin
 -------
 DOS prompt:
 
 	cd \abcmint\src
 	mingw32-make -f makefile.mingw
-	strip abcmint.exe
+	strip raqcoin.exe

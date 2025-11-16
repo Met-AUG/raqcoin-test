@@ -1,5 +1,5 @@
 ---
-name: "abcmint"
+name: "raqcoin"
 suites:
 - "lucid"
 architectures:
@@ -13,11 +13,11 @@ packages:
 reference_datetime: "2011-01-30 00:00:00"
 remotes:
 - "url": "https://github.com/abcmint/abcmint.git"
-  "dir": "abcmint"
+  "dir": "raqcoin"
 files:
 - "qt-win32-4.8.3-gitian-r1.zip"
 - "boost-win32-1.50.0-gitian2.zip"
-- "abcmint-deps-0.0.5.zip"
+- "raqcoin-deps-0.0.5.zip"
 script: |
   #
   mkdir $HOME/qt
@@ -39,11 +39,11 @@ script: |
   mv include/boost .
   cd ..
   #
-  unzip abcmint-deps-0.0.5.zip
+  unzip raqcoin-deps-0.0.5.zip
   #
   find -type f | xargs touch --date="$REFERENCE_DATETIME"
   #
-  cd abcmint
+  cd raqcoin
   mkdir -p $OUTDIR/src
   git archive HEAD | tar -x -C $OUTDIR/src
   cp $OUTDIR/src/doc/README_windows.txt $OUTDIR/readme.txt
@@ -51,7 +51,7 @@ script: |
   export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
   export FAKETIME=$REFERENCE_DATETIME
   export TZ=UTC
-  $HOME/qt/src/bin/qmake -spec unsupported/win32-g++-cross MINIUPNPC_LIB_PATH=$HOME/build/miniupnpc MINIUPNPC_INCLUDE_PATH=$HOME/build/ BDB_LIB_PATH=$HOME/build/db-4.8.30.NC/build_unix BDB_INCLUDE_PATH=$HOME/build/db-4.8.30.NC/build_unix BOOST_LIB_PATH=$HOME/build/boost_1_50_0/stage/lib BOOST_INCLUDE_PATH=$HOME/build/boost_1_50_0 BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$HOME/build/openssl-1.0.1c OPENSSL_INCLUDE_PATH=$HOME/build/openssl-1.0.1c/include QRENCODE_LIB_PATH=$HOME/build/qrencode-3.2.0/.libs QRENCODE_INCLUDE_PATH=$HOME/build/qrencode-3.2.0 USE_QRCODE=1 INCLUDEPATH=$HOME/build DEFINES=BOOST_THREAD_USE_LIB ABCMINT_NEED_QT_PLUGINS=1 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=abcmint USE_BUILD_INFO=1
+  $HOME/qt/src/bin/qmake -spec unsupported/win32-g++-cross MINIUPNPC_LIB_PATH=$HOME/build/miniupnpc MINIUPNPC_INCLUDE_PATH=$HOME/build/ BDB_LIB_PATH=$HOME/build/db-4.8.30.NC/build_unix BDB_INCLUDE_PATH=$HOME/build/db-4.8.30.NC/build_unix BOOST_LIB_PATH=$HOME/build/boost_1_50_0/stage/lib BOOST_INCLUDE_PATH=$HOME/build/boost_1_50_0 BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$HOME/build/openssl-1.0.1c OPENSSL_INCLUDE_PATH=$HOME/build/openssl-1.0.1c/include QRENCODE_LIB_PATH=$HOME/build/qrencode-3.2.0/.libs QRENCODE_INCLUDE_PATH=$HOME/build/qrencode-3.2.0 USE_QRCODE=1 INCLUDEPATH=$HOME/build DEFINES=BOOST_THREAD_USE_LIB RAQCOIN_NEED_QT_PLUGINS=1 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=raqcoin USE_BUILD_INFO=1
   make $MAKEOPTS
   cp release/abcmint-qt.exe $OUTDIR/
   #
@@ -59,10 +59,10 @@ script: |
   export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
   export FAKETIME=$REFERENCE_DATETIME
   export TZ=UTC
-  make -f makefile.linux-mingw $MAKEOPTS DEPSDIR=$HOME/build abcmint.exe USE_UPNP=0 DEBUGFLAGS="-frandom-seed=abcmint"
-  i586-mingw32msvc-strip abcmint.exe
+  make -f makefile.linux-mingw $MAKEOPTS DEPSDIR=$HOME/build raqcoin.exe USE_UPNP=0 DEBUGFLAGS="-frandom-seed=raqcoin"
+  i586-mingw32msvc-strip raqcoin.exe
   mkdir $OUTDIR/daemon
-  cp abcmint.exe $OUTDIR/daemon
+  cp raqcoin.exe $OUTDIR/daemon
   cd ..
   mkdir nsis
   git archive HEAD | tar -x -C nsis

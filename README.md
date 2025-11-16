@@ -1,17 +1,17 @@
-Abcmint integration/staging tree
+Raqcoin integration/staging tree
 ================================
 
 http://www.abcmint.org
 
 Copyright (c) 2018 ABCMintCore Developers
 
-What is Abcmint?
+What is Raqcoin?
 ----------------
 
-Abcmint is an experimental new digital currency that enables instant payments to
-anyone, anywhere in the world. Abcmint uses peer-to-peer technology to operate
+Raqcoin is an experimental new digital currency that enables instant payments to
+anyone, anywhere in the world. Raqcoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Abcmint is also the name of the open source
+out collectively by the network. Raqcoin is also the name of the open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
@@ -27,7 +27,7 @@ THIRD PARTY SOFTWARE DISCLOSURE, ATTRIBUTIONS, COPYRIGHT NOTICES, AND LICENSES
 Certain open source third-party software and data components are integrated and/or redistributed with
 ABCMintCore. Such third-party components include terms and conditions, such as attribution and liability disclaimers (collectively "Third Party Disclosures") for which disclosure is required by their respective owners. This notice sets forth such Third Party Disclosures for ABCMintCore. 
 
-ABC MINT FOUNDATION MAKES NO REPRESENTATION, WARRANTY OR OTHER COMMITMENT REGARDING SUCH THIRD PARTY COMPONENTS.  ABCMINTCORE, AND ALL THIRD PARTY COMPONENTS, ARE DISTRIBUTED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, UNLESS PROHIBITED BY APPLICABLE LAW
+ABC MINT FOUNDATION MAKES NO REPRESENTATION, WARRANTY OR OTHER COMMITMENT REGARDING SUCH THIRD PARTY COMPONENTS.  RAQCOINCORE, AND ALL THIRD PARTY COMPONENTS, ARE DISTRIBUTED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, UNLESS PROHIBITED BY APPLICABLE LAW
 
 
 1. Openssl
@@ -141,7 +141,7 @@ controversial.
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/abcmint/abcmint/tags) are created
-regularly to indicate new official, stable release versions of Abcmint.
+regularly to indicate new official, stable release versions of Raqcoin.
 
 Testing
 -------
@@ -162,7 +162,7 @@ Unit tests for the core code are in `src/test/`. To compile and run them:
 
 Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
 
-    qmake ABCMINT_QT_TEST=1 -o Makefile.test raqcoin-qt.pro
+    qmake RAQCOIN_QT_TEST=1 -o Makefile.test raqcoin-qt.pro
     make -f Makefile.test
     ./abcmint-qt_test
 

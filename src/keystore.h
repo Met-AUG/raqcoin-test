@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_KEYSTORE_H
-#define ABCMINT_KEYSTORE_H
+#ifndef RAQCOIN_KEYSTORE_H
+#define RAQCOIN_KEYSTORE_H
 
 #include "crypter.h"
 #include "sync.h"
@@ -30,7 +31,7 @@ public:
     virtual void GetKeys(std::set<CKeyID> &setAddress) const =0;
     virtual bool GetPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const;
 
-    // Support for BIP 0013 : see https://en.abcmint.it/wiki/BIP_0013
+    // Support for BIP 0013 : see https://en.raqcoin.it/wiki/BIP_0013
     virtual bool AddCScript(const CScript& redeemScript) =0;
     virtual bool HaveCScript(const CScriptID &hash) const =0;
     virtual bool GetCScript(const CScriptID &hash, CScript& redeemScriptOut) const =0;

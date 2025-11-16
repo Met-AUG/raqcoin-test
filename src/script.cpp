@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 #include <boost/foreach.hpp>
 #include <boost/tuple/tuple.hpp>
@@ -1239,7 +1240,7 @@ bool Solver(const CScript& scriptPubKey, txnouttype& typeRet, vector<vector<unsi
         // Standard tx, sender provides pubkey, receiver adds signature
         mTemplates.insert(make_pair(TX_PUBKEY, CScript() << OP_PUBKEY << OP_CHECKSIG));
 
-        // Abcmint address tx, sender provides hash of pubkey, receiver provides signature and pubkey
+        // Raqcoin address tx, sender provides hash of pubkey, receiver provides signature and pubkey
         mTemplates.insert(make_pair(TX_PUBKEYHASH, CScript() << OP_DUP << OP_HASH256 << OP_PUBKEYHASH << OP_EQUALVERIFY << OP_CHECKSIG));
 
         // Sender provides N pubkeys, receivers provides M signatures
@@ -1455,7 +1456,7 @@ bool Solver(const CKeyStore& keystore, const CScript& scriptPubKey, const CTrans
             scriptSigRet<<v;
         } else {
             CDiskPubKeyPos pos;
-            string address = CAbcmintAddress(keyID).ToString();
+            string address = CRaqcoinAddress(keyID).ToString();
             if (!pwalletMain->GetPubKeyPos(address, pos)) {
                 scriptSigRet << vch.vchPubKey;
 

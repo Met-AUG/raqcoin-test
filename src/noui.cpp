@@ -1,6 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include "ui_interface.h"
@@ -44,7 +45,7 @@ static void noui_InitMessage(const std::string &message)
 
 void noui_connect()
 {
-    // Connect abcmint signal handlers
+    // Connect raqcoin signal handlers
     uiInterface.ThreadSafeMessageBox.connect(noui_ThreadSafeMessageBox);
     uiInterface.ThreadSafeAskFee.connect(noui_ThreadSafeAskFee);
     uiInterface.InitMessage.connect(noui_InitMessage);

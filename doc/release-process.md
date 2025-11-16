@@ -27,7 +27,7 @@ Release Process
 
 ##perform gitian builds
 
- From a directory containing the abcmint source, gitian-builder and gitian.sigs
+ From a directory containing the raqcoin source, gitian-builder and gitian.sigs
   
 	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
 	export VERSION=0.8.0
@@ -52,42 +52,42 @@ Release Process
 	./bin/gbuild ../abcmint/contrib/gitian-descriptors/deps-win32.yml
 	mv build/out/abcmint-deps-0.0.5.zip inputs/
 
- Build abcmint and abcmint-qt on Linux32, Linux64, and Win32:
+ Build raqcoin and raqcoin-qt on Linux32, Linux64, and Win32:
   
 	./bin/gbuild --commit abcmint=v${VERSION} ../abcmint/contrib/gitian-descriptors/gitian.yml
 	./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../abcmint/contrib/gitian-descriptors/gitian.yml
 	pushd build/out
-	zip -r abcmint-${VERSION}-linux-gitian.zip *
-	mv abcmint-${VERSION}-linux-gitian.zip ../../../
+	zip -r raqcoin-${VERSION}-linux-gitian.zip *
+	mv raqcoin-${VERSION}-linux-gitian.zip ../../../
 	popd
 	./bin/gbuild --commit abcmint=v${VERSION} ../abcmint/contrib/gitian-descriptors/gitian-win32.yml
 	./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs/ ../abcmint/contrib/gitian-descriptors/gitian-win32.yml
 	pushd build/out
-	zip -r abcmint-${VERSION}-win32-gitian.zip *
-	mv abcmint-${VERSION}-win32-gitian.zip ../../../
+	zip -r raqcoin-${VERSION}-win32-gitian.zip *
+	mv raqcoin-${VERSION}-win32-gitian.zip ../../../
 	popd
 	popd
 
   Build output expected:
 
-  1. linux 32-bit and 64-bit binaries + source (abcmint-${VERSION}-linux-gitian.zip)
-  2. windows 32-bit binary, installer + source (abcmint-${VERSION}-win32-gitian.zip)
+  1. linux 32-bit and 64-bit binaries + source (raqcoin-${VERSION}-linux-gitian.zip)
+  2. windows 32-bit binary, installer + source (raqcoin-${VERSION}-win32-gitian.zip)
   3. Gitian signatures (in gitian.sigs/${VERSION}[-win32]/(your gitian key)/
 
 repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 **Linux .tar.gz:**
 
-	unzip abcmint-${VERSION}-linux-gitian.zip -d abcmint-${VERSION}-linux
-	tar czvf abcmint-${VERSION}-linux.tar.gz abcmint-${VERSION}-linux
-	rm -rf abcmint-${VERSION}-linux
+	unzip raqcoin-${VERSION}-linux-gitian.zip -d raqcoin-${VERSION}-linux
+	tar czvf raqcoin-${VERSION}-linux.tar.gz raqcoin-${VERSION}-linux
+	rm -rf raqcoin-${VERSION}-linux
 
 **Windows .zip and setup.exe:**
 
-	unzip abcmint-${VERSION}-win32-gitian.zip -d abcmint-${VERSION}-win32
+	unzip raqcoin-${VERSION}-win32-gitian.zip -d raqcoin-${VERSION}-win32
 	mv abcmint-${VERSION}-win32/abcmint-*-setup.exe .
-	zip -r abcmint-${VERSION}-win32.zip abcmint-${VERSION}-win32
-	rm -rf abcmint-${VERSION}-win32
+	zip -r raqcoin-${VERSION}-win32.zip raqcoin-${VERSION}-win32
+	rm -rf raqcoin-${VERSION}-win32
 
 **Perform Mac build:**
 
@@ -98,14 +98,14 @@ repackage gitian builds for release as stand-alone zip/tar/installer exe
 	export QTDIR=/opt/local/share/qt4  # needed to find translations/qt_*.qm files
 	T=$(contrib/qt_translations.py $QTDIR/translations src/qt/locale)
 	python2.7 share/qt/clean_mac_info_plist.py
-	python2.7 contrib/macdeploy/macdeployqtplus Abcmint-Qt.app -add-qt-tr $T -dmg -fancy contrib/macdeploy/fancy.plist
+	python2.7 contrib/macdeploy/macdeployqtplus Raqcoin-Qt.app -add-qt-tr $T -dmg -fancy contrib/macdeploy/fancy.plist
 
- Build output expected: Abcmint-Qt.dmg
+ Build output expected: Raqcoin-Qt.dmg
 
 ###Next steps:
 
 * Code-sign Windows -setup.exe (in a Windows virtual machine) and
-  OSX Abcmint-Qt.app (Note: only Gavin has the code-signing keys currently)
+  OSX Raqcoin-Qt.app (Note: only Gavin has the code-signing keys currently)
 
 * upload builds to SourceForge
 
@@ -118,7 +118,7 @@ repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 * update wiki download links
 
-* update wiki changelog: [https://en.abcmint.it/wiki/Changelog](https://en.abcmint.it/wiki/Changelog)
+* update wiki changelog: [https://en.raqcoin.it/wiki/Changelog](https://en.raqcoin.it/wiki/Changelog)
 
 Commit your signature to gitian.sigs:
 
@@ -133,11 +133,11 @@ Commit your signature to gitian.sigs:
 
 ### After 3 or more people have gitian-built, repackage gitian-signed zips:
 
-From a directory containing abcmint source, gitian.sigs and gitian zips
+From a directory containing raqcoin source, gitian.sigs and gitian zips
 
 	export VERSION=0.5.1
-	mkdir abcmint-${VERSION}-linux-gitian
-	pushd abcmint-${VERSION}-linux-gitian
+	mkdir raqcoin-${VERSION}-linux-gitian
+	pushd raqcoin-${VERSION}-linux-gitian
 	unzip ../abcmint-${VERSION}-linux-gitian.zip
 	mkdir gitian
 	cp ../abcmint/contrib/gitian-downloader/*.pgp ./gitian/
@@ -145,11 +145,11 @@ From a directory containing abcmint source, gitian.sigs and gitian zips
 	 cp ../gitian.sigs/${VERSION}/${signer}/abcmint-build.assert ./gitian/${signer}-build.assert
 	 cp ../gitian.sigs/${VERSION}/${signer}/abcmint-build.assert.sig ./gitian/${signer}-build.assert.sig
 	done
-	zip -r abcmint-${VERSION}-linux-gitian.zip *
-	cp abcmint-${VERSION}-linux-gitian.zip ../
+	zip -r raqcoin-${VERSION}-linux-gitian.zip *
+	cp raqcoin-${VERSION}-linux-gitian.zip ../
 	popd
-	mkdir abcmint-${VERSION}-win32-gitian
-	pushd abcmint-${VERSION}-win32-gitian
+	mkdir raqcoin-${VERSION}-win32-gitian
+	pushd raqcoin-${VERSION}-win32-gitian
 	unzip ../abcmint-${VERSION}-win32-gitian.zip
 	mkdir gitian
 	cp ../abcmint/contrib/gitian-downloader/*.pgp ./gitian/
@@ -157,8 +157,8 @@ From a directory containing abcmint source, gitian.sigs and gitian zips
 	 cp ../gitian.sigs/${VERSION}-win32/${signer}/abcmint-build.assert ./gitian/${signer}-build.assert
 	 cp ../gitian.sigs/${VERSION}-win32/${signer}/abcmint-build.assert.sig ./gitian/${signer}-build.assert.sig
 	done
-	zip -r abcmint-${VERSION}-win32-gitian.zip *
-	cp abcmint-${VERSION}-win32-gitian.zip ../
+	zip -r raqcoin-${VERSION}-win32-gitian.zip *
+	cp raqcoin-${VERSION}-win32-gitian.zip ../
 	popd
 
 - Upload gitian zips to SourceForge

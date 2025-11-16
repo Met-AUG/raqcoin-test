@@ -1,4 +1,5 @@
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 #include "pqcrypto/api.h"
 #include "key.h"

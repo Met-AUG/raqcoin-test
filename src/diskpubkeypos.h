@@ -1,7 +1,8 @@
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_DISKPUBKEYPOS_H
-#define ABCMINT_DISKPUBKEYPOS_H
+#ifndef RAQCOIN_DISKPUBKEYPOS_H
+#define RAQCOIN_DISKPUBKEYPOS_H
 
 #include <vector>
 #include <boost/thread.hpp>

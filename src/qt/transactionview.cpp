@@ -272,7 +272,7 @@ void TransactionView::changedAmount(const QString &amount)
     if(!transactionProxyModel)
         return;
     qint64 amount_parsed = 0;
-    if(AbcmintUnits::parse(model->getOptionsModel()->getDisplayUnit(), amount, &amount_parsed))
+    if(RaqcoinUnits::parse(model->getOptionsModel()->getDisplayUnit(), amount, &amount_parsed))
     {
         transactionProxyModel->setMinAmount(amount_parsed);
     }

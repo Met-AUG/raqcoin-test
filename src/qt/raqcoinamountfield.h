@@ -1,5 +1,5 @@
-#ifndef ABCMINTAMOUNTFIELD_H
-#define ABCMINTAMOUNTFIELD_H
+#ifndef RAQCOINAMOUNTFIELD_H
+#define RAQCOINAMOUNTFIELD_H
 
 #include <QWidget>
 
@@ -8,16 +8,16 @@ class QDoubleSpinBox;
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering abcmint amounts.
+/** Widget for entering raqcoin amounts.
   */
-class AbcmintAmountField: public QWidget
+class RaqcoinAmountField: public QWidget
 {
     Q_OBJECT
 
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY textChanged USER true)
 
 public:
-    explicit AbcmintAmountField(QWidget *parent = 0);
+    explicit RaqcoinAmountField(QWidget *parent = 0);
 
     qint64 value(bool *valid=0) const;
     void setValue(qint64 value);
@@ -58,4 +58,4 @@ private slots:
 
 };
 
-#endif // ABCMINTAMOUNTFIELD_H
+#endif // RAQCOINAMOUNTFIELD_H

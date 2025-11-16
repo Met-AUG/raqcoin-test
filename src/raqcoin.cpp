@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 {
     bool fRet = false;
 
-    // Connect  Abcmint signal handlers
+    // Connect  Raqcoin signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);

@@ -13,12 +13,12 @@
   - '0' and 'O' to 'o'
 */
 
-AbcmintAddressValidator::AbcmintAddressValidator(QObject *parent) :
+RaqcoinAddressValidator::RaqcoinAddressValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State AbcmintAddressValidator::validate(QString &input, int &pos) const
+QValidator::State RaqcoinAddressValidator::validate(QString &input, int &pos) const
 {
     // Correction
     for(int idx=0; idx<input.size();)

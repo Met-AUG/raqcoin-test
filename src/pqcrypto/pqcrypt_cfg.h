@@ -4,8 +4,8 @@
  * out the line that #define's the word for the thing you want to remove.  phew!
  */
 
-#ifndef ABCMINT_PQCRYPT_CFG_H
-#define ABCMINT_PQCRYPT_CFG_H
+#ifndef RAQCOIN_PQCRYPT_CFG_H
+#define RAQCOIN_PQCRYPT_CFG_H
 
 
 #if defined(_WIN32) || defined(_MSC_VER)

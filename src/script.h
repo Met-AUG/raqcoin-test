@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef H_ABCMINT_SCRIPT
-#define H_ABCMINT_SCRIPT
+#ifndef H_RAQCOIN_SCRIPT
+#define H_RAQCOIN_SCRIPT
 
 #include <string>
 #include <vector>
@@ -636,7 +637,7 @@ public:
         return nFound;
     }
 
-    // Pre-version-0.6, Abcmint always counted CHECKMULTISIGs
+    // Pre-version-0.6, Raqcoin always counted CHECKMULTISIGs
     // as 20 sigops. With pay-to-script-hash, that changed:
     // CHECKMULTISIGs serialized in scriptSigs are
     // counted more accurately, assuming they are of the form

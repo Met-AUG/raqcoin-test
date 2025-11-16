@@ -62,7 +62,7 @@ QString dateTimeStr(qint64 nTime)
     return dateTimeStr(QDateTime::fromTime_t((qint32)nTime));
 }
 
-QFont abcmintAddressFont()
+QFont raqcoinAddressFont()
 {
     QFont font("Monospace");
     font.setStyleHint(QFont::TypeWriter);
@@ -71,9 +71,9 @@ QFont abcmintAddressFont()
 
 void setupAddressWidget(QLineEdit *widget, QWidget *parent)
 {
-    widget->setMaxLength(AbcmintAddressValidator::MaxAddressLength);
-    widget->setValidator(new AbcmintAddressValidator(parent));
-    widget->setFont(abcmintAddressFont());
+    widget->setMaxLength(RaqcoinAddressValidator::MaxAddressLength);
+    widget->setValidator(new RaqcoinAddressValidator(parent));
+    widget->setFont(raqcoinAddressFont());
 }
 
 void setupAmountWidget(QLineEdit *widget, QWidget *parent)
@@ -85,10 +85,10 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-bool parseAbcmintURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseRaqcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no abcmint URI
-    if(!uri.isValid() || uri.scheme() != QString("abcmint"))
+    // return if URI is not valid or is no raqcoin URI
+    if(!uri.isValid() || uri.scheme() != QString("raqcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -118,7 +118,7 @@ bool parseAbcmintURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!AbcmintUnits::parse(AbcmintUnits::ABC, i->second, &rv.amount))
+                if(!RaqcoinUnits::parse(RaqcoinUnits::ABC, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -136,7 +136,7 @@ bool parseAbcmintURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseAbcmintURI(QString uri, SendCoinsRecipient *out)
+bool parseRaqcoinURI(QString uri, SendCoinsRecipient *out)
 {
     // Convert abcmint:// to abcmint:
     //
@@ -147,7 +147,7 @@ bool parseAbcmintURI(QString uri, SendCoinsRecipient *out)
         uri.replace(0, 10, "abcmint:");
     }
     QUrl uriInstance(uri);
-    return parseAbcmintURI(uriInstance, out);
+    return parseRaqcoinURI(uriInstance, out);
 }
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
@@ -299,12 +299,12 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Abcmint.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Raqcoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Abcmint.lnk
+    // check for Raqcoin.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -381,7 +381,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "abcmint.desktop";
+    return GetAutostartDir() / "raqcoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -419,10 +419,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a abcmint.desktop file to the autostart directory:
+        // Write a raqcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Abcmint\n";
+        optionFile << "Name=Raqcoin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -559,10 +559,10 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("Abcmint-Qt") + " " + tr("version") + " " +
+    header = tr("Raqcoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  abcmint-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  raqcoin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -571,7 +571,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("Abcmint-Qt"));
+    setWindowTitle(tr("Raqcoin-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));

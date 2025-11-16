@@ -1,5 +1,6 @@
 # Copyright (c) 2009-2010 Satoshi Nakamoto
 # Copyright (c) 2018 ABCMintCore developers
+# Copyright (c) 2025 Raqcoin Core developers
 
 # :=0 --> UPnP support turned off by default at runtime
 # :=1 --> UPnP support turned on by default at runtime
@@ -177,7 +178,7 @@ OBJS= \
 all: raqcoin_p
 
 test check: test_raqcoin FORCE
-    ./test_raqcoin
+	./test_raqcoin
 
 #
 # LevelDB support
@@ -245,7 +246,7 @@ obj/%.o: %.cpp
 	  rm -f $(@:%.o=%.d)
 
 raqcoin_p:  $(OBJS:obj/%=obj/%)
-    $(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)	
+	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)	
 	
 
 TESTOBJS := obj-test/gtest.a obj-test/gtest_main.a
@@ -288,13 +289,13 @@ obj-test/%.o: test/%.cpp
 	  
 
 test_raqcoin: $(TESTOBJS) $(filter-out obj/raqcoin.o,$(OBJS:obj/%=obj/%))
-    $(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
+	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
 
-#test_abcmint: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+#test_raqcoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 #	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
 
 clean:
-    -rm -f raqcoin_p test_raqcoin
+	-rm -f raqcoin_p test_raqcoin
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f pqcrypto/*.o

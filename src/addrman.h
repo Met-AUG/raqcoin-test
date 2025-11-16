@@ -1,6 +1,6 @@
 // Copyright (c) 2012 Pieter Wuille
-#ifndef _ABCMINT_ADDRMAN
-#define _ABCMINT_ADDRMAN 1
+#ifndef _RAQCOIN_ADDRMAN
+#define _RAQCOIN_ADDRMAN 1
 
 #include "netbase.h"
 #include "protocol.h"

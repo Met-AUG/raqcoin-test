@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Abcmint</source>
-        <translation>Abcmintについて</translation>
+        <source>About Raqcoin</source>
+        <translation>Raqcoinについて</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Abcmint&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Abcmint&lt;/b&gt; バージョン</translation>
+        <source>&lt;b&gt;Raqcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Raqcoin&lt;/b&gt; バージョン</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="+0"/>
-        <source>The Abcmint developers</source>
-        <translation>Abcmint の開発者</translation>
+        <source>The Raqcoin developers</source>
+        <translation>Raqcoin の開発者</translation>
     </message>
 </context>
 <context>
@@ -66,8 +66,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Abcmint addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>これらは、支払いを受け取るための Abcmint アドレスです。誰があなたに支払っているかを追跡できるように、各送信者に異なるものを渡すことをお勧めします。</translation>
+        <source>These are your Raqcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>これらは、支払いを受け取るための Raqcoin アドレスです。誰があなたに支払っているかを追跡できるように、各送信者に異なるものを渡すことをお勧めします。</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,8 +81,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Abcmint address</source>
-        <translation>メッセージに署名して、Abcmint アドレスを所有していることを証明します</translation>
+        <source>Sign a message to prove you own a Raqcoin address</source>
+        <translation>メッセージに署名して、Raqcoin アドレスを所有していることを証明します</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,8 +106,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Abcmint address</source>
-        <translation>メッセージを検証して、指定された Abcmint アドレスで署名されていることを確認します</translation>
+        <source>Verify a message to ensure it was signed with a specified Raqcoin address</source>
+        <translation>メッセージを検証して、指定された Raqcoin アドレスで署名されていることを確認します</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,8 +121,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Abcmint addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>これらは、支払いを送信するための Abcmint アドレスです。コインを送る前に必ず金額と受取先を確認してください。</translation>
+        <source>These are your Raqcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>これらは、支払いを送信するための Raqcoin アドレスです。コインを送る前に必ず金額と受取先を確認してください。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -267,8 +267,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABCMINTS&lt;/b&gt;!</source>
-        <translation>警告: ウォレットを暗号化してパスフレーズを紛失すると、 &lt;b&gt;すべての ABCMINTS が失われます&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAQCOINS&lt;/b&gt;!</source>
+        <translation>警告: ウォレットを暗号化してパスフレーズを紛失すると、 &lt;b&gt;すべての RAQCOINS が失われます&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -294,7 +294,7 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="-56"/>
-        <source>Abcmint will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your abcmints from being stolen by malware infecting your computer.</source>
+        <source>Raqcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your raqcoins from being stolen by malware infecting your computer.</source>
         <translation>警告: Caps Lock キーがオンになっています!</translation>
     </message>
     <message>
@@ -340,7 +340,7 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
 </context>
 <context>
-    <name>AbcmintGUI</name>
+    <name>RaqcoinGUI</name>
     <message>
         <location filename="../raqcoingui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
@@ -393,8 +393,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Abcmint</source>
-        <translation>Abcmintに関する情報を見る</translation>
+        <source>Show information about Raqcoin</source>
+        <translation>Raqcoinに関する情報を見る</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -438,13 +438,13 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Abcmint address</source>
-        <translation>Abcmintアドレスにコインを送る</translation>
+        <source>Send coins to a Raqcoin address</source>
+        <translation>Raqcoinアドレスにコインを送る</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Abcmint</source>
-        <translation>Abcmint の構成オプションを変更する</translation>
+        <source>Modify configuration options for Raqcoin</source>
+        <translation>Raqcoin の構成オプションを変更する</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -474,8 +474,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Abcmint</source>
-        <translation>Abcmint</translation>
+        <source>Raqcoin</source>
+        <translation>Raqcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -499,8 +499,8 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Abcmint</source>
-        <translation>&amp;Abcmintについて</translation>
+        <source>&amp;About Raqcoin</source>
+        <translation>&amp;Raqcoinについて</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -519,13 +519,13 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Abcmint addresses to prove you own them</source>
-        <translation>Abcmint アドレスを使用してメッセージに署名し、所有者であることを証明します</translation>
+        <source>Sign messages with your Raqcoin addresses to prove you own them</source>
+        <translation>Raqcoin アドレスを使用してメッセージに署名し、所有者であることを証明します</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Abcmint addresses</source>
-        <translation>メッセージを検証して、指定された Abcmint アドレスで署名されていることを確認します</translation>
+        <source>Verify messages to ensure they were signed with specified Raqcoin addresses</source>
+        <translation>メッセージを検証して、指定された Raqcoin アドレスで署名されていることを確認します</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -555,13 +555,13 @@ MIT/X11 ソフトウェア ライセンスに基づいて配布されていま�
     </message>
     <message>
         <location line="+47"/>
-        <source>Abcmint client</source>
-        <translation>Abcmint クライアント</translation>
+        <source>Raqcoin client</source>
+        <translation>Raqcoin クライアント</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Abcmint network</source>
-        <translation><numerusform>%n Abcmint ネットワークへのアクティブな接続</numerusform></translation>
+        <source>%n active connection(s) to Raqcoin network</source>
+        <translation><numerusform>%n Raqcoin ネットワークへのアクティブな接続</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -674,8 +674,8 @@ Address: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Abcmint address or malformed URI parameters.</source>
-        <translation>URI を解析できません!これは、無効な Abcmint アドレスまたは不正な形式の URI パラメーターが原因である可能性があります。</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Raqcoin address or malformed URI parameters.</source>
+        <translation>URI を解析できません!これは、無効な Raqcoin アドレスまたは不正な形式の URI パラメーターが原因である可能性があります。</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -689,8 +689,8 @@ Address: %4
     </message>
     <message>
         <location filename="../raqcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Abcmint can no longer continue safely and will quit.</source>
-        <translation>致命的なエラーが発生しました。 Abcmint は安全に続行できなくなり、終了します。</translation>
+        <source>A fatal error occurred. Raqcoin can no longer continue safely and will quit.</source>
+        <translation>致命的なエラーが発生しました。 Raqcoin は安全に続行できなくなり、終了します。</translation>
     </message>
 </context>
 <context>
@@ -755,8 +755,8 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Abcmint address.</source>
-        <translation>入力されたアドレス &quot;%1&quot; は有効な Abcmint アドレスではありません。</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Raqcoin address.</source>
+        <translation>入力されたアドレス &quot;%1&quot; は有効な Raqcoin アドレスではありません。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -774,8 +774,8 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Abcmint-Qt</source>
-        <translation>Abcmint-Qt</translation>
+        <source>Raqcoin-Qt</source>
+        <translation>Raqcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -837,13 +837,13 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Abcmint after logging in to the system.</source>
-        <translation>システムにログインした後、Abcmint を自動的に起動します。</translation>
+        <source>Automatically start Raqcoin after logging in to the system.</source>
+        <translation>システムにログインした後、Raqcoin を自動的に起動します。</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Abcmint on system login</source>
-        <translation>&amp;システム ログイン時に Abcmint を起動する</translation>
+        <source>&amp;Start Raqcoin on system login</source>
+        <translation>&amp;システム ログイン時に Raqcoin を起動する</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -862,8 +862,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Abcmint client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>ルーターで Abcmint クライアント ポートを自動的に開きます。これは、ルーターが UPnP をサポートし、有効になっている場合にのみ機能します。</translation>
+        <source>Automatically open the Raqcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>ルーターで Raqcoin クライアント ポートを自動的に開きます。これは、ルーターが UPnP をサポートし、有効になっている場合にのみ機能します。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -872,8 +872,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Abcmint network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>SOCKS プロキシを介して Abcmint ネットワークに接続します (Tor を介して接続する場合など)。</translation>
+        <source>Connect to the Raqcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>SOCKS プロキシを介して Raqcoin ネットワークに接続します (Tor を介して接続する場合など)。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -947,8 +947,8 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Abcmint.</source>
-        <translation>ユーザー インターフェイス言語はここで設定できます。この設定は Abcmint の再起動後に有効になります。</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Raqcoin.</source>
+        <translation>ユーザー インターフェイス言語はここで設定できます。この設定は Raqcoin の再起動後に有効になります。</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -962,8 +962,8 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Abcmint addresses in the transaction list or not.</source>
-        <translation>Abcmint アドレスをトランザクション リストに表示するかどうか。</translation>
+        <source>Whether to show Raqcoin addresses in the transaction list or not.</source>
+        <translation>Raqcoin アドレスをトランザクション リストに表示するかどうか。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1014,8 +1014,8 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Abcmint.</source>
-        <translation>この設定は Abcmint の再起動後に有効になります。</translation>
+        <source>This setting will take effect after restarting Raqcoin.</source>
+        <translation>この設定は Raqcoin の再起動後に有効になります。</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1033,8 +1033,8 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Abcmint network after a connection is established, but this process has not completed yet.</source>
-        <translation>表示されている情報が古い可能性があります。接続が確立されると、ウォレットは Abcmint ネットワークと自動的に同期しますが、このプロセスはまだ完了していません。</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raqcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>表示されている情報が古い可能性があります。接続が確立されると、ウォレットは Raqcoin ネットワークと自動的に同期しますが、このプロセスはまだ完了していません。</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1088,7 +1088,7 @@ Address: %4
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
         <source>Cannot start abcmint: click-to-pay handler</source>
-        <translation>abcmint を開始できません: Click-to-Pay ハンドラー</translation>
+        <translation>raqcoin を開始できません: Click-to-Pay ハンドラー</translation>
     </message>
 </context>
 <context>
@@ -1237,8 +1237,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Abcmint-Qt help message to get a list with possible Abcmint command-line options.</source>
-        <translation>Abcmint-Qt ヘルプ メッセージを表示して、可能な Abcmint コマンドライン オプションのリストを取得します。</translation>
+        <source>Show the Raqcoin-Qt help message to get a list with possible Raqcoin command-line options.</source>
+        <translation>Raqcoin-Qt ヘルプ メッセージを表示して、可能な Raqcoin コマンドライン オプションのリストを取得します。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1257,13 +1257,13 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Abcmint - Debug window</source>
-        <translation>Abcmint - デバッグ ウィンドウ</translation>
+        <source>Raqcoin - Debug window</source>
+        <translation>Raqcoin - デバッグ ウィンドウ</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Abcmint Core</source>
-        <translation>Abcmint コア</translation>
+        <source>Raqcoin Core</source>
+        <translation>Raqcoin コア</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1272,8 +1272,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Abcmint debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>現在のデータ ディレクトリから Abcmint デバッグ ログ ファイルを開きます。大きなログ ファイルの場合、これには数秒かかる場合があります。</translation>
+        <source>Open the Raqcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>現在のデータ ディレクトリから Raqcoin デバッグ ログ ファイルを開きます。大きなログ ファイルの場合、これには数秒かかる場合があります。</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1282,8 +1282,8 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Abcmint RPC console.</source>
-        <translation>Abcmint RPC コンソールへようこそ。</translation>
+        <source>Welcome to the Raqcoin RPC console.</source>
+        <translation>Raqcoin RPC コンソールへようこそ。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1484,8 +1484,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Abcmint アドレスを入力します (例: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Raqcoin アドレスを入力します (例: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
     </message>
 </context>
 <context>
@@ -1549,8 +1549,8 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Abcmint address</source>
-        <translation>メッセージに署名して、この Abcmint アドレスを所有していることを証明してください</translation>
+        <source>Sign the message to prove you own this Raqcoin address</source>
+        <translation>メッセージに署名して、この Raqcoin アドレスを所有していることを証明してください</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1585,8 +1585,8 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Abcmint address</source>
-        <translation>メッセージを検証して、指定された Abcmint アドレスで署名されていることを確認します</translation>
+        <source>Verify the message to ensure it was signed with the specified Raqcoin address</source>
+        <translation>メッセージを検証して、指定された Raqcoin アドレスで署名されていることを確認します</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1601,8 +1601,8 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Abcmint address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
-        <translation>Abcmint アドレスを入力します (例: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
+        <source>Enter a Raqcoin address (e.g. 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</source>
+        <translation>Raqcoin アドレスを入力します (例: 8SeSbjQXnCvhbHwQT1dqqDwrkLyxujLfRG49rFbB7tn5zBHACQ)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1611,8 +1611,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Abcmint signature</source>
-        <translation>Abcmint 署名を入力してください</translation>
+        <source>Enter Raqcoin signature</source>
+        <translation>Raqcoin 署名を入力してください</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1685,8 +1685,8 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Abcmint developers</source>
-        <translation>Abcmint の開発者</translation>
+        <source>The Raqcoin developers</source>
+        <translation>Raqcoin の開発者</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2220,11 +2220,11 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>abcmint-core</name>
+    <name>raqcoin-core</name>
     <message>
         <location filename="../raqcoinstrings.cpp" line="+94"/>
-        <source>Abcmint version</source>
-        <translation>Abcmint バージョン</translation>
+        <source>Raqcoin version</source>
+        <translation>Raqcoin バージョン</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2233,8 +2233,8 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or abcmint</source>
-        <translation>コマンドを -server または abcmint に送信する</translation>
+        <source>Send command to -server or raqcoin</source>
+        <translation>コマンドを -server または raqcoin に送信する</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2258,8 +2258,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: abcmint.pid)</source>
-        <translation>pidファイルを指定（デフォルト：abcmint.pid）</translation>
+        <source>Specify pid file (default: raqcoin.pid)</source>
+        <translation>pidファイルを指定（デフォルト：raqcoin.pid）</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2336,24 +2336,24 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=abcmintrpc
+rpcuser=raqcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Abcmint Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Raqcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s、構成ファイルで rpcpassword を設定する必要があります:
 %s
 次のランダム パスワードを使用することをお勧めします。
-rpcuser=abcmintrpc
+rpcuser=raqcoinrpc
 rpcpassword=%s
 (このパスワードを覚える必要はありません)
 ユーザー名とパスワードは同じであってはなりません。
 ファイルが存在しない場合は、所有者が読み取り専用のファイル権限で作成します。
 問題が通知されるように、alertnotify を設定することもお勧めします。
-例: alertnotify=echo %%s | mail -s "Abcmint アラート" admin@foo.com</translation>
+例: alertnotify=echo %%s | mail -s "Raqcoin アラート" admin@foo.com</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2367,8 +2367,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Abcmint is probably already running.</source>
-        <translation>データ ディレクトリ %s のロックを取得できません。 Abcmint はおそらく既に実行されています。</translation>
+        <source>Cannot obtain a lock on data directory %s. Raqcoin is probably already running.</source>
+        <translation>データ ディレクトリ %s のロックを取得できません。 Raqcoin はおそらく既に実行されています。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2412,8 +2412,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Abcmint will not work properly.</source>
-        <translation>警告: コンピュータの日付と時刻が正しいことを確認してください!時計が間違っていると、Abcmint は正しく動作しません。</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Raqcoin will not work properly.</source>
+        <translation>警告: コンピュータの日付と時刻が正しいことを確認してください!時計が間違っていると、Raqcoin は正しく動作しません。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2662,8 +2662,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Abcmint Wiki for SSL setup instructions)</source>
-        <translation>SSL オプション: (SSL のセットアップ手順については Abcmint Wiki を参照してください)</translation>
+        <source>SSL options: (see the Raqcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL オプション: (SSL のセットアップ手順については Raqcoin Wiki を参照してください)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2852,13 +2852,13 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Abcmint</source>
-        <translation>wallet.dat のロード中にエラーが発生しました: ウォレットには新しいバージョンの Abcmint が必要です</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Raqcoin</source>
+        <translation>wallet.dat のロード中にエラーが発生しました: ウォレットには新しいバージョンの Raqcoin が必要です</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Abcmint to complete</source>
-        <translation>ウォレットを書き換える必要がありました: 完了するには Abcmint を再起動してください</translation>
+        <source>Wallet needed to be rewritten: restart Raqcoin to complete</source>
+        <translation>ウォレットを書き換える必要がありました: 完了するには Raqcoin を再起動してください</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2917,8 +2917,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Abcmint is probably already running.</source>
-        <translation>このコンピュータの %s にバインドできません。 Abcmint はおそらく既に実行されています。</translation>
+        <source>Unable to bind to %s on this computer. Raqcoin is probably already running.</source>
+        <translation>このコンピュータの %s にバインドできません。 Raqcoin はおそらく既に実行されています。</translation>
     </message>
     <message>
         <location line="+64"/>

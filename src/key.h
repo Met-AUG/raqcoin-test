@@ -1,7 +1,8 @@
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_KEY_H
-#define ABCMINT_KEY_H
+#ifndef RAQCOIN_KEY_H
+#define RAQCOIN_KEY_H
 
 #include <stdexcept>
 #include <vector>
@@ -56,7 +57,7 @@ public:
  *  * CNoDestination: no destination set
  *  * CKeyID: TX_PUBKEYHASH destination
  *  * CScriptID: TX_SCRIPTHASH destination
- *  A CTxDestination is the internal data type encoded in a CAbcmintAddress
+ *  A CTxDestination is the internal data type encoded in a CRaqcoinAddress
  */
 typedef boost::variant<CNoDestination, CKeyID, CScriptID> CTxDestination;
 

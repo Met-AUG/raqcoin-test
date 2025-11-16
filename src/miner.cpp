@@ -1,4 +1,5 @@
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include "init.h"
@@ -2348,7 +2349,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return false;
 
     //// debug print
-    //printf("AbcmintMiner:\n");
+    //printf("RaqcoinMiner:\n");
     //pblock->print();
     //printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
 
@@ -2358,7 +2359,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         if (pblock->hashPrevBlock != hashBestChain) {
             printf("\n\n ***********hashBestChain****************** %s \n\n", hashBestChain.ToString().c_str());
             printf("\n\n ***********pblock->hashPrevBlock****************** %s \n\n", pblock->hashPrevBlock.ToString().c_str());
-            return error("AbcmintMiner : generated block is stale");
+            return error("RaqcoinMiner : generated block is stale");
         }
 
         // Remove key from key pool
@@ -2373,7 +2374,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("AbcmintMiner : ProcessBlock, block not accepted");
+            return error("RaqcoinMiner : ProcessBlock, block not accepted");
     }
 
     return true;
@@ -2702,11 +2703,11 @@ uint256 getRandomNonce(unsigned int nBits, uint256 oldNonce) {
     return share_randomNonce;
 }
 
-void static AbcmintMiner(CWallet *pwallet, int deviceID, int threadID, int threadCount)
+void static RaqcoinMiner(CWallet *pwallet, int deviceID, int threadID, int threadCount)
 {
-    //printf("AbcmintMiner started deviceID=%d, threadID=%d, threadCount=%d\n", deviceID, threadID, threadCount);
+    //printf("RaqcoinMiner started deviceID=%d, threadID=%d, threadCount=%d\n", deviceID, threadID, threadCount);
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("abcmint-miner");
+    RenameThread("raqcoin-miner");
 
 #ifdef USE_GPU
 	SetDevice(deviceID);
@@ -2734,7 +2735,7 @@ void static AbcmintMiner(CWallet *pwallet, int deviceID, int threadID, int threa
         CBlock *pblock = &pblocktemplate->block;
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-        printf("Running AbcmintMiner with %" PRIszu " transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running RaqcoinMiner with %" PRIszu " transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
 
@@ -2793,12 +2794,12 @@ void static AbcmintMiner(CWallet *pwallet, int deviceID, int threadID, int threa
     } }
     catch (boost::thread_interrupted)
     {
-        printf("AbcmintMiner terminated\n");
+        printf("RaqcoinMiner terminated\n");
         //throw;
     }
 }
 
-void GenerateAbcmints(bool fGenerate, CWallet* pwallet)
+void GenerateRaqcoins(bool fGenerate, CWallet* pwallet)
 {
     static boost::thread_group* minerThreads = NULL;
 
@@ -2847,6 +2848,6 @@ void GenerateAbcmints(bool fGenerate, CWallet* pwallet)
 
     minerThreads = new boost::thread_group();
     for (int i = 0; i < nThreads; i++) {
-        minerThreads->create_thread(boost::bind(&AbcmintMiner, pwallet, i/tmpMultiple, i, nThreads));
+        minerThreads->create_thread(boost::bind(&RaqcoinMiner, pwallet, i/tmpMultiple, i, nThreads));
     }
 }

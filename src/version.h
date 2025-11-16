@@ -1,8 +1,9 @@
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_VERSION_H
-#define ABCMINT_VERSION_H
+#ifndef RAQCOIN_VERSION_H
+#define RAQCOIN_VERSION_H
 
 #include "clientversion.h"
 #include <string>

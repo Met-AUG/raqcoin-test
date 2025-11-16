@@ -1,21 +1,21 @@
-#ifndef ABCMINTUNITS_H
-#define ABCMINTUNITS_H
+#ifndef RAQCOINUNITS_H
+#define RAQCOINUNITS_H
 
 #include <QString>
 #include <QAbstractListModel>
 
-/** Abcmint unit definitions. Encapsulates parsing and formatting
+/** Raqcoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class AbcmintUnits: public QAbstractListModel
+class RaqcoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit AbcmintUnits(QObject *parent);
+    explicit RaqcoinUnits(QObject *parent);
 
-    /** Abcmint units.
-      @note Source: https://en.abcmint.it/wiki/Units . Please add only sensible ones
+    /** Raqcoin units.
+      @note Source: https://en.raqcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
@@ -62,8 +62,8 @@ public:
     ///@}
 
 private:
-    QList<AbcmintUnits::Unit> unitlist;
+    QList<RaqcoinUnits::Unit> unitlist;
 };
-typedef AbcmintUnits::Unit AbcmintUnit;
+typedef RaqcoinUnits::Unit RaqcoinUnit;
 
-#endif // ABCMINTUNITS_H
+#endif // RAQCOINUNITS_H

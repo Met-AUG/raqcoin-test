@@ -1,6 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
 #include "main.h"
@@ -40,8 +41,8 @@ Value setmineraddress(const Array& params, bool fHelp) {
 
     string strAddress = params[0].get_str();
     CKeyID keyId;
-    if (!CAbcmintAddress(strAddress).GetKeyID(keyId))
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Abcmint address");
+    if (!CRaqcoinAddress(strAddress).GetKeyID(keyId))
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Raqcoin address");
 
     std::map<CTxDestination, std::string>::iterator mi = pwalletMain->mapAddressBook.find(keyId);
     if (mi == pwalletMain->mapAddressBook.end() || !IsMine(*pwalletMain, keyId)) {
@@ -89,7 +90,7 @@ Value setgenerate(const Array& params, bool fHelp)
     }
     mapArgs["-gen"] = (fGenerate ? "1" : "0");
 
-    GenerateAbcmints(fGenerate, pwalletMain);
+    GenerateRaqcoins(fGenerate, pwalletMain);
     return Value::null;
 }
 
@@ -142,10 +143,10 @@ Value getwork(const Array& params, bool fHelp)
             "If [data] is specified, tries to solve the block and returns true if it was successful.");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Abcmint is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Raqcoin is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Abcmint is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Raqcoin is downloading blocks...");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;    // FIXME: thread safety
@@ -262,7 +263,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
             "  \"sizelimit\" : limit of block size\n"
             "  \"bits\" : compressed target of next block\n"
             "  \"height\" : height of the next block\n"
-            "See https://en.abcmint.it/wiki/BIP_0022 for full specification.");
+            "See https://en.raqcoin.it/wiki/BIP_0022 for full specification.");
 
     std::string strMode = "template";
     if (params.size() > 0)
@@ -283,10 +284,10 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Abcmint is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Raqcoin is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Abcmint is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Raqcoin is downloading blocks...");
 
     // Update block
     static unsigned int nTransactionsUpdatedLast;
@@ -394,7 +395,7 @@ Value submitblock(const Array& params, bool fHelp)
             "submitblock <hex data> [optional-params-obj]\n"
             "[optional-params-obj] parameter is currently ignored.\n"
             "Attempts to submit new block to network.\n"
-            "See https://en.abcmint.it/wiki/BIP_0022 for full specification.");
+            "See https://en.raqcoin.it/wiki/BIP_0022 for full specification.");
 
     vector<unsigned char> blockData(ParseHex(params[0].get_str()));
     CDataStream ssBlock(blockData, SER_NETWORK, PROTOCOL_VERSION);

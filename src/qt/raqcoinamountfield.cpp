@@ -10,7 +10,7 @@
 #include <QApplication>
 #include <qmath.h> // for qPow()
 
-AbcmintAmountField::AbcmintAmountField(QWidget *parent):
+RaqcoinAmountField::RaqcoinAmountField(QWidget *parent):
         QWidget(parent), amount(0), currentUnit(-1)
 {
     amount = new QDoubleSpinBox(this);
@@ -23,7 +23,7 @@ AbcmintAmountField::AbcmintAmountField(QWidget *parent):
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
-    unit->setModel(new AbcmintUnits(this));
+    unit->setModel(new RaqcoinUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
@@ -41,7 +41,7 @@ AbcmintAmountField::AbcmintAmountField(QWidget *parent):
     unitChanged(unit->currentIndex());
 }
 
-void AbcmintAmountField::setText(const QString &text)
+void RaqcoinAmountField::setText(const QString &text)
 {
     if (text.isEmpty())
         amount->clear();
@@ -49,18 +49,18 @@ void AbcmintAmountField::setText(const QString &text)
         amount->setValue(text.toDouble());
 }
 
-void AbcmintAmountField::clear()
+void RaqcoinAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-bool AbcmintAmountField::validate()
+bool RaqcoinAmountField::validate()
 {
     bool valid = true;
     if (amount->value() == 0.0)
         valid = false;
-    if (valid && !AbcmintUnits::parse(currentUnit, text(), 0))
+    if (valid && !RaqcoinUnits::parse(currentUnit, text(), 0))
         valid = false;
 
     setValid(valid);
@@ -68,7 +68,7 @@ bool AbcmintAmountField::validate()
     return valid;
 }
 
-void AbcmintAmountField::setValid(bool valid)
+void RaqcoinAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -76,7 +76,7 @@ void AbcmintAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-QString AbcmintAmountField::text() const
+QString RaqcoinAmountField::text() const
 {
     if (amount->text().isEmpty())
         return QString();
@@ -84,7 +84,7 @@ QString AbcmintAmountField::text() const
         return amount->text();
 }
 
-bool AbcmintAmountField::eventFilter(QObject *object, QEvent *event)
+bool RaqcoinAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -105,16 +105,16 @@ bool AbcmintAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *AbcmintAmountField::setupTabChain(QWidget *prev)
+QWidget *RaqcoinAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     return amount;
 }
 
-qint64 AbcmintAmountField::value(bool *valid_out) const
+qint64 RaqcoinAmountField::value(bool *valid_out) const
 {
     qint64 val_out = 0;
-    bool valid = AbcmintUnits::parse(currentUnit, text(), &val_out);
+    bool valid = RaqcoinUnits::parse(currentUnit, text(), &val_out);
     if(valid_out)
     {
         *valid_out = valid;
@@ -122,18 +122,18 @@ qint64 AbcmintAmountField::value(bool *valid_out) const
     return val_out;
 }
 
-void AbcmintAmountField::setValue(qint64 value)
+void RaqcoinAmountField::setValue(qint64 value)
 {
-    setText(AbcmintUnits::format(currentUnit, value));
+    setText(RaqcoinUnits::format(currentUnit, value));
 }
 
-void AbcmintAmountField::unitChanged(int idx)
+void RaqcoinAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
 
     // Determine new unit ID
-    int newUnit = unit->itemData(idx, AbcmintUnits::UnitRole).toInt();
+    int newUnit = unit->itemData(idx, RaqcoinUnits::UnitRole).toInt();
 
     // Parse current value and convert to new unit
     bool valid = false;
@@ -142,10 +142,10 @@ void AbcmintAmountField::unitChanged(int idx)
     currentUnit = newUnit;
 
     // Set max length after retrieving the value, to prevent truncation
-    amount->setDecimals(AbcmintUnits::decimals(currentUnit));
-    amount->setMaximum(qPow(10, AbcmintUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
+    amount->setDecimals(RaqcoinUnits::decimals(currentUnit));
+    amount->setMaximum(qPow(10, RaqcoinUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
 
-    if(currentUnit == AbcmintUnits::uABC)
+    if(currentUnit == RaqcoinUnits::uABC)
         amount->setSingleStep(0.01);
     else
         amount->setSingleStep(0.001);
@@ -163,7 +163,7 @@ void AbcmintAmountField::unitChanged(int idx)
     setValid(true);
 }
 
-void AbcmintAmountField::setDisplayUnit(int newUnit)
+void RaqcoinAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }

@@ -63,10 +63,10 @@ f.write("""#include <QtGlobal>
 #define UNUSED
 #endif
 """)
-f.write('static const char UNUSED *abcmint_strings[] = {\n')
+f.write('static const char UNUSED *raqcoin_strings[] = {\n')
 messages.sort(key=operator.itemgetter(0))
 for (msgid, msgstr) in messages:
     if msgid != EMPTY:
-        f.write('QT_TRANSLATE_NOOP("abcmint-core", %s),\n' % ('\n'.join(msgid)))
+        f.write('QT_TRANSLATE_NOOP("raqcoin-core", %s),\n' % ('\n'.join(msgid)))
 f.write('};')
 f.close()

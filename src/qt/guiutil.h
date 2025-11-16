@@ -19,7 +19,7 @@ class QUrl;
 class QAbstractItemView;
 QT_END_NAMESPACE
 
-/** Utility functions used by the Abcmint Qt UI.
+/** Utility functions used by the Raqcoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -27,8 +27,8 @@ namespace GUIUtil
     QString dateTimeStr(const QDateTime &datetime);
     QString dateTimeStr(qint64 nTime);
 
-    // Render Abcmint addresses in monospace font
-    QFont abcmintAddressFont();
+    // Render Raqcoin addresses in monospace font
+    QFont raqcoinAddressFont();
 
     // Set up widgets for address and amounts
     void setupAddressWidget(QLineEdit *widget, QWidget *parent);
@@ -36,8 +36,8 @@ namespace GUIUtil
 
     // Parse "abcmint:" URI into recipient object, return true on successful parsing
     // See Abcmint URI definition discussion here: https://abcminttalk.org/index.php?topic=33490.0
-    bool parseAbcmintURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseAbcmintURI(QString uri, SendCoinsRecipient *out);
+    bool parseRaqcoinURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseRaqcoinURI(QString uri, SendCoinsRecipient *out);
 
     // HTML escaping for rich text controls
     QString HtmlEscape(const QString& str, bool fMultiLine=false);
@@ -138,7 +138,7 @@ namespace GUIUtil
     bool GetStartOnSystemStartup();
     bool SetStartOnSystemStartup(bool fAutoStart);
 
-    /** Help message for Abcmint-Qt, shown with --help. */
+    /** Help message for Raqcoin-Qt, shown with --help. */
     class HelpMessageBox : public QMessageBox
     {
         Q_OBJECT

@@ -38,7 +38,7 @@ TEST(keyTest, keyGen) {
 
 	
     CKeyID id = pk.GetID();
-	CAbcmintAddress addr;
+	CRaqcoinAddress addr;
 	EXPECT_TRUE(addr.Set(id));
 	std::cout<<"key id : "<<id.ToString()<<std::endl;
     std::cout<<"key address : "<<addr.ToString()<<std::endl;
@@ -62,7 +62,7 @@ TEST(keyTest, keySignAndVerify) {
 	//printStr(pk1.vchPubKey.data(), printLen);
 	//printStr(pk1.vchPubKey.data()+RAINBOW_PUBLIC_KEY_SIZE-printLen, printLen);
     CKeyID id = pk1.GetID();
-	CAbcmintAddress addr;
+	CRaqcoinAddress addr;
 	EXPECT_TRUE(addr.Set(id));
 	//std::cout<<"sk1 key id : "<<id.ToString()<<std::endl;
     std::cout<<"sk1 key address : "<<addr.ToString()<<std::endl;

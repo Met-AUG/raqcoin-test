@@ -15,7 +15,7 @@ src/abcmint
 src/abcmintrpc
 src/abcmint-cli
 src/abcmint-tx
-src/test_abcmint
+src/test_raqcoin
 src/test_*
 
 # 编译中间文件

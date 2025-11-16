@@ -6,8 +6,8 @@
 // - E-mail usually won't line-break if there's no punctuation to break at.
 // - Double-clicking selects the whole number as one word if it's all alphanumeric.
 //
-#ifndef ABCMINT_BASE58_H
-#define ABCMINT_BASE58_H
+#ifndef RAQCOIN_BASE58_H
+#define RAQCOIN_BASE58_H
 
 #include <string>
 #include <vector>
@@ -137,25 +137,25 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded Abcmint addresses.
+/** base58-encoded Raqcoin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains SHA256(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains SHA256(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CAbcmintAddress;
-class CAbcmintAddressVisitor : public boost::static_visitor<bool>
+class CRaqcoinAddress;
+class CRaqcoinAddressVisitor : public boost::static_visitor<bool>
 {
 private:
-    CAbcmintAddress *addr;
+    CRaqcoinAddress *addr;
 public:
-    CAbcmintAddressVisitor(CAbcmintAddress *addrIn) : addr(addrIn) { }
+    CRaqcoinAddressVisitor(CRaqcoinAddress *addrIn) : addr(addrIn) { }
     bool operator()(const CKeyID &id) const;
     bool operator()(const CScriptID &id) const;
     bool operator()(const CNoDestination &no) const;
 };
 
-class CAbcmintAddress : public CBase58Data
+class CRaqcoinAddress : public CBase58Data
 {
 public:
     enum
@@ -178,7 +178,7 @@ public:
 
     bool Set(const CTxDestination &dest)
     {
-        return boost::apply_visitor(CAbcmintAddressVisitor(this), dest);
+        return boost::apply_visitor(CRaqcoinAddressVisitor(this), dest);
     }
 
     bool IsValid() const
@@ -201,19 +201,19 @@ public:
         return fExpectTestNet == fTestNet && vchData.size() == HASH_LEN_BYTES;
     }
 
-    CAbcmintAddress() {}
+    CRaqcoinAddress() {}
 
-    CAbcmintAddress(const CTxDestination &dest)
+    CRaqcoinAddress(const CTxDestination &dest)
     {
         Set(dest);
     }
 
-    CAbcmintAddress(const std::string& strAddress)
+    CRaqcoinAddress(const std::string& strAddress)
     {
         SetString(strAddress);
     }
 
-    CAbcmintAddress(const char* pszAddress)
+    CRaqcoinAddress(const char* pszAddress)
     {
         SetString(pszAddress);
     }
@@ -266,12 +266,12 @@ public:
     }
 };
 
-bool inline CAbcmintAddressVisitor::operator()(const CKeyID &id) const         { return addr->Set(id); }
-bool inline CAbcmintAddressVisitor::operator()(const CScriptID &id) const      { return addr->Set(id); }
-bool inline CAbcmintAddressVisitor::operator()(const CNoDestination &id) const { return false; }
+bool inline CRaqcoinAddressVisitor::operator()(const CKeyID &id) const         { return addr->Set(id); }
+bool inline CRaqcoinAddressVisitor::operator()(const CScriptID &id) const      { return addr->Set(id); }
+bool inline CRaqcoinAddressVisitor::operator()(const CNoDestination &id) const { return false; }
 
 /** A base58-encoded secret key */
-class CAbcmintSecret : public CBase58Data
+class CRaqcoinSecret : public CBase58Data
 {
 public:
     void SetSecret(const CSecret& vchSecret)
@@ -316,14 +316,14 @@ public:
         return SetString(strSecret.c_str());
     }
 
-    CAbcmintSecret(const CSecret& vchSecret)
+    CRaqcoinSecret(const CSecret& vchSecret)
     {
         SetSecret(vchSecret);
     }
 
-    CAbcmintSecret()
+    CRaqcoinSecret()
     {
     }
 };
 
-#endif // ABCMINT_BASE58_H
+#endif // RAQCOIN_BASE58_H

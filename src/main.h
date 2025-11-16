@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_MAIN_H
-#define ABCMINT_MAIN_H
+#ifndef RAQCOIN_MAIN_H
+#define RAQCOIN_MAIN_H
 
 #include "sync.h"
 #include "net.h"
@@ -566,7 +567,7 @@ public:
      */
     unsigned int GetP2SHSigOpCount(CCoinsViewCache& mapInputs) const;
 
-    /** Amount of abcmints spent by this transaction.
+    /** Amount of raqcoins spent by this transaction.
         @return sum of all outputs (note: does not include fees)
      */
     int64 GetValueOut() const
@@ -581,7 +582,7 @@ public:
         return nValueOut;
     }
 
-    /** Amount of abcmints coming in to this transaction
+    /** Amount of raqcoins coming in to this transaction
         Note that lightweight clients may not know anything besides the hash of previous transactions,
         so may not be able to calculate this.
 

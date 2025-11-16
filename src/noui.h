@@ -1,11 +1,12 @@
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 
-#ifndef ABCMINT_NOUI_H
-#define ABCMINT_NOUI_H
+#ifndef RAQCOIN_NOUI_H
+#define RAQCOIN_NOUI_H
 
 extern void noui_connect();
 
-#endif // ABCMINT_NOUI_H
+#endif // RAQCOIN_NOUI_H
 

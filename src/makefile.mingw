@@ -93,7 +93,7 @@ OBJS= \
 	obj/diskpubkeypos.o \
     obj/net.o \
     obj/protocol.o \
-    obj/abcmintrpc.o \
+    obj/raqcoinrpc.o \
     obj/rpcdump.o \
     obj/rpcnet.o \
     obj/rpcmining.o \
@@ -110,14 +110,14 @@ OBJS= \
     obj/noui.o \
     obj/leveldb.o \
     obj/txdb.o \
-    obj/abcmint.o \
+    obj/raqcoin.o \
     obj/miner.o
 
 
-all: abcmint.exe
+all: raqcoin.exe
 
-test check: test_abcmint.exe FORCE
-	test_abcmint.exe
+test check: test_raqcoin.exe FORCE
+	test_raqcoin.exe
 
 #
 # LevelDB support
@@ -144,7 +144,7 @@ pqcrypto/libpqcrypto.a: $(PQCOBJS)
 obj/%.o: %.cpp $(HEADERS)
 	$(CXX) -c $(CFLAGS) -o $@ $<
 
-abcmint.exe: $(OBJS:obj/%=obj/%)
+raqcoin.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -152,11 +152,11 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	$(CXX) -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_abcmint.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_raqcoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework$(BOOST_SUFFIX) $(LIBS)
 
 clean:
-	rm -f abcmint.exe test_abcmint.exe
+	rm -f raqcoin.exe test_raqcoin.exe
 	rm -f pqcrypto/*.o
 	rm -f pqcrypto/*.P
 	rm -f pqcrypto/*.a

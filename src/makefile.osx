@@ -3,7 +3,7 @@
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-# Mac OS X makefile for abcmint
+# Mac OS X makefile for raqcoin
 # Originally by Laszlo Hanyecz (solar@heliacal.net)
 
 CXX=clang++
@@ -32,7 +32,7 @@ STATIC = 1
 
 TESTDEFS = -DTEST_DATA_DIR=$(abspath test/data)
 ifdef STATIC
-# Build STATIC if you are redistributing the abcmint binary
+# Build STATIC if you are redistributing the raqcoin binary
 TESTLIBS += \
  $(LIBDIR)/boost/lib/libboost_unit_test_framework.a
 # Note: boost_system is header-only since Boost 1.69, no need to link
@@ -96,8 +96,8 @@ OBJS= \
     obj/main.o \
     obj/diskpubkeypos.o \
     obj/net.o \
-	obj/protocol.o \
-	obj/raqcoinrpc.o \
+    obj/protocol.o \
+    obj/raqcoinrpc.o \
     obj/rpcdump.o \
     obj/rpcnet.o \
     obj/rpcmining.o \
@@ -112,10 +112,10 @@ OBJS= \
     obj/hash.o \
     obj/bloom.o \
     obj/noui.o \
-	obj/leveldb.o \
-	obj/txdb.o \
-	obj/validationinterface.o \
-	obj/raqcoin.o \
+    obj/leveldb.o \
+    obj/txdb.o \
+    obj/validationinterface.o \
+    obj/raqcoin.o \
     obj/miner.o
 
 ifndef USE_UPNP

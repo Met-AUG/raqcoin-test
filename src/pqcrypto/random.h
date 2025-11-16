@@ -1,5 +1,5 @@
-#ifndef ABCMINT_RANDOM_H
-#define ABCMINT_RANDOM_H
+#ifndef RAQCOIN_RANDOM_H
+#define RAQCOIN_RANDOM_H
 
 
 void getRandBytes(unsigned char* buf, int size);

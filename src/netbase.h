@@ -1,8 +1,9 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_NETBASE_H
-#define ABCMINT_NETBASE_H
+#ifndef RAQCOIN_NETBASE_H
+#define RAQCOIN_NETBASE_H
 
 #include <string>
 #include <vector>

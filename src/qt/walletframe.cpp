@@ -1,5 +1,5 @@
 /*
- * Qt4 abcmint GUI.
+ * Qt4 raqcoin GUI.
  *
  * W.J. van der Laan 2011-2012
  * The Bitcoin Developers 2011-2013
@@ -13,7 +13,7 @@
 
 #include <stdio.h>
 
-WalletFrame::WalletFrame(AbcmintGUI *_gui) :
+WalletFrame::WalletFrame(RaqcoinGUI *_gui) :
     QFrame(_gui),
     gui(_gui),
     clientModel(0)
@@ -22,7 +22,7 @@ WalletFrame::WalletFrame(AbcmintGUI *_gui) :
     QHBoxLayout *walletFrameLayout = new QHBoxLayout(this);
     setContentsMargins(0,0,0,0);
     walletStack = new WalletStack(this);
-    walletStack->setAbcmintGUI(gui);
+    walletStack->setRaqcoinGUI(gui);
     walletFrameLayout->setContentsMargins(0,0,0,0);
     walletFrameLayout->addWidget(walletStack);
 }

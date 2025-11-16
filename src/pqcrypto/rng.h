@@ -1,5 +1,5 @@
-#ifndef ABCMINT_PQCRYPT_RNG_H
-#define ABCMINT_PQCRYPT_RNG_H
+#ifndef RAQCOIN_PQCRYPT_RNG_H
+#define RAQCOIN_PQCRYPT_RNG_H
 
 /* Slow RNG you **might** be able to use to seed a PRNG with.  Be careful as this
  * might not work on all platforms as planned

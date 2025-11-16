@@ -1,8 +1,8 @@
 /* Defines the PQC_ARGCHK macro used within the library */
 /* ARGTYPE is defined in pqcrypt_cfg.h */
 
-#ifndef ABCMINT_PQCRYPT_ARGCHK_H
-#define ABCMINT_PQCRYPT_ARGCHK_H
+#ifndef RAQCOIN_PQCRYPT_ARGCHK_H
+#define RAQCOIN_PQCRYPT_ARGCHK_H
 
 #include <signal.h>
 

@@ -1,5 +1,5 @@
-#ifndef ABCMINT_PQCRYPT_H
-#define ABCMINT_PQCRYPT_H
+#ifndef RAQCOIN_PQCRYPT_H
+#define RAQCOIN_PQCRYPT_H
 
 #include <assert.h>
 #include <stdio.h>

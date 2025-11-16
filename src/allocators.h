@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_ALLOCATORS_H
-#define ABCMINT_ALLOCATORS_H
+#ifndef RAQCOIN_ALLOCATORS_H
+#define RAQCOIN_ALLOCATORS_H
 
 #include <string.h>
 #include <string>

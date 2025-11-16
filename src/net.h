@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_NET_H
-#define ABCMINT_NET_H
+#ifndef RAQCOIN_NET_H
+#define RAQCOIN_NET_H
 
 #include <deque>
 #include <boost/array.hpp>

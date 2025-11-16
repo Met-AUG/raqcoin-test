@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_TXDB_LEVELDB_H
-#define ABCMINT_TXDB_LEVELDB_H
+#ifndef RAQCOIN_TXDB_LEVELDB_H
+#define RAQCOIN_TXDB_LEVELDB_H
 
 #include "main.h"
 #include "leveldb.h"
@@ -60,4 +61,4 @@ public:
     bool DeletePublicKeyPos(const std::string& address);
 };
 
-#endif // ABCMINT_TXDB_LEVELDB_H
+#endif // RAQCOIN_TXDB_LEVELDB_H

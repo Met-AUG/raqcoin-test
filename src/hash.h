@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_HASH_H
-#define ABCMINT_HASH_H
+#ifndef RAQCOIN_HASH_H
+#define RAQCOIN_HASH_H
 
 #include "uint256.h"
 #include "serialize.h"

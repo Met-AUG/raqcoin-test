@@ -1,17 +1,17 @@
-Mac OS X abcmint build instructions
+Mac OS X raqcoin build instructions
 ====================================
 
 Authors
 -------
 
-AbcmintCore Developers
+RaqcoinCore Developers
 
 License
 -------
 
 Copyright (c) 2018 AbcmintCore Developers
 
-Abcmintcoie is released under the terms of the GNU GPL v. 3 license. 
+Raqcoincoie is released under the terms of the GNU GPL v. 3 license. 
 See https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
 
 This product includes software developed by the OpenSSL Project for use in
@@ -23,7 +23,7 @@ Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
 Notes
 -----
 
-See `doc/readme-qt.rst` for instructions on building Abcmint-Qt, the
+See `doc/readme-qt.rst` for instructions on building Raqcoin-Qt, the
 graphical user interface.
 
 Tested on OS X 10.7 through 10.13 on Intel processors only. PPC is not
@@ -69,12 +69,12 @@ Installing the dependencies using MacPorts is very straightforward.
 
     sudo port install boost db@+no_java openssl miniupnpc
 
-### Building `abcmint`
+### Building `raqcoin`
 
 1. Clone the github tree to get the source code and go into the directory.
 
         git clone git@github.com:abcmint/abcmint.git abcmint
-        cd abcmint
+        cd raqcoin
 
 2.  Build abcmint:
 
@@ -104,12 +104,12 @@ If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
 Rerunning "openssl version" should now return the correct version.
 
-### Building `abcmint`
+### Building `raqcoin`
 
 1. Clone the github tree to get the source code and go into the directory.
 
         git clone git@github.com:abcmint/abcmint.git abcmint
-        cd abcmint
+        cd raqcoin
 
 2.  Modify source in order to pick up the `openssl` library.
 
@@ -131,10 +131,10 @@ Rerunning "openssl version" should now return the correct version.
 Creating a release build
 ------------------------
 
-A abcmint binary is not included in the Abcmint-Qt.app bundle. You can ignore
-this section if you are building `abcmint` for your own use.
+A raqcoin binary is not included in the Raqcoin-Qt.app bundle. You can ignore
+this section if you are building `raqcoin` for your own use.
 
-If you are building `abcmint` for others, your build machine should be set up
+If you are building `raqcoin` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -153,10 +153,10 @@ As of December 2012, the `boost` port does not obey `macosx_deployment_target`.
 Download `http://gavinandresen-abcmint.s3.amazonaws.com/boost_macports_fix.zip`
 for a fix. Some ports also seem to obey either `build_arch` or
 `macosx_deployment_target`, but not both at the same time. For example, building
-on an OS X 10.6 64-bit machine fails. Official release builds of Abcmint-Qt are
+on an OS X 10.6 64-bit machine fails. Official release builds of Raqcoin-Qt are
 compiled on an OS X 10.6 32-bit machine to workaround that problem.
 
-Once dependencies are compiled, creating `Abcmint-Qt.app` is easy:
+Once dependencies are compiled, creating `Raqcoin-Qt.app` is easy:
 
     make -f Makefile.osx RELEASE=1
 
@@ -169,8 +169,8 @@ directory. We have to first create the RPC configuration file, though.
 Run `./abcmint` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=abcmintrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Abcmint/raqcoin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Abcmint/raqcoin.conf"
+    echo -e "rpcuser=raqcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Raqcoin/raqcoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Raqcoin/raqcoin.conf"
 
 When next you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours.

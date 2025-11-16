@@ -93,7 +93,7 @@ QString QRCodeDialog::getURI()
         if (ui->lnReqAmount->validate())
         {
             // even if we allow a non ABC unit input in lnReqAmount, we generate the URI with ABC as unit (as defined in BIP21)
-            ret += QString("?amount=%1").arg(AbcmintUnits::format(AbcmintUnits::ABC, ui->lnReqAmount->value()));
+            ret += QString("?amount=%1").arg(RaqcoinUnits::format(RaqcoinUnits::ABC, ui->lnReqAmount->value()));
             paramCount++;
         }
         else

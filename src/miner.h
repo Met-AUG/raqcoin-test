@@ -1,7 +1,8 @@
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_MINER_H
-#define ABCMINT_MINER_H
+#ifndef RAQCOIN_MINER_H
+#define RAQCOIN_MINER_H
 
 #include <inttypes.h>
 #if defined(__x86_64__) || defined(__i386__)
@@ -186,6 +187,6 @@ CBlockTemplate* CreateNewBlock(CReserveKey& reservekey);
 void FormatHashBuffers(CBlock* pblock, char* pmidstate, char* pdata, char* phash1);
 
 /** Run the miner threads */
-void GenerateAbcmints(bool fGenerate, CWallet* pwallet);
+void GenerateRaqcoins(bool fGenerate, CWallet* pwallet);
 
 #endif

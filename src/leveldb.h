@@ -1,8 +1,9 @@
 // Copyright (c) 2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_LEVELDB_H
-#define ABCMINT_LEVELDB_H
+#ifndef RAQCOIN_LEVELDB_H
+#define RAQCOIN_LEVELDB_H
 
 #include "serialize.h"
 
@@ -177,4 +178,4 @@ public:
     }
 };
 
-#endif // ABCMINT_LEVELDB_H
+#endif // RAQCOIN_LEVELDB_H

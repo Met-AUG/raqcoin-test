@@ -115,7 +115,7 @@ void SendCoinsDialog::on_sendButton_clicked()
     QStringList formatted;
     foreach(const SendCoinsRecipient &rcp, recipients)
     {
-        formatted.append(tr("<b>%1</b> to %2 (%3)").arg(AbcmintUnits::formatWithUnit(AbcmintUnits::ABC, rcp.amount), GUIUtil::HtmlEscape(rcp.label), rcp.address));
+        formatted.append(tr("<b>%1</b> to %2 (%3)").arg(RaqcoinUnits::formatWithUnit(RaqcoinUnits::ABC, rcp.amount), GUIUtil::HtmlEscape(rcp.label), rcp.address));
     }
 
     fNewRecipientAllowed = false;
@@ -175,7 +175,7 @@ void SendCoinsDialog::on_sendButton_clicked()
     case WalletModel::AmountWithFeeExceedsBalance:
         QMessageBox::warning(this, tr("Send Coins"),
             tr("The total exceeds your balance when the %1 transaction fee is included.").
-            arg(AbcmintUnits::formatWithUnit(AbcmintUnits::ABC, sendstatus.fee)),
+            arg(RaqcoinUnits::formatWithUnit(RaqcoinUnits::ABC, sendstatus.fee)),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::DuplicateAddress:
@@ -332,9 +332,9 @@ bool SendCoinsDialog::handleURI(const QString &uri)
 {
     SendCoinsRecipient rv;
     // URI has to be valid
-    if (GUIUtil::parseAbcmintURI(uri, &rv))
+    if (GUIUtil::parseRaqcoinURI(uri, &rv))
     {
-        CAbcmintAddress address(rv.address.toStdString());
+        CRaqcoinAddress address(rv.address.toStdString());
         if (!address.IsValid())
             return false;
         pasteEntry(rv);
@@ -352,7 +352,7 @@ void SendCoinsDialog::setBalance(qint64 balance, qint64 unconfirmedBalance, qint
         return;
 
     int unit = model->getOptionsModel()->getDisplayUnit();
-    ui->labelBalance->setText(AbcmintUnits::formatWithUnit(unit, balance));*/
+    ui->labelBalance->setText(RaqcoinUnits::formatWithUnit(unit, balance));*/
     Q_UNUSED(balance);
     OnTextChanged();
 }
@@ -361,7 +361,7 @@ void SendCoinsDialog::updateDisplayUnit()
 {
     /*if(model && model->getOptionsModel())
     {
-        ui->labelBalance->setText(AbcmintUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), model->getBalance()));
+        ui->labelBalance->setText(RaqcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), model->getBalance()));
     }*/
     OnTextChanged();
 }
@@ -373,12 +373,12 @@ void SendCoinsDialog::OnTextChanged()
 
     QString fromAddress = ui->payFrom->text();
     if(fromAddress.isEmpty()) {
-        ui->labelBalance->setText(AbcmintUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), model->getBalance()));
+        ui->labelBalance->setText(RaqcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), model->getBalance()));
     } else {
         if (model->validateAddress(fromAddress)) {
-            ui->labelBalance->setText(AbcmintUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), model->getBalance(fromAddress)));
+            ui->labelBalance->setText(RaqcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), model->getBalance(fromAddress)));
         } else {
-            ui->labelBalance->setText(AbcmintUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), 0));
+            ui->labelBalance->setText(RaqcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), 0));
         }
     }
 }

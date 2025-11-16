@@ -1,4 +1,5 @@
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
 #include "diskpubkeypos.h"
 #include "util.h"
@@ -215,7 +216,7 @@ void PubKeyScanner(CWallet* pwalletMain)
             std::set<CKeyID> setAddress;
             pwalletMain->GetKeys(setAddress);
             for (std::set<CKeyID>::iterator it = setAddress.begin(); it != setAddress.end(); ++it) {
-                std::string address = CAbcmintAddress(*it).ToString();
+                std::string address = CRaqcoinAddress(*it).ToString();
 
                 CPubKey pubKey;
                 if (!pwalletMain->GetPubKey(*it, pubKey)) {

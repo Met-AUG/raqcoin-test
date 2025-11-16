@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Batch-rename all files whose basename contains 'abcmint' to replace that
+Batch-rename all files whose basename contains 'raqcoin' to replace that
 substring with 'raqcoin', and update references to those filenames across
 text files in the repository.
 
 Usage:
   - Dry run (default):
-      python tools/rename_abcmint_to_raqcoin.py
+      python tools/rename_raqcoin_to_raqcoin.py
   - Apply changes:
-      python tools/rename_abcmint_to_raqcoin.py --apply
+      python tools/rename_raqcoin_to_raqcoin.py --apply
 
 Notes:
   - Only basenames are renamed (directories are not renamed).
@@ -103,14 +103,14 @@ def walk_files(root: str) -> Iterable[str]:
 
 
 def build_plan(root: str) -> Plan:
-    # Identify files whose basenames contain 'abcmint'
+    # Identify files whose basenames contain 'raqcoin'
     candidates: List[str] = []
     for path in walk_files(root):
         base = os.path.basename(path)
         # Skip this script itself to avoid self-renaming
         if os.path.abspath(path) == CURRENT_SCRIPT_PATH:
             continue
-        if "abcmint" in base:
+        if "raqcoin" in base:
             candidates.append(path)
     # Build rename mapping and verify uniqueness
     file_renames: List[Tuple[str, str]] = []
@@ -118,7 +118,7 @@ def build_plan(root: str) -> Plan:
     seen_targets: set[str] = set()
     for old_abs in sorted(candidates):
         old_base = os.path.basename(old_abs)
-        new_base = old_base.replace("abcmint", "raqcoin")
+        new_base = old_base.replace("raqcoin", "raqcoin")
         new_abs = os.path.join(os.path.dirname(old_abs), new_base)
         file_renames.append((old_abs, new_abs))
         content_replacements[old_base] = new_base
@@ -135,7 +135,7 @@ def apply_two_phase_renames(renames: List[Tuple[str, str]]) -> None:
     for old_abs, new_abs in renames:
         dirn = os.path.dirname(old_abs)
         old_base = os.path.basename(old_abs)
-        temp_base = old_base.replace("abcmint", f"abcmint__tmp__{nonce}")
+        temp_base = old_base.replace("raqcoin", f"raqcoin__tmp__{nonce}")
         temp_abs = os.path.join(dirn, temp_base)
         if not os.path.exists(old_abs):
             # Already moved? Skip
@@ -171,23 +171,57 @@ def update_references(root: str, mapping: Dict[str, str], dry_run: bool, brand_a
                 content = content.replace(old_base, new_base)
         # Optional: global brand replacement inside text files
         if brand_all:
-            # Preserve upstream copyright headers like:
-            # // Copyright (c) 2018 The Abcmint developers
-            # We'll avoid replacing in lines that contain both 'Copyright' and 'developers'
-            # Do a line-wise replacement with skip conditions.
+            # Preserve upstream copyright headers, external URLs, protocol-level strings, etc.
+            # that would cause forks or break external references if changed.
+            # Do a line-wise replacement with comprehensive skip conditions.
             lines = content.splitlines(True)  # keepends=True
-            def should_skip(line: str) -> bool:
+            
+            def should_skip_line(line: str) -> bool:
+                """Return True if this line should NOT have brand replacements applied."""
                 low = line.lower()
-                return ("copyright" in low and "developer" in low)
+                
+                # 1. Copyright headers mentioning developers
+                if "copyright" in low and "developer" in low:
+                    return True
+                
+                # 2. External HTTP(S) URLs (preserve external links)
+                if "http://" in low or "https://" in low:
+                    # Allow replacement in comments explaining local code, but skip actual URLs
+                    # Simple heuristic: if line has a domain-like pattern, skip it
+                    if any(domain in low for domain in [".org", ".com", ".net", ".io", ".edu", ".gov"]):
+                        return True
+                
+                # 3. Message signing protocol string (critical for compatibility)
+                # "Abcmint Signed Message:\n" must stay unchanged
+                if "signed message" in low:
+                    return True
+                
+                # 4. URI scheme declarations (abcmint: protocol)
+                # Lines like: const QString ABCMINT_IPC_PREFIX("abcmint:");
+                # or parseAbcmintURI, or "abcmint:" in URI examples
+                if "abcmint:" in line or "abcmint://" in line:
+                    return True
+                
+                # 5. Data directory path hints in comments or help text
+                # e.g., "~/.abcmint" or "Application Support/abc" references
+                # Check for filesystem path patterns
+                if any(pattern in line for pattern in ["~/.abc", "/.abc", "\\abc", "/abc", "Application Support/abc"]):
+                    return True
+                
+                # 6. Git/GitHub URLs and repository references
+                if "github.com" in low or "sourceforge.net" in low:
+                    return True
+                
+                return False
 
             brand_variants = (
-                ("abcmint", "raqcoin"),
-                ("Abcmint", "Raqcoin"),
-                ("ABCMINT", "RAQCOIN"),
+                ("raqcoin", "raqcoin"),
+                ("Raqcoin", "Raqcoin"),
+                ("RAQCOIN", "RAQCOIN"),
             )
             new_lines = []
             for ln in lines:
-                if should_skip(ln):
+                if should_skip_line(ln):
                     new_lines.append(ln)
                     continue
                 new_ln = ln
@@ -196,12 +230,12 @@ def update_references(root: str, mapping: Dict[str, str], dry_run: bool, brand_a
                         new_ln = new_ln.replace(old, new)
                 new_lines.append(new_ln)
             content = "".join(new_lines)
-        # Special handling: .rc resource identifier 'abcmint' (without extension)
+        # Special handling: .rc resource identifier 'raqcoin' (without extension)
         # Only replace the standalone identifier at line start or preceded by whitespace
         # to avoid over-broad symbol renames elsewhere.
         if path.endswith('.rc'):
-            # Pattern: start of line optional whitespace then 'abcmint' then whitespace and (ICON|BITMAP|PNG|JPG)
-            pattern = re.compile(r'^(\s*)abcmint(\s+(ICON|BITMAP|PNG|JPG))', re.MULTILINE)
+            # Pattern: start of line optional whitespace then 'raqcoin' then whitespace and (ICON|BITMAP|PNG|JPG)
+            pattern = re.compile(r'^(\s*)raqcoin(\s+(ICON|BITMAP|PNG|JPG))', re.MULTILINE)
             def repl(m: re.Match) -> str:
                 return f"{m.group(1)}raqcoin{m.group(2)}"
             content = pattern.sub(repl, content)
@@ -215,9 +249,9 @@ def update_references(root: str, mapping: Dict[str, str], dry_run: bool, brand_a
 
 
 def main(argv: List[str]) -> int:
-    parser = argparse.ArgumentParser(description="Rename files containing 'abcmint' to 'raqcoin' and update references.")
+    parser = argparse.ArgumentParser(description="Rename files containing 'raqcoin' to 'raqcoin' and update references.")
     parser.add_argument("--apply", action="store_true", help="Apply changes. Without this flag, runs in dry-run mode.")
-    parser.add_argument("--brand-all", action="store_true", help="Also replace 'abcmint' brand tokens in all text files (identifiers, strings, docs) with 'raqcoin' (case-aware).")
+    parser.add_argument("--brand-all", action="store_true", help="Also replace 'raqcoin' brand tokens in all text files (identifiers, strings, docs) with 'raqcoin' (case-aware).")
     parser.add_argument("--root", default=REPO_ROOT, help="Repository root (default: project root)")
     args = parser.parse_args(argv)
 
@@ -227,7 +261,7 @@ def main(argv: List[str]) -> int:
         return 2
 
     plan = build_plan(root)
-    print(f"Discovered {len(plan.file_renames)} files to rename containing 'abcmint'.")
+    print(f"Discovered {len(plan.file_renames)} files to rename containing 'raqcoin'.")
 
     # Print planned renames
     for old_abs, new_abs in plan.file_renames:

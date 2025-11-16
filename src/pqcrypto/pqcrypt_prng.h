@@ -1,5 +1,5 @@
-#ifndef ABCMINT_PQCRYPT_PRNG_H
-#define ABCMINT_PQCRYPT_PRNG_H
+#ifndef RAQCOIN_PQCRYPT_PRNG_H
+#define RAQCOIN_PQCRYPT_PRNG_H
 
 
 /* ---- PRNG Stuff ---- */

@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_WALLET_H
-#define ABCMINT_WALLET_H
+#ifndef RAQCOIN_WALLET_H
+#define RAQCOIN_WALLET_H
 
 #include <string>
 #include <vector>
@@ -606,7 +607,7 @@ public:
                 if (!ExtractDestination(txout.scriptPubKey, addressId) || !IsMine(*pwallet, addressId))
                     continue;
 
-                if (CAbcmintAddress(addressId).ToString() != strAddress)
+                if (CRaqcoinAddress(addressId).ToString() != strAddress)
                     continue;
 
                 nCredit += txout.nValue;

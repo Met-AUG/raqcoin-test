@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2018 The Abcmint developers
+// Copyright (c) 2025 The Raqcoin developers
 
-#ifndef ABCMINT_THREADSAFETY_H
-#define ABCMINT_THREADSAFETY_H
+#ifndef RAQCOIN_THREADSAFETY_H
+#define RAQCOIN_THREADSAFETY_H
 
 #ifdef __clang__
 // TL;DR Add GUARDED_BY(mutex) to member variables. The others are
@@ -50,4 +51,4 @@
 #define SHARED_LOCKS_REQUIRED(...)
 #define NO_THREAD_SAFETY_ANALYSIS
 #endif  // __GNUC__
-#endif  // ABCMINT_THREADSAFETY_H
+#endif  // RAQCOIN_THREADSAFETY_H

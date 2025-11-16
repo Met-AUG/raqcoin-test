@@ -23,7 +23,7 @@ SIGNATUREFILE="http://downloads.sourceforge.net/project/abcmint/Abcmint/abcmint-
 SIGNATUREFILENAME="SHA256SUMS.asc"
 RCSUBDIR="test/"
 BASEDIR="http://downloads.sourceforge.net/project/abcmint/Abcmint/"
-VERSIONPREFIX="abcmint-"
+VERSIONPREFIX="raqcoin-"
 RCVERSIONSTRING="rc"
 
 if [ ! -d "$WORKINGDIR" ]; then
@@ -34,7 +34,7 @@ cd "$WORKINGDIR"
 
 #test if a version number has been passed as an argument
 if [ -n "$1" ]; then
-   #let's also check if the version number includes the prefix 'abcmint-',
+   #let's also check if the version number includes the prefix 'raqcoin-',
    #  and add this prefix if it doesn't
    if [[ $1 == "$VERSIONPREFIX"* ]]; then
       VERSION="$1"
@@ -62,7 +62,7 @@ WGETOUT=$(wget -N "$BASEDIR$SIGNATUREFILENAME" 2>&1)
 #and then see if wget completed successfully
 if [ $? -ne 0 ]; then
    echo "Error: couldn't fetch signature file. Have you specified the version number in the following format?"
-   echo "[abcmint-]<version>-[rc[0-9]] (example: abcmint-0.7.1-rc1)"
+   echo "[raqcoin-]<version>-[rc[0-9]] (example: raqcoin-0.7.1-rc1)"
    echo "wget output:"
    echo "$WGETOUT"|sed 's/^/\t/g'
    exit 2

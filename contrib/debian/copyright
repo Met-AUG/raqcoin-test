@@ -1,14 +1,14 @@
 Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?rev=174
-Upstream-Name: Abcmint
+Upstream-Name: Raqcoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
- irc://#abcmint@freenode.net
+ irc://#raqcoin@freenode.net
 Source: http://sourceforge.net/projects/abcmint/files/
  https://github.com/abcmint/abcmint
 
 Files: *
 Copyright: 2009-2012, Abcmint Developers
 License: Expat
-Comment: The Abcmint Developers encompasses the current developers listed on abcmint.org,
+Comment: The Raqcoin Developers encompasses the current developers listed on abcmint.org,
          as well as the numerous contributors to the project.
 
 Files: src/json/*

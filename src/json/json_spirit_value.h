@@ -341,7 +341,7 @@ namespace json_spirit
         {
             std::ostringstream os;
 
-            ///// Abcmint: Tell the types by name instead of by number
+            ///// Raqcoin: Tell the types by name instead of by number
             os << "value is type " << Value_type_name[type()] << ", expected " << Value_type_name[vtype];
 
             throw std::runtime_error( os.str() );

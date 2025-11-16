@@ -25,7 +25,7 @@ release time)
 
 - Additional debug.log logging for diagnosis of network problems, log timestamps by default
 
-- Fix Abcmint-Qt startup crash when clicking dock icon on OSX 
+- Fix Raqcoin-Qt startup crash when clicking dock icon on OSX 
 
 - Fix memory leaks in CKey::SetCompactSignature() and Key::SignCompact()
 
