@@ -1,9 +1,9 @@
 Raqcoin integration/staging tree
 ================================
 
-http://www.abcmint.org
+http://www.raqcoin.org
 
-Copyright (c) 2018 ABCMintCore Developers
+Copyright (c) 2025 The Raqcoin developers
 
 What is Raqcoin?
 ----------------
@@ -40,7 +40,7 @@ ABC MINT FOUNDATION MAKES NO REPRESENTATION, WARRANTY OR OTHER COMMITMENT REGARD
 •	License 2: Apache License 1.0
 •	License 3: Apache License 2.0
 
-2. Berkeley DB
+1. Berkeley DB
 
 •	Copyright (c) 1990, 1993, 1994, 1995	The Regents of the University of California, all rights reserved
 •	Copyright (c) 1995, 1996 The President and Fellows of Harvard University, all rights reserved
