@@ -1,7 +1,7 @@
 Raqcoin integration/staging tree
 ================================
 
-http://www.raqcoin.org
+www.Raqmint.org
 
 Copyright (c) 2025 The Raqcoin developers
 
@@ -15,12 +15,12 @@ out collectively by the network. Raqcoin is also the name of the open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the ABCMintCore client software, see http://www.abcmint.org.
+the RaqcoinCore client software, see www.Raqmint.org.
 
 License
 -------
 
-ABCMintCore is released under the terms of the GNU GPL v. 3 license. See https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
+RaqcoinCore is released under the terms of the GNU GPL v. 3 license. See https://www.gnu.org/licenses/gpl-3.0.en.html for more information.
 
 THIRD PARTY SOFTWARE DISCLOSURE, ATTRIBUTIONS, COPYRIGHT NOTICES, AND LICENSES 
 
