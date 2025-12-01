@@ -72,7 +72,6 @@ __pycache__/
 *$py.class
 
 # IDE和编辑器
-.github/
 .vscode/
 .idea/
 *.sublime-*
